@@ -1,0 +1,913 @@
+
+<!DOCTYPE HTML>
+<html lang>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Metrics &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-custom-js-css/9eb07385451571ed1c43d6bfc772c8d5-docsearch.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-docsearch/doc-search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ROI.html">
+    
+    
+    <link rel="prev" href="TwoStageDetector.html">
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary"><div id="book-search-input">
+    <input type="text" id="book-doc-search-input" placeholder="Type to search">
+</div>
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../General.html">
+            
+                <a href="../../General.html">
+            
+                    
+                    General
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../General/Optimization.html">
+            
+                <a href="../../General/Optimization.html">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../General/How_to_prevent_overfitting.html">
+            
+                <a href="../../General/How_to_prevent_overfitting.html">
+            
+                    
+                    How to prevent overfitting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../General/Linear_algebra.html">
+            
+                <a href="../../General/Linear_algebra.html">
+            
+                    
+                    Linear Algebra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../General/Clustering.html">
+            
+                <a href="../../General/Clustering.html">
+            
+                    
+                    Clustering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../General/Calculate_Parameters_In_CNN.html">
+            
+                <a href="../../General/Calculate_Parameters_In_CNN.html">
+            
+                    
+                    Calculate Parameters in CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../General/Weight_norm_and_layer_norm.html">
+            
+                <a href="../../General/Weight_norm_and_layer_norm.html">
+            
+                    
+                    Weight norm and layer norm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../General/Imbalance_problem_in_object_detection.html">
+            
+                <a href="../../General/Imbalance_problem_in_object_detection.html">
+            
+                    
+                    Imbalance problem in object detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Classical_Machine_learning.html">
+            
+                <a href="../../Classical_Machine_learning.html">
+            
+                    
+                    Classical Machine Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Neural_Networks.html">
+            
+                <a href="../../Neural_Networks.html">
+            
+                    
+                    Neural Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Different_types_of_Convolution.html">
+            
+                <a href="../Different_types_of_Convolution.html">
+            
+                    
+                    Different Types of Convolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2">
+            
+                <span>
+            
+                    
+                    Loss
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Loss/Cross_Entropy_Loss.html">
+            
+                <a href="../Loss/Cross_Entropy_Loss.html">
+            
+                    
+                    Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Loss/Binary_Cross_Entropy_Loss.html">
+            
+                <a href="../Loss/Binary_Cross_Entropy_Loss.html">
+            
+                    
+                    Binary Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Loss/Categorical_Cross_Entropy_loss.html">
+            
+                <a href="../Loss/Categorical_Cross_Entropy_loss.html">
+            
+                    
+                    Categorical Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Loss/Focal_Loss.html">
+            
+                <a href="../Loss/Focal_Loss.html">
+            
+                    
+                    (Optional) Focal Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Loss/CORAL_Loss.html">
+            
+                <a href="../Loss/CORAL_Loss.html">
+            
+                    
+                    (Optional) CORAL Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Resnet.html">
+            
+                <a href="../Resnet.html">
+            
+                    
+                    Resnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Embedding.html">
+            
+                <a href="../Embedding.html">
+            
+                    
+                    Embedding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../RNN_LSTM.html">
+            
+                <a href="../RNN_LSTM.html">
+            
+                    
+                    RNN &amp; LSTM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../GAN.html">
+            
+                <a href="../GAN.html">
+            
+                    
+                    GAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Mobilenet.html">
+            
+                <a href="../Mobilenet.html">
+            
+                    
+                    Mobilenet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="TwoStageDetector.html">
+            
+                <a href="TwoStageDetector.html">
+            
+                    
+                    Two Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.8.1" data-path="Metrics.html">
+            
+                <a href="Metrics.html">
+            
+                    
+                    Metrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="ROI.html">
+            
+                <a href="ROI.html">
+            
+                    
+                    ROI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.3" data-path="R-CNN.html">
+            
+                <a href="R-CNN.html">
+            
+                    
+                    R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.4" data-path="Fast-RCNN.html">
+            
+                <a href="Fast-RCNN.html">
+            
+                    
+                    Fast RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.5" data-path="Faster-RCNN.html">
+            
+                <a href="Faster-RCNN.html">
+            
+                    
+                    Faster RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.6" data-path="Mask-RCNN.html">
+            
+                <a href="Mask-RCNN.html">
+            
+                    
+                    Mask RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9">
+            
+                <span>
+            
+                    
+                    One Stage Object Detection
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.9.1" data-path="../One_Stage_Object_Detection/YOLO.html">
+            
+                <a href="../One_Stage_Object_Detection/YOLO.html">
+            
+                    
+                    YOLO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.2" data-path="../One_Stage_Object_Detection/SSD.html">
+            
+                <a href="../One_Stage_Object_Detection/SSD.html">
+            
+                    
+                    Single Shot MultiBox Detector(SSD)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.3" data-path="FPN.html">
+            
+                <a href="FPN.html">
+            
+                    
+                    FPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10">
+            
+                <span>
+            
+                    
+                    Segmentation
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.1" data-path="../Segmentation/Panoptic.html">
+            
+                <a href="../Segmentation/Panoptic.html">
+            
+                    
+                    Panoptic Segmentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../FaceNet.html">
+            
+                <a href="../FaceNet.html">
+            
+                    
+                    FaceNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5">
+            
+                <span>
+            
+                    
+                    Anomaly Detection
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../Anomaly/dbscan.html">
+            
+                <a href="../../Anomaly/dbscan.html">
+            
+                    
+                    DBSCAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../Anomaly/autoencoder_anomaly.html">
+            
+                <a href="../../Anomaly/autoencoder_anomaly.html">
+            
+                    
+                    Autoencoder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6">
+            
+                <span>
+            
+                    
+                    Visualization
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Visualization/Saliency_Maps.html">
+            
+                <a href="../../Visualization/Saliency_Maps.html">
+            
+                    
+                    Saliency Maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Visualization/Fooling_Images.html">
+            
+                <a href="../../Visualization/Fooling_Images.html">
+            
+                    
+                    Fooling images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Visualization/Class_Visualization.html">
+            
+                <a href="../../Visualization/Class_Visualization.html">
+            
+                    
+                    Class Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../..">Metrics</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="metrics">Metrics</h1>
+<p>The following 12 metrics are used for characterizing the performance of an object detector on COCO:</p>
+<h3 id="average-precision-ap"><a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html" target="_blank">Average Precision (AP)</a>:</h3>
+<p>Compute average precision (AP) from prediction scores</p>
+<p>AP summarizes a precision-recall curve as the weighted mean of precisions achieved at each threshold, with the increase in recall from the previous threshold used as the weight:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext><mi mathvariant="normal">A</mi><mi mathvariant="normal">P</mi></mtext><mo>=</mo><msub><mo>&#x2211;</mo><mi>n</mi></msub><mo>(</mo><msub><mi>R</mi><mi>n</mi></msub><mo>&#x2212;</mo><msub><mi>R</mi><mrow><mi>n</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msub><mo>)</mo><msub><mi>P</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">
+\text{AP} = \sum_n (R_n - R_{n-1}) P_n
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.050005em;"></span><span class="strut bottom" style="height:2.3000100000000003em;vertical-align:-1.250005em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord text displaystyle textstyle uncramped"><span class="mord mathrm">AP</span></span><span class="mrel">=</span><span class="mop op-limits"><span class="vlist"><span style="top:1.150005em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span style="top:-0.000005000000000032756em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span><span class="mbin mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></span></p>
+<p>where <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">P_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">R_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> are the precision and recall at the nth threshold. This implementation is not interpolated and is different from computing the area under the precision-recall curve with the trapezoidal rule, which uses linear interpolation and can be too optimistic.</p>
+<p>Note: this implementation is restricted to the binary classification task or multilabel classification task.</p>
+<p>AP: AP at IoU=.50:.05:.95 (primary challenge metric)</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msup><mi>P</mi><mrow><mi>I</mi><mi>o</mi><mi>U</mi><mo>=</mo><mi mathvariant="normal">.</mi><mn>5</mn><mn>0</mn></mrow></msup></mrow><annotation encoding="application/x-tex">AP^{IoU=.50}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.07847em;">I</span><span class="mord mathit mtight">o</span><span class="mord mathit mtight" style="margin-right:0.10903em;">U</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">5</span><span class="mord mathrm mtight">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>: AP at IoU=.50 (PASCAL VOC metric)</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msup><mi>P</mi><mrow><mi>I</mi><mi>o</mi><mi>U</mi><mo>=</mo><mi mathvariant="normal">.</mi><mn>7</mn><mn>5</mn></mrow></msup></mrow><annotation encoding="application/x-tex">AP^{IoU=.75}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.07847em;">I</span><span class="mord mathit mtight">o</span><span class="mord mathit mtight" style="margin-right:0.10903em;">U</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">7</span><span class="mord mathrm mtight">5</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>: AP at IoU=.75 (strict metric)</p>
+<h2 id="interpolated-ap"><strong>Interpolated AP</strong></h2>
+<p>PASCAL VOC is a popular dataset for object detection. For the PASCAL VOC challenge, a prediction is positive if IoU &#x2265; 0.5. Also, if multiple detections of the same object are detected, it counts the first one as a positive while the rest as negatives.</p>
+<p>In Pascal VOC2008, an average for the 11-point interpolated AP is calculated.</p>
+<figure>
+<img src="https://miro.medium.com/max/4400/1*naz02wO-XMywlwAdFzF-GA.jpeg" alt style="width:100%;display:block;margin-left:auto;margin-right:auto;">
+<figcaption style="text-align:center"></figcaption>
+</figure>
+
+<p>First, we divide the recall value from 0 to 1.0 into 11 points &#x2014; 0, 0.1, 0.2, &#x2026;, 0.9 and 1.0. Next, we compute the average of maximum precision value for these 11 recall values.</p>
+<figure>
+<img src="https://miro.medium.com/max/3168/1*OIOis-n603z1Xngo_Ip6Dw.jpeg" alt style="width:100%;display:block;margin-left:auto;margin-right:auto;">
+<figcaption style="text-align:center"></figcaption>
+</figure>
+
+<p>In our example, AP = (5 &#xD7; 1.0 + 4 &#xD7; 0.57 + 2 &#xD7; 0.5)/11</p>
+<p>Here are the more precise mathematical definitions.</p>
+<figure>
+<img src="https://miro.medium.com/max/1566/1*5C4GaqxfPrq-9lFINMix8Q.png" alt style="width:100%;display:block;margin-left:auto;margin-right:auto;">
+<figcaption style="text-align:center"></figcaption>
+</figure>
+
+<p>When <em>AP</em>&#x1D63; turns extremely small, we can assume the remaining terms to be zero. i.e. we don&#x2019;t necessarily make predictions until the recall reaches 100%. If the possible maximum precision levels drop to a negligible level, we can stop. For 20 different classes in PASCAL VOC, we compute an AP for every class and also provide an average for those 20 AP results.</p>
+<p>According to the original researcher, the intention of using 11 interpolated point in calculating AP is</p>
+<blockquote>
+<p>The intention in interpolating the precision/recall curve in this way is to reduce the impact of the &#x201C;wiggles&#x201D; in the precision/recall curve, caused by small variations in the ranking of examples.</p>
+</blockquote>
+<p>However, this interpolated method is an approximation which suffers two issues. It is less precise. Second, it lost the capability in measuring the difference for methods with low AP. Therefore, a different AP calculation is adopted after 2008 for PASCAL VOC.</p>
+<h2 id="ap-area-under-curve-auc">AP (Area under curve AUC)</h2>
+<p>For later Pascal VOC competitions, VOC2010&#x2013;2012 samples the curve at all unique recall values (<em>r&#x2081;, r&#x2082;, &#x2026;</em>), whenever the maximum precision value drops. With this change, we are measuring the exact area under the precision-recall curve after the zigzags are removed.</p>
+<figure>
+<img src="https://miro.medium.com/max/3520/1*TAuQ3UOA8xh_5wI5hwLHcg.jpeg" alt style="width:100%;display:block;margin-left:auto;margin-right:auto;">
+<figcaption style="text-align:center"></figcaption>
+</figure>
+
+<p>No approximation or interpolation is needed. Instead of sampling 11 points, we sample <em>p</em>(<em>r&#x1D62;</em>) whenever it drops and computes AP as the sum of the rectangular blocks.</p>
+<figure>
+<img src="https://miro.medium.com/max/3520/1*q6S0m6R6mQA1J6K30HZkvw.jpeg" alt style="width:100%;display:block;margin-left:auto;margin-right:auto;">
+<figcaption style="text-align:center"></figcaption>
+</figure>
+
+<p>This definition is called the Area Under Curve (AUC). As shown below, as the interpolated points do not cover where the precision drops, both methods will diverge.</p>
+<figure>
+<img src="https://miro.medium.com/max/3520/1*dEfFSY6vFPSun96lRoxOEw.jpeg" alt style="width:100%;display:block;margin-left:auto;margin-right:auto;">
+<figcaption style="text-align:center"></figcaption>
+</figure>
+
+<h3 id="ap-across-scales">AP Across Scales:</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>P</mi><mrow><mi>s</mi><mi>m</mi><mi>a</mi><mi>l</mi><mi>l</mi></mrow></mrow><annotation encoding="application/x-tex">AP{small}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mord textstyle uncramped"><span class="mord mathit">s</span><span class="mord mathit">m</span><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit" style="margin-right:0.01968em;">l</span></span></span></span></span>: AP for small objects: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo>&lt;</mo><mn>3</mn><msup><mn>2</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">area &lt; 32^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.853208em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord mathit">a</span><span class="mrel">&lt;</span><span class="mord mathrm">3</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>P</mi><mrow><mi>m</mi><mi>e</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>m</mi></mrow></mrow><annotation encoding="application/x-tex">AP{medium}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mord textstyle uncramped"><span class="mord mathit">m</span><span class="mord mathit">e</span><span class="mord mathit">d</span><span class="mord mathit">i</span><span class="mord mathit">u</span><span class="mord mathit">m</span></span></span></span></span>: AP for medium objects: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><msup><mn>2</mn><mn>2</mn></msup><mo>&lt;</mo><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo>&lt;</mo><mn>9</mn><msup><mn>6</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">32^2 &lt; area &lt; 96^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.853208em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">&lt;</span><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord mathit">a</span><span class="mrel">&lt;</span><span class="mord mathrm">9</span><span class="mord"><span class="mord mathrm">6</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>P</mi><mrow><mi>l</mi><mi>a</mi><mi>r</mi><mi>g</mi><mi>e</mi></mrow></mrow><annotation encoding="application/x-tex">AP{large}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">e</span></span></span></span></span>: AP for large objects: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo>&gt;</mo><mn>9</mn><msup><mn>6</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">area &gt; 96^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.853208em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord mathit">a</span><span class="mrel">&gt;</span><span class="mord mathrm">9</span><span class="mord"><span class="mord mathrm">6</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<h3 id="average-recall-ar">Average Recall (AR):</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msup><mi>R</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo>=</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">AR^{max=1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">m</span><span class="mord mathit mtight">a</span><span class="mord mathit mtight">x</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>: AR given 1 detection per image</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msup><mi>R</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo>=</mo><mn>1</mn><mn>0</mn></mrow></msup></mrow><annotation encoding="application/x-tex">AR^{max=10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">m</span><span class="mord mathit mtight">a</span><span class="mord mathit mtight">x</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>: AR given 10 detections per image</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msup><mi>R</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo>=</mo><mn>1</mn><mn>0</mn><mn>0</mn></mrow></msup></mrow><annotation encoding="application/x-tex">AR^{max=100}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">m</span><span class="mord mathit mtight">a</span><span class="mord mathit mtight">x</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">0</span><span class="mord mathrm mtight">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>: AR given 100 detections per image</p>
+<h3 id="ar-across-scales">AR Across Scales:</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msup><mi>R</mi><mrow><mi>s</mi><mi>m</mi><mi>a</mi><mi>l</mi><mi>l</mi></mrow></msup></mrow><annotation encoding="application/x-tex">AR^{small}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:0.849108em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">s</span><span class="mord mathit mtight">m</span><span class="mord mathit mtight">a</span><span class="mord mathit mtight" style="margin-right:0.01968em;">l</span><span class="mord mathit mtight" style="margin-right:0.01968em;">l</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>: AR for small objects: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo>&lt;</mo><mn>3</mn><msup><mn>2</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">area &lt; 32^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.853208em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord mathit">a</span><span class="mrel">&lt;</span><span class="mord mathrm">3</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msup><mi>R</mi><mrow><mi>m</mi><mi>e</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>m</mi></mrow></msup></mrow><annotation encoding="application/x-tex">AR^{medium}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:0.849108em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">m</span><span class="mord mathit mtight">e</span><span class="mord mathit mtight">d</span><span class="mord mathit mtight">i</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">m</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>: AR for medium objects: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><msup><mn>2</mn><mn>2</mn></msup><mo>&lt;</mo><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo>&lt;</mo><mn>9</mn><msup><mn>6</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">32^2 &lt; area &lt; 96^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.853208em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">&lt;</span><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord mathit">a</span><span class="mrel">&lt;</span><span class="mord mathrm">9</span><span class="mord"><span class="mord mathrm">6</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msup><mi>R</mi><mrow><mi>l</mi><mi>a</mi><mi>r</mi><mi>g</mi><mi>e</mi></mrow></msup></mrow><annotation encoding="application/x-tex">AR^{large}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:0.849108em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.01968em;">l</span><span class="mord mathit mtight">a</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span><span class="mord mathit mtight" style="margin-right:0.03588em;">g</span><span class="mord mathit mtight">e</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>: AR for large objects: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo>&gt;</mo><mn>9</mn><msup><mn>6</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">area &gt; 96^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.853208em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord mathit">a</span><span class="mrel">&gt;</span><span class="mord mathrm">9</span><span class="mord"><span class="mord mathrm">6</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<h2 id="description">Description</h2>
+<p>1.Unless otherwise specified, AP and AR are averaged over multiple Intersection over Union (IoU) values. Specifically we use 10 IoU thresholds of .50:.05:.95. This is a break from tradition, where AP is computed at a single IoU of .50 (which corresponds to our metric <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msup><mi>P</mi><mrow><mi>I</mi><mi>o</mi><mi>U</mi><mo>=</mo><mi mathvariant="normal">.</mi><mn>5</mn><mn>0</mn></mrow></msup></mrow><annotation encoding="application/x-tex">AP^{IoU=.50}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.07847em;">I</span><span class="mord mathit mtight">o</span><span class="mord mathit mtight" style="margin-right:0.10903em;">U</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">5</span><span class="mord mathrm mtight">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>). Averaging over IoUs rewards detectors with better localization.</p>
+<p>2.AP is averaged over all categories. Traditionally, this is called &quot;mean average precision&quot; (mAP). We make no distinction between AP and mAP (and likewise AR and mAR) and assume the difference is clear from context.</p>
+<p>3.AP (averaged across all 10 IoU thresholds and all 80 categories) will determine the challenge winner. This should be considered the single most important metric when considering performance on COCO.</p>
+<p>4.In COCO, there are more small objects than large objects. Specifically: approximately 41% of objects are small (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo>&lt;</mo><mn>3</mn><msup><mn>2</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">area &lt; 32^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.853208em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord mathit">a</span><span class="mrel">&lt;</span><span class="mord mathrm">3</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>), 34% are medium (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><msup><mn>2</mn><mn>2</mn></msup><mo>&lt;</mo><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo>&lt;</mo><mn>9</mn><msup><mn>6</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">32^2 &lt; area &lt; 96^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.853208em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">&lt;</span><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord mathit">a</span><span class="mrel">&lt;</span><span class="mord mathrm">9</span><span class="mord"><span class="mord mathrm">6</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>), and 24% are large (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo>&gt;</mo><mn>9</mn><msup><mn>6</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">area &gt; 96^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.853208em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord mathit">a</span><span class="mrel">&gt;</span><span class="mord mathrm">9</span><span class="mord"><span class="mord mathrm">6</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>). Area is measured as the number of pixels in the segmentation mask.</p>
+<p>5.AR is the maximum recall given a fixed number of detections per image, averaged over categories and IoUs. AR is related to the metric of the same name used in proposal evaluation but is computed on a per-category basis.</p>
+<p>6.All metrics are computed allowing for at most 100 top-scoring detections per image (across all categories). The evaluation metrics for detection with bounding boxes and segmentation masks are identical in all respects except for the IoU computation (which is performed over boxes or masks, respectively).</p>
+<h1 id="reference">Reference</h1>
+<ul>
+<li><a href="https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173" target="_blank">mAP (mean Average Precision) for Object Detection</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="TwoStageDetector.html" class="navigation navigation-prev " aria-label="Previous page: Two Stage Object Detection">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ROI.html" class="navigation navigation-next " aria-label="Next page: ROI">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Metrics","level":"1.4.8.1","depth":3,"next":{"title":"ROI","level":"1.4.8.2","depth":3,"path":"docs/Neural_Networks/Two_Stage_Object_Detection/ROI.md","ref":"docs/Neural_Networks/Two_Stage_Object_Detection/ROI.md","articles":[]},"previous":{"title":"Two Stage Object Detection","level":"1.4.8","depth":2,"path":"docs/Neural_Networks/Two_Stage_Object_Detection/TwoStageDetector.md","ref":"docs/Neural_Networks/Two_Stage_Object_Detection/TwoStageDetector.md","articles":[{"title":"Metrics","level":"1.4.8.1","depth":3,"path":"docs/Neural_Networks/Two_Stage_Object_Detection/Metrics.md","ref":"docs/Neural_Networks/Two_Stage_Object_Detection/Metrics.md","articles":[]},{"title":"ROI","level":"1.4.8.2","depth":3,"path":"docs/Neural_Networks/Two_Stage_Object_Detection/ROI.md","ref":"docs/Neural_Networks/Two_Stage_Object_Detection/ROI.md","articles":[]},{"title":"R-CNN","level":"1.4.8.3","depth":3,"path":"docs/Neural_Networks/Two_Stage_Object_Detection/R-CNN.md","ref":"docs/Neural_Networks/Two_Stage_Object_Detection/R-CNN.md","articles":[]},{"title":"Fast RCNN","level":"1.4.8.4","depth":3,"path":"docs/Neural_Networks/Two_Stage_Object_Detection/Fast-RCNN.md","ref":"docs/Neural_Networks/Two_Stage_Object_Detection/Fast-RCNN.md","articles":[]},{"title":"Faster RCNN","level":"1.4.8.5","depth":3,"path":"docs/Neural_Networks/Two_Stage_Object_Detection/Faster-RCNN.md","ref":"docs/Neural_Networks/Two_Stage_Object_Detection/Faster-RCNN.md","articles":[]},{"title":"Mask RCNN","level":"1.4.8.6","depth":3,"path":"docs/Neural_Networks/Two_Stage_Object_Detection/Mask-RCNN.md","ref":"docs/Neural_Networks/Two_Stage_Object_Detection/Mask-RCNN.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-search","-lunr","custom-js-css","docsearch","intopic-toc"],"pluginsConfig":{"docsearch":{},"docSearch":{"apiKey":"9b2d0c53eb838616448e652b3caafb42","index":"ztlevi-machine-learning"},"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"Navigation"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"css":["css/docsearch.css"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/Neural_Networks/Two_Stage_Object_Detection/Metrics.md","mtime":"2021-03-08T12:29:40.465Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-08T12:30:24.019Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-docsearch/doc-search-lib.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-docsearch/doc-search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

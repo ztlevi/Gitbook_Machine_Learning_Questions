@@ -1,0 +1,838 @@
+
+<!DOCTYPE HTML>
+<html lang>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Panoptic Segmentation &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-custom-js-css/9eb07385451571ed1c43d6bfc772c8d5-docsearch.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-docsearch/doc-search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../FaceNet.html">
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary"><div id="book-search-input">
+    <input type="text" id="book-doc-search-input" placeholder="Type to search">
+</div>
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../General.html">
+            
+                <a href="../../General.html">
+            
+                    
+                    General
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../General/Optimization.html">
+            
+                <a href="../../General/Optimization.html">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../General/How_to_prevent_overfitting.html">
+            
+                <a href="../../General/How_to_prevent_overfitting.html">
+            
+                    
+                    How to prevent overfitting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../General/Linear_algebra.html">
+            
+                <a href="../../General/Linear_algebra.html">
+            
+                    
+                    Linear Algebra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../General/Clustering.html">
+            
+                <a href="../../General/Clustering.html">
+            
+                    
+                    Clustering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../General/Calculate_Parameters_In_CNN.html">
+            
+                <a href="../../General/Calculate_Parameters_In_CNN.html">
+            
+                    
+                    Calculate Parameters in CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../General/Weight_norm_and_layer_norm.html">
+            
+                <a href="../../General/Weight_norm_and_layer_norm.html">
+            
+                    
+                    Weight norm and layer norm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../General/Imbalance_problem_in_object_detection.html">
+            
+                <a href="../../General/Imbalance_problem_in_object_detection.html">
+            
+                    
+                    Imbalance problem in object detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Classical_Machine_learning.html">
+            
+                <a href="../../Classical_Machine_learning.html">
+            
+                    
+                    Classical Machine Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Neural_Networks.html">
+            
+                <a href="../../Neural_Networks.html">
+            
+                    
+                    Neural Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Different_types_of_Convolution.html">
+            
+                <a href="../Different_types_of_Convolution.html">
+            
+                    
+                    Different Types of Convolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2">
+            
+                <span>
+            
+                    
+                    Loss
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Loss/Cross_Entropy_Loss.html">
+            
+                <a href="../Loss/Cross_Entropy_Loss.html">
+            
+                    
+                    Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Loss/Binary_Cross_Entropy_Loss.html">
+            
+                <a href="../Loss/Binary_Cross_Entropy_Loss.html">
+            
+                    
+                    Binary Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Loss/Categorical_Cross_Entropy_loss.html">
+            
+                <a href="../Loss/Categorical_Cross_Entropy_loss.html">
+            
+                    
+                    Categorical Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Loss/Focal_Loss.html">
+            
+                <a href="../Loss/Focal_Loss.html">
+            
+                    
+                    (Optional) Focal Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Loss/CORAL_Loss.html">
+            
+                <a href="../Loss/CORAL_Loss.html">
+            
+                    
+                    (Optional) CORAL Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Resnet.html">
+            
+                <a href="../Resnet.html">
+            
+                    
+                    Resnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Embedding.html">
+            
+                <a href="../Embedding.html">
+            
+                    
+                    Embedding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../RNN_LSTM.html">
+            
+                <a href="../RNN_LSTM.html">
+            
+                    
+                    RNN &amp; LSTM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../GAN.html">
+            
+                <a href="../GAN.html">
+            
+                    
+                    GAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Mobilenet.html">
+            
+                <a href="../Mobilenet.html">
+            
+                    
+                    Mobilenet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Two_Stage_Object_Detection/TwoStageDetector.html">
+            
+                <a href="../Two_Stage_Object_Detection/TwoStageDetector.html">
+            
+                    
+                    Two Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="../Two_Stage_Object_Detection/Metrics.html">
+            
+                <a href="../Two_Stage_Object_Detection/Metrics.html">
+            
+                    
+                    Metrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="../Two_Stage_Object_Detection/ROI.html">
+            
+                <a href="../Two_Stage_Object_Detection/ROI.html">
+            
+                    
+                    ROI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.3" data-path="../Two_Stage_Object_Detection/R-CNN.html">
+            
+                <a href="../Two_Stage_Object_Detection/R-CNN.html">
+            
+                    
+                    R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.4" data-path="../Two_Stage_Object_Detection/Fast-RCNN.html">
+            
+                <a href="../Two_Stage_Object_Detection/Fast-RCNN.html">
+            
+                    
+                    Fast RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.5" data-path="../Two_Stage_Object_Detection/Faster-RCNN.html">
+            
+                <a href="../Two_Stage_Object_Detection/Faster-RCNN.html">
+            
+                    
+                    Faster RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.6" data-path="../Two_Stage_Object_Detection/Mask-RCNN.html">
+            
+                <a href="../Two_Stage_Object_Detection/Mask-RCNN.html">
+            
+                    
+                    Mask RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9">
+            
+                <span>
+            
+                    
+                    One Stage Object Detection
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.9.1" data-path="../One_Stage_Object_Detection/YOLO.html">
+            
+                <a href="../One_Stage_Object_Detection/YOLO.html">
+            
+                    
+                    YOLO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.2" data-path="../One_Stage_Object_Detection/SSD.html">
+            
+                <a href="../One_Stage_Object_Detection/SSD.html">
+            
+                    
+                    Single Shot MultiBox Detector(SSD)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.3" data-path="../Two_Stage_Object_Detection/FPN.html">
+            
+                <a href="../Two_Stage_Object_Detection/FPN.html">
+            
+                    
+                    FPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10">
+            
+                <span>
+            
+                    
+                    Segmentation
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.10.1" data-path="Panoptic.html">
+            
+                <a href="Panoptic.html">
+            
+                    
+                    Panoptic Segmentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../FaceNet.html">
+            
+                <a href="../FaceNet.html">
+            
+                    
+                    FaceNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5">
+            
+                <span>
+            
+                    
+                    Anomaly Detection
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../Anomaly/dbscan.html">
+            
+                <a href="../../Anomaly/dbscan.html">
+            
+                    
+                    DBSCAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../Anomaly/autoencoder_anomaly.html">
+            
+                <a href="../../Anomaly/autoencoder_anomaly.html">
+            
+                    
+                    Autoencoder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6">
+            
+                <span>
+            
+                    
+                    Visualization
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Visualization/Saliency_Maps.html">
+            
+                <a href="../../Visualization/Saliency_Maps.html">
+            
+                    
+                    Saliency Maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Visualization/Fooling_Images.html">
+            
+                <a href="../../Visualization/Fooling_Images.html">
+            
+                    
+                    Fooling images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Visualization/Class_Visualization.html">
+            
+                <a href="../../Visualization/Class_Visualization.html">
+            
+                    
+                    Class Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../..">Panoptic Segmentation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="evaluation"><a href="https://kharshit.github.io/blog/2019/10/18/introduction-to-panoptic-segmentation-tutorial#:~:text=In%20semantic%20segmentation%2C%20the%20goal,pixel%20into%20the%20given%20classes.&amp;text=The%20panoptic%20segmentation%20combines%20semantic,semantic%20segmentation%2C%20and%20instance%20segmentation." target="_blank">Evaluation</a></h2>
+<p>In semantic segmentation, <code>IoU</code> and per-pixel accuracy is used as a evaluation criterion. In instance segmentation, average precision over different <code>IoU</code> thresholds is used for evaluation. For panoptic segmentation, a combination of <code>IoU</code> and <code>AP</code> can be used, but it causes asymmetry for classes with or without instance-level annotations. That is why, a new metric that treats all the categories equally, called <strong>Panoptic Quality (<code>PQ</code>)</strong>, is used.</p>
+<p><em>Read more about <a href="https://kharshit.github.io/blog/2019/09/20/evaluation-metrics-for-object-detection-and-segmentation" target="_blank">evaluation metrics</a>.</em></p>
+<p>As in the calculation of <code>AP</code>, <code>PQ</code> is also first calculated independently for each class, then averaged over all classes. It involves two steps: matching, and calculation.</p>
+<p>Step 1 (matching): The predicted and ground truth segments are considered to be matched if their <code>IoU &gt; 0.5</code>. It, with non-overlapping instances property, results in a unique matching i.e. there can be at most one predicted segment corresponding to a ground truth segment.</p>
+<p><img src="https://kharshit.github.io/img/pq.png" alt="img"></p>
+<p>Step 2 (calculation): Mathematically, for a ground truth segment <code>g</code>, and for predicted segment <code>p</code>, PQ is calculated as follows.</p>
+<figure>
+<img src="../../../assets/pq_2.jpg" alt style="width:60%;display:block;margin-left:auto;margin-right:auto;">
+<figcaption style="text-align:center"></figcaption>
+</figure>
+
+<p>Here, in the first equation, the numerator divided by <code>TP</code> is simply the average <code>IoU</code> of matched segments, and <code>FP</code> and <code>FN</code> are added to penalize the non-matched segments. As shown in the second equation, <code>PQ</code> can divided into segmentation quality (<code>SQ</code>), and recognition quality (<code>RQ</code>). <code>SQ</code>, here, is the average <code>IoU</code> of matched segments, and <code>RQ</code> is the <code>F1</code> score.</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="../FaceNet.html" class="navigation navigation-next navigation-unique" aria-label="Next page: FaceNet">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Panoptic Segmentation","level":"1.4.10.1","depth":3,"next":{"title":"FaceNet","level":"1.4.11","depth":2,"path":"docs/Neural_Networks/FaceNet.md","ref":"docs/Neural_Networks/FaceNet.md","articles":[]},"previous":{"title":"Segmentation","level":"1.4.10","depth":2,"ref":"","articles":[{"title":"Panoptic Segmentation","level":"1.4.10.1","depth":3,"path":"docs/Neural_Networks/Segmentation/Panoptic.md","ref":"docs/Neural_Networks/Segmentation/Panoptic.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-search","-lunr","custom-js-css","docsearch","intopic-toc"],"pluginsConfig":{"docsearch":{},"docSearch":{"apiKey":"9b2d0c53eb838616448e652b3caafb42","index":"ztlevi-machine-learning"},"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"Navigation"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"css":["css/docsearch.css"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/Neural_Networks/Segmentation/Panoptic.md","mtime":"2021-03-08T12:29:40.465Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-08T12:30:24.019Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-docsearch/doc-search-lib.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-docsearch/doc-search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

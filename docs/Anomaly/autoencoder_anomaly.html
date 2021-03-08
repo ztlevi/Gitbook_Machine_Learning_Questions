@@ -1,0 +1,983 @@
+
+<!DOCTYPE HTML>
+<html lang>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Autoencoder &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-custom-js-css/9eb07385451571ed1c43d6bfc772c8d5-docsearch.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-docsearch/doc-search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="dbscan.html">
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary"><div id="book-search-input">
+    <input type="text" id="book-doc-search-input" placeholder="Type to search">
+</div>
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../General.html">
+            
+                <a href="../General.html">
+            
+                    
+                    General
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../General/Optimization.html">
+            
+                <a href="../General/Optimization.html">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../General/How_to_prevent_overfitting.html">
+            
+                <a href="../General/How_to_prevent_overfitting.html">
+            
+                    
+                    How to prevent overfitting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../General/Linear_algebra.html">
+            
+                <a href="../General/Linear_algebra.html">
+            
+                    
+                    Linear Algebra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../General/Clustering.html">
+            
+                <a href="../General/Clustering.html">
+            
+                    
+                    Clustering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../General/Calculate_Parameters_In_CNN.html">
+            
+                <a href="../General/Calculate_Parameters_In_CNN.html">
+            
+                    
+                    Calculate Parameters in CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../General/Weight_norm_and_layer_norm.html">
+            
+                <a href="../General/Weight_norm_and_layer_norm.html">
+            
+                    
+                    Weight norm and layer norm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../General/Imbalance_problem_in_object_detection.html">
+            
+                <a href="../General/Imbalance_problem_in_object_detection.html">
+            
+                    
+                    Imbalance problem in object detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Classical_Machine_learning.html">
+            
+                <a href="../Classical_Machine_learning.html">
+            
+                    
+                    Classical Machine Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Neural_Networks.html">
+            
+                <a href="../Neural_Networks.html">
+            
+                    
+                    Neural Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Neural_Networks/Different_types_of_Convolution.html">
+            
+                <a href="../Neural_Networks/Different_types_of_Convolution.html">
+            
+                    
+                    Different Types of Convolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2">
+            
+                <span>
+            
+                    
+                    Loss
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Neural_Networks/Loss/Cross_Entropy_Loss.html">
+            
+                <a href="../Neural_Networks/Loss/Cross_Entropy_Loss.html">
+            
+                    
+                    Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Neural_Networks/Loss/Binary_Cross_Entropy_Loss.html">
+            
+                <a href="../Neural_Networks/Loss/Binary_Cross_Entropy_Loss.html">
+            
+                    
+                    Binary Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Neural_Networks/Loss/Categorical_Cross_Entropy_loss.html">
+            
+                <a href="../Neural_Networks/Loss/Categorical_Cross_Entropy_loss.html">
+            
+                    
+                    Categorical Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Neural_Networks/Loss/Focal_Loss.html">
+            
+                <a href="../Neural_Networks/Loss/Focal_Loss.html">
+            
+                    
+                    (Optional) Focal Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Neural_Networks/Loss/CORAL_Loss.html">
+            
+                <a href="../Neural_Networks/Loss/CORAL_Loss.html">
+            
+                    
+                    (Optional) CORAL Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Neural_Networks/Resnet.html">
+            
+                <a href="../Neural_Networks/Resnet.html">
+            
+                    
+                    Resnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Neural_Networks/Embedding.html">
+            
+                <a href="../Neural_Networks/Embedding.html">
+            
+                    
+                    Embedding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Neural_Networks/RNN_LSTM.html">
+            
+                <a href="../Neural_Networks/RNN_LSTM.html">
+            
+                    
+                    RNN &amp; LSTM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Neural_Networks/GAN.html">
+            
+                <a href="../Neural_Networks/GAN.html">
+            
+                    
+                    GAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Neural_Networks/Mobilenet.html">
+            
+                <a href="../Neural_Networks/Mobilenet.html">
+            
+                    
+                    Mobilenet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Neural_Networks/Two_Stage_Object_Detection/TwoStageDetector.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/TwoStageDetector.html">
+            
+                    
+                    Two Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="../Neural_Networks/Two_Stage_Object_Detection/Metrics.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/Metrics.html">
+            
+                    
+                    Metrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="../Neural_Networks/Two_Stage_Object_Detection/ROI.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/ROI.html">
+            
+                    
+                    ROI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.3" data-path="../Neural_Networks/Two_Stage_Object_Detection/R-CNN.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/R-CNN.html">
+            
+                    
+                    R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.4" data-path="../Neural_Networks/Two_Stage_Object_Detection/Fast-RCNN.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/Fast-RCNN.html">
+            
+                    
+                    Fast RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.5" data-path="../Neural_Networks/Two_Stage_Object_Detection/Faster-RCNN.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/Faster-RCNN.html">
+            
+                    
+                    Faster RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.6" data-path="../Neural_Networks/Two_Stage_Object_Detection/Mask-RCNN.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/Mask-RCNN.html">
+            
+                    
+                    Mask RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9">
+            
+                <span>
+            
+                    
+                    One Stage Object Detection
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.9.1" data-path="../Neural_Networks/One_Stage_Object_Detection/YOLO.html">
+            
+                <a href="../Neural_Networks/One_Stage_Object_Detection/YOLO.html">
+            
+                    
+                    YOLO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.2" data-path="../Neural_Networks/One_Stage_Object_Detection/SSD.html">
+            
+                <a href="../Neural_Networks/One_Stage_Object_Detection/SSD.html">
+            
+                    
+                    Single Shot MultiBox Detector(SSD)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.3" data-path="../Neural_Networks/Two_Stage_Object_Detection/FPN.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/FPN.html">
+            
+                    
+                    FPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10">
+            
+                <span>
+            
+                    
+                    Segmentation
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.1" data-path="../Neural_Networks/Segmentation/Panoptic.html">
+            
+                <a href="../Neural_Networks/Segmentation/Panoptic.html">
+            
+                    
+                    Panoptic Segmentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../Neural_Networks/FaceNet.html">
+            
+                <a href="../Neural_Networks/FaceNet.html">
+            
+                    
+                    FaceNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5">
+            
+                <span>
+            
+                    
+                    Anomaly Detection
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="dbscan.html">
+            
+                <a href="dbscan.html">
+            
+                    
+                    DBSCAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="autoencoder_anomaly.html">
+            
+                <a href="autoencoder_anomaly.html">
+            
+                    
+                    Autoencoder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6">
+            
+                <span>
+            
+                    
+                    Visualization
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Visualization/Saliency_Maps.html">
+            
+                <a href="../Visualization/Saliency_Maps.html">
+            
+                    
+                    Saliency Maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Visualization/Fooling_Images.html">
+            
+                <a href="../Visualization/Fooling_Images.html">
+            
+                    
+                    Fooling images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Visualization/Class_Visualization.html">
+            
+                <a href="../Visualization/Class_Visualization.html">
+            
+                    
+                    Class Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../..">Autoencoder</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="a-keras-based-autoencoder-for-anomaly-detection-in-sequences">A Keras-Based Autoencoder for Anomaly Detection in Sequences</h1>
+<h2 id="use-keras-to-develop-a-robust-nn-architecture-that-can-be-used-to-efficiently-recognize-anomalies-in-sequences">Use Keras to develop a robust NN architecture that can be used to efficiently recognize anomalies in sequences</h2>
+<p>Suppose that you have a very long list of string sequences, such as a list of amino acid structures (&#x2018;PHE-SER-CYS&#x2019;, &#x2018;GLN-ARG-SER&#x2019;,&#x2026;), product serial numbers (&#x2018;AB121E&#x2019;, &#x2018;AB323&#x2019;, &#x2018;DN176&#x2019;&#x2026;), or users UIDs, and you are required to create a validation process of some kind that will detect anomalies in this sequence. An anomaly might be a string that follows a slightly different or unusual format than the others (whether it was created by mistake or on purpose) or just one that is extremely rare. To make things even more interesting, suppose that you don&apos;t know what is the correct format or structure that sequences suppose to follow.</p>
+<p>This is a relatively common problem (though with an uncommon twist) that many data scientists usually approach using one of the popular unsupervised ML algorithms, such as DBScan, Isolation Forest, etc. Many of these algorithms typically do a good job in finding anomalies or outliers by singling out data points that are relatively far from the others or from areas in which most data points lie. Although autoencoders are also well-known for their anomaly detection capabilities, they work quite differently and are less common when it comes to problems of this sort.</p>
+<p>I will leave the explanations of what is exactly an autoencoder to the many insightful and well-written posts, and articles that are freely available online. Very very briefly (and please just read on if this doesn&apos;t make sense to you), just like other kinds of ML algorithms, autoencoders learn by creating different representations of data and by measuring how well these representations do in generating an expected outcome; and just like other kinds of neural network, autoencoders learn by creating different <em>layers</em> of such representations that allow them to learn more complex and sophisticated representations of data (which on my view is exactly what makes them superior for a task like ours). Autoencoders are a special form of a neural network, however, because the output that they attempt to generate is a <em>reconstruction of the input they receive</em>. An autoencoder starts with input data (i.e., a set of numbers) and then transforms it in different ways using a set of mathematical operations until it learns the parameters that it ought to use in order to reconstruct the same data (or get very close to it). In this learning process, an autoencoder essentially learns the format rules of the input data. And, that&apos;s exactly what makes it perform well as an anomaly detection mechanism in settings like ours.</p>
+<p>Using autoencoders to detect anomalies usually involves two main steps:</p>
+<p>First, we feed our data to an autoencoder and tune it until it is well trained to reconstruct the expected output with minimum error. An autoencoder that receives an input like 10,5,100 and returns 11,5,99, for example, is well-trained if we consider the reconstructed output as sufficiently close to the input and if the autoencoder is able to successfully reconstruct most of the data in this way.</p>
+<p>Second, we feed all our data again to our trained autoencoder and measure the <em>error term</em> of each reconstructed data point. In other words, we measure how &#x201C;far&#x201D; is the <em>reconstructed</em> data point from the <em>actual</em> datapoint. A well-trained autoencoder essentially learns how to reconstruct an input that follows a certain format, so if we give a badly formatted data point to a well-trained autoencoder then we are likely to get something that is quite different from our input, and a large error term.</p>
+<h2 id="time-for-some-code">Time for Some Code</h2>
+<p>Let&apos;s get into the details. I should emphasize, though, that this is just one way that one can go about such a task using an autoencoder. There are other ways and technics to build autoencoders and you should experiment until you find the architecture that suits your project.</p>
+<p>These are the steps that I&apos;m going to follow:</p>
+<ol>
+<li>Generate a set of random string sequences that follow a specified format, and add a few anomalies.</li>
+<li>Encode the sequences into numbers and scale them.</li>
+<li>Design, fit, and tune an autoencoder.</li>
+<li>Feed the sequences to the trained autoencoder and calculate the error term of each data point.</li>
+<li>Find the anomalies by finding the data points with the highest error term.</li>
+<li><strong>Generate a long sequence of strings.</strong></li>
+</ol>
+<p>We&apos;re gonna start by writing a function that creates strings of the following format: CEBF0ZPQ ([4 letters A-F][1 digit 0&#x2013;2][3 letters QWOPZXML]), and generate 25K sequences of this format.</p>
+<pre><code class="lang-python">first_letters =  <span class="hljs-string">&apos;ABCDEF&apos;</span>
+second_numbers = <span class="hljs-string">&apos;120&apos;</span>
+last_letters = <span class="hljs-string">&apos;QWOPZXML&apos;</span>
+
+<span class="hljs-comment"># returns a string of the following format: [4 letters A-F][1 digit 0-2][3 letters QWOPZXML]</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_random_string</span><span class="hljs-params">()</span>:</span>
+    str1 = <span class="hljs-string">&apos;&apos;</span>.join(random.choice(first_letters) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>))
+    str2 = random.choice(second_numbers)
+    str3 = <span class="hljs-string">&apos;&apos;</span>.join(random.choice(last_letters) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>))
+    <span class="hljs-keyword">return</span> str1+str2+str3
+
+<span class="hljs-comment"># get 25,000 sequences of this format</span>
+random_sequences = [get_random_string() <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">25000</span>)]
+<span class="hljs-comment">#this will return string according to the following format</span>
+<span class="hljs-comment"># [&apos;CBCA2QOM&apos;, &apos;FBEF0WZW&apos;, &apos;DBFB2ZML&apos;, &apos;BFCB2WXO&apos;]</span>
+<span class="hljs-comment"># add some anomalies to our list</span>
+random_sequences.extend([<span class="hljs-string">&apos;XYDC2DCA&apos;</span>, <span class="hljs-string">&apos;TXSX1ABC&apos;</span>,<span class="hljs-string">&apos;RNIU4XRE&apos;</span>,<span class="hljs-string">&apos;AABDXUEI&apos;</span>,<span class="hljs-string">&apos;SDRAC5RF&apos;</span>])
+<span class="hljs-comment">#save this to a dataframe</span>
+seqs_ds = pd.DataFrame(random_sequences)
+</code></pre>
+<ol>
+<li><strong>Encode the string sequences into numbers and scale them</strong></li>
+</ol>
+<pre><code class="lang-python"><span class="hljs-comment">#Build the char index that we will use to encode seqs to numbers</span>
+<span class="hljs-comment">#(this char index was written by Jason Brownlee from Machine Learning Mastery)</span>
+char_index = <span class="hljs-string">&apos;0abcdefghijklmnopqrstuvwxyz&apos;</span>
+char_index +=<span class="hljs-string">&apos;ABCDEFGHIJKLMNOPQRSTUVWXYZ&apos;</span>
+char_index += <span class="hljs-string">&apos;123456789&apos;</span>
+char_index += <span class="hljs-string">&apos;().,-/+=&amp;$?@#!*:;_[]|%&#x2E0F;{}\&quot;\&apos;&apos;</span> + <span class="hljs-string">&apos; &apos;</span> +<span class="hljs-string">&apos;\\&apos;</span>
+
+char_to_int = dict((c, i) <span class="hljs-keyword">for</span> i, c <span class="hljs-keyword">in</span> enumerate(char_index))
+int_to_char = dict((i, c) <span class="hljs-keyword">for</span> i, c <span class="hljs-keyword">in</span> enumerate(char_index))
+
+<span class="hljs-keyword">from</span> keras.preprocessing.sequence <span class="hljs-keyword">import</span> pad_sequences
+<span class="hljs-comment">#function that convert a char seqs to numbers seqs</span>
+<span class="hljs-comment">#(it does a little more but lets leave it for now)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">encode_sequence_list</span><span class="hljs-params">(seqs, feat_n=<span class="hljs-number">0</span>)</span>:</span>
+    encoded_seqs = []
+    <span class="hljs-keyword">for</span> seq <span class="hljs-keyword">in</span> seqs:
+        encoded_seq = [char_to_int[c] <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> seq]
+        encoded_seqs.append(encoded_seq)
+    <span class="hljs-keyword">if</span>(feat_n &gt; <span class="hljs-number">0</span>):
+        encoded_seqs.append(np.zeros(feat_n))
+    <span class="hljs-keyword">return</span> pad_sequences(encoded_seqs, padding=<span class="hljs-string">&apos;post&apos;</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">decode_sequence_list</span><span class="hljs-params">(seqs)</span>:</span>
+    decoded_seqs = []
+    <span class="hljs-keyword">for</span> seq <span class="hljs-keyword">in</span> seqs:
+        decoded_seq = [int_to_char[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> seq]
+        decoded_seqs.append(decoded_seq)
+    <span class="hljs-keyword">return</span> decoded_seqs
+
+<span class="hljs-comment"># Using the char_index, the encode_sequence_list function</span>
+<span class="hljs-comment"># will turn a string like this EBCA0OXO</span>
+<span class="hljs-comment">#to an array like this [29 32 27 27  0 42 42 38]</span>
+
+<span class="hljs-comment"># encode each string seq to an integer array [[1],[5],[67]], [[45],[76],[7]</span>
+encoded_seqs = encode_sequence_list(random_sequences)
+<span class="hljs-comment"># mix everything up</span>
+np.random.shuffle(encoded_seqs)
+</code></pre>
+<p>Now we have an array of the following shape as every string sequence has 8 characters, each of which is encoded as a number which we will treat as a column.</p>
+<pre><code>encoded_seqs.shape#(25005,8)
+</code></pre><p>Finally, before feeding the data to the autoencoder I&apos;m going to scale the data using a MinMaxScaler, and split it into a training and test set. Proper scaling can often significantly improve the performance of NNs so it is important to experiment with more than one method.</p>
+<pre><code class="lang-python">
+<span class="hljs-comment">#Scale our data using a MinMaxScaler that will scale</span>
+<span class="hljs-comment">#each number so that it will be between 0 and 1</span>
+<span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> StandardScaler, MinMaxScaler
+scaler = MinMaxScaler()
+scaled_seqs = scaler.fit_transform(encoded_seqs)
+<span class="hljs-comment">#Create a test and train sets of our data</span>
+X_train = scaled_seqs[:<span class="hljs-number">20000</span>]
+X_test = scaled_seqs[<span class="hljs-number">20000</span>:]
+</code></pre>
+<p><strong>3. Design, fit and tune the autoencoder.</strong></p>
+<p>As mentioned earlier, there is more than one way to design an autoencoder. It is usually based on small hidden layers wrapped with larger layers (this is what creates the encoding-decoding effect). I have made a few tuning sessions in order to determine the best params to use here as different kinds of data usually lend themselves to very different best-performance parameters.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> keras.models <span class="hljs-keyword">import</span> Model, load_model
+<span class="hljs-keyword">from</span> keras.layers <span class="hljs-keyword">import</span> Input, Dense, Dropout
+<span class="hljs-keyword">from</span> keras.callbacks <span class="hljs-keyword">import</span> ModelCheckpoint, TensorBoard
+<span class="hljs-keyword">from</span> keras <span class="hljs-keyword">import</span> regularizers
+
+input_dim = X_train.shape[<span class="hljs-number">1</span>] <span class="hljs-comment"># the # features</span>
+encoding_dim = <span class="hljs-number">8</span> <span class="hljs-comment"># first layer</span>
+hidden_dim = int(encoding_dim / <span class="hljs-number">2</span>) <span class="hljs-comment">#hideen layer</span>
+
+nb_epoch = <span class="hljs-number">30</span>
+batch_size = <span class="hljs-number">128</span>
+learning_rate = <span class="hljs-number">0.1</span>
+
+input_layer = Input(shape=(input_dim, ))
+encoder = Dense(encoding_dim, activation=<span class="hljs-string">&quot;tanh&quot;</span>, activity_regularizer=regularizers.l1(<span class="hljs-number">10e-5</span>))(input_layer)
+encoder = Dense(hidden_dim, activation=<span class="hljs-string">&quot;relu&quot;</span>)(encoder)
+decoder = Dense(encoding_dim, activation=<span class="hljs-string">&apos;relu&apos;</span>)(encoder)
+decoder = Dense(input_dim, activation=<span class="hljs-string">&apos;tanh&apos;</span>)(decoder)
+autoencoder = Model(inputs=input_layer, outputs=decoder)
+
+<span class="hljs-comment"># ----- some data omitted --------- #</span>
+
+history = autoencoder.fit(X_train, X_train,
+                    epochs=nb_epoch,
+                    batch_size=batch_size,
+                    shuffle=<span class="hljs-keyword">True</span>,
+                    validation_data=(X_test, X_test),
+                    verbose=<span class="hljs-number">1</span>,
+                    callbacks=[checkpointer, tensorboard]).history
+</code></pre>
+<p>And, indeed, our autoencoder seems to perform very well as it is able to minimize the error term (or loss function) quite impressively.</p>
+<p><img src="../../assets/autoencoder_3.png" alt></p>
+<p><strong>4. Calculate the Error and Find the Anomalies!</strong></p>
+<p>Now, we feed the data again as a whole to the autoencoder and check the error term on each sample. Recall that <em>seqs_ds</em> is a pandas DataFrame that holds the actual string sequences. Line #2 encodes each string, and line #4 scales it. Then, I use the predict() method to get the reconstructed inputs of the strings stored in seqs_ds. Finally, I get the error term for each data point by calculating the &#x201C;distance&#x201D; between the input data point (or the actual data point) and the output that was reconstructed by the autoencoder:</p>
+<pre><code>mse = np.mean(np.power(actual_data - reconstructed_data, 2), axis=1)
+</code></pre><pre><code class="lang-python"><span class="hljs-comment">#encode all the data</span>
+encoded_seqs = encode_sequence_list(seqs_ds.iloc[:,<span class="hljs-number">0</span>])
+<span class="hljs-comment">#scale it</span>
+scaled_data = MinMaxScaler().fit_transform(encoded_seqs)
+<span class="hljs-comment">#predict it</span>
+predicted = autoencoder.predict(scaled_data)
+<span class="hljs-comment">#get the error term</span>
+mse = np.mean(np.power(scaled_data - predicted, <span class="hljs-number">2</span>), axis=<span class="hljs-number">1</span>)
+<span class="hljs-comment">#now add them to our data frame</span>
+seqs_ds[<span class="hljs-string">&apos;MSE&apos;</span>] = mse
+</code></pre>
+<p>After we store the error term in the data frame, we can see how well each input data was constructed by our autoencoder.</p>
+<p><img src="../../assets/autoencoder_4.png" alt></p>
+<p><strong>How do we find the anomalies?</strong></p>
+<p>Well, the first thing we need to do is decide what is our threshold, and that usually depends on our data and domain knowledge. Some will say that an anomaly is a data point that has an error term that is higher than 95% of our data, for example. That would be an appropriate threshold if we expect that 5% of our data will be anomalous. However, recall that we injected 5 anomalies to a list of 25,000 perfectly formatted sequences, which means that only 0.02% of our data is anomalous, so we want to set our threshold as higher than 99.98% of our data (or the 0.9998 percentile). So first let&apos;s find this threshold:</p>
+<p><img src="../../assets/autoencoder_5.png" alt></p>
+<p>Next, I will add an MSE_Outlier column to the data set and set it to 1 when the error term crosses this threshold.</p>
+<p><img src="../../assets/autoencoder_6.png" alt></p>
+<p>And now all we have to do is check how many outliers do we have and whether these outliers are the ones we injected and mixed in the data</p>
+<pre><code>[&apos;XYDC2DCA&apos;, &apos;TXSX1ABC&apos;,&apos;RNIU4XRE&apos;,&apos;AABDXUEI&apos;,&apos;SDRAC5RF&apos;]
+</code></pre><p>So let&apos;s see how many outliers we have and whether they are the ones we injected.</p>
+<p><img src="../../assets/autoencoder_7.png" alt></p>
+<p>And&#x2026;. Voila! We found 6 outliers while 5 of which are the &#x201C;real&#x201D; outliers.</p>
+<p>Looks like magic ha?</p>
+<p>Source code on git available <a href="https://github.com/a-agmon/experiments/blob/master/Sequence_Anomaly_Detection-NN.ipynb" target="_blank">here</a></p>
+<h2 id="reference">Reference</h2>
+<p>[1] <a href="https://towardsdatascience.com/a-keras-based-autoencoder-for-anomaly-detection-in-sequences-75337eaed0e5" target="_blank">https://towardsdatascience.com/a-keras-based-autoencoder-for-anomaly-detection-in-sequences-75337eaed0e5</a></p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="dbscan.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: DBSCAN">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Autoencoder","level":"1.5.2","depth":2,"next":{"title":"Visualization","level":"1.6","depth":1,"ref":"","articles":[{"title":"Saliency Maps","level":"1.6.1","depth":2,"path":"docs/Visualization/Saliency_Maps.md","ref":"docs/Visualization/Saliency_Maps.md","articles":[]},{"title":"Fooling images","level":"1.6.2","depth":2,"path":"docs/Visualization/Fooling_Images.md","ref":"docs/Visualization/Fooling_Images.md","articles":[]},{"title":"Class Visualization","level":"1.6.3","depth":2,"path":"docs/Visualization/Class_Visualization.md","ref":"docs/Visualization/Class_Visualization.md","articles":[]}]},"previous":{"title":"DBSCAN","level":"1.5.1","depth":2,"path":"docs/Anomaly/dbscan.md","ref":"docs/Anomaly/dbscan.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-search","-lunr","custom-js-css","docsearch","intopic-toc"],"pluginsConfig":{"docsearch":{},"docSearch":{"apiKey":"9b2d0c53eb838616448e652b3caafb42","index":"ztlevi-machine-learning"},"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"Navigation"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"css":["css/docsearch.css"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/Anomaly/autoencoder_anomaly.md","mtime":"2021-03-08T12:29:40.465Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-08T12:30:24.019Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-docsearch/doc-search-lib.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-docsearch/doc-search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

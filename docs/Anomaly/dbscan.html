@@ -1,0 +1,944 @@
+
+<!DOCTYPE HTML>
+<html lang>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>DBSCAN &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-custom-js-css/9eb07385451571ed1c43d6bfc772c8d5-docsearch.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-docsearch/doc-search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="autoencoder_anomaly.html">
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary"><div id="book-search-input">
+    <input type="text" id="book-doc-search-input" placeholder="Type to search">
+</div>
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../General.html">
+            
+                <a href="../General.html">
+            
+                    
+                    General
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../General/Optimization.html">
+            
+                <a href="../General/Optimization.html">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../General/How_to_prevent_overfitting.html">
+            
+                <a href="../General/How_to_prevent_overfitting.html">
+            
+                    
+                    How to prevent overfitting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../General/Linear_algebra.html">
+            
+                <a href="../General/Linear_algebra.html">
+            
+                    
+                    Linear Algebra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../General/Clustering.html">
+            
+                <a href="../General/Clustering.html">
+            
+                    
+                    Clustering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../General/Calculate_Parameters_In_CNN.html">
+            
+                <a href="../General/Calculate_Parameters_In_CNN.html">
+            
+                    
+                    Calculate Parameters in CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../General/Weight_norm_and_layer_norm.html">
+            
+                <a href="../General/Weight_norm_and_layer_norm.html">
+            
+                    
+                    Weight norm and layer norm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../General/Imbalance_problem_in_object_detection.html">
+            
+                <a href="../General/Imbalance_problem_in_object_detection.html">
+            
+                    
+                    Imbalance problem in object detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Classical_Machine_learning.html">
+            
+                <a href="../Classical_Machine_learning.html">
+            
+                    
+                    Classical Machine Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Neural_Networks.html">
+            
+                <a href="../Neural_Networks.html">
+            
+                    
+                    Neural Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Neural_Networks/Different_types_of_Convolution.html">
+            
+                <a href="../Neural_Networks/Different_types_of_Convolution.html">
+            
+                    
+                    Different Types of Convolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2">
+            
+                <span>
+            
+                    
+                    Loss
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Neural_Networks/Loss/Cross_Entropy_Loss.html">
+            
+                <a href="../Neural_Networks/Loss/Cross_Entropy_Loss.html">
+            
+                    
+                    Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Neural_Networks/Loss/Binary_Cross_Entropy_Loss.html">
+            
+                <a href="../Neural_Networks/Loss/Binary_Cross_Entropy_Loss.html">
+            
+                    
+                    Binary Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Neural_Networks/Loss/Categorical_Cross_Entropy_loss.html">
+            
+                <a href="../Neural_Networks/Loss/Categorical_Cross_Entropy_loss.html">
+            
+                    
+                    Categorical Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Neural_Networks/Loss/Focal_Loss.html">
+            
+                <a href="../Neural_Networks/Loss/Focal_Loss.html">
+            
+                    
+                    (Optional) Focal Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Neural_Networks/Loss/CORAL_Loss.html">
+            
+                <a href="../Neural_Networks/Loss/CORAL_Loss.html">
+            
+                    
+                    (Optional) CORAL Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Neural_Networks/Resnet.html">
+            
+                <a href="../Neural_Networks/Resnet.html">
+            
+                    
+                    Resnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Neural_Networks/Embedding.html">
+            
+                <a href="../Neural_Networks/Embedding.html">
+            
+                    
+                    Embedding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Neural_Networks/RNN_LSTM.html">
+            
+                <a href="../Neural_Networks/RNN_LSTM.html">
+            
+                    
+                    RNN &amp; LSTM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Neural_Networks/GAN.html">
+            
+                <a href="../Neural_Networks/GAN.html">
+            
+                    
+                    GAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Neural_Networks/Mobilenet.html">
+            
+                <a href="../Neural_Networks/Mobilenet.html">
+            
+                    
+                    Mobilenet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Neural_Networks/Two_Stage_Object_Detection/TwoStageDetector.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/TwoStageDetector.html">
+            
+                    
+                    Two Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="../Neural_Networks/Two_Stage_Object_Detection/Metrics.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/Metrics.html">
+            
+                    
+                    Metrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="../Neural_Networks/Two_Stage_Object_Detection/ROI.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/ROI.html">
+            
+                    
+                    ROI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.3" data-path="../Neural_Networks/Two_Stage_Object_Detection/R-CNN.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/R-CNN.html">
+            
+                    
+                    R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.4" data-path="../Neural_Networks/Two_Stage_Object_Detection/Fast-RCNN.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/Fast-RCNN.html">
+            
+                    
+                    Fast RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.5" data-path="../Neural_Networks/Two_Stage_Object_Detection/Faster-RCNN.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/Faster-RCNN.html">
+            
+                    
+                    Faster RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.6" data-path="../Neural_Networks/Two_Stage_Object_Detection/Mask-RCNN.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/Mask-RCNN.html">
+            
+                    
+                    Mask RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9">
+            
+                <span>
+            
+                    
+                    One Stage Object Detection
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.9.1" data-path="../Neural_Networks/One_Stage_Object_Detection/YOLO.html">
+            
+                <a href="../Neural_Networks/One_Stage_Object_Detection/YOLO.html">
+            
+                    
+                    YOLO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.2" data-path="../Neural_Networks/One_Stage_Object_Detection/SSD.html">
+            
+                <a href="../Neural_Networks/One_Stage_Object_Detection/SSD.html">
+            
+                    
+                    Single Shot MultiBox Detector(SSD)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.3" data-path="../Neural_Networks/Two_Stage_Object_Detection/FPN.html">
+            
+                <a href="../Neural_Networks/Two_Stage_Object_Detection/FPN.html">
+            
+                    
+                    FPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10">
+            
+                <span>
+            
+                    
+                    Segmentation
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.1" data-path="../Neural_Networks/Segmentation/Panoptic.html">
+            
+                <a href="../Neural_Networks/Segmentation/Panoptic.html">
+            
+                    
+                    Panoptic Segmentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../Neural_Networks/FaceNet.html">
+            
+                <a href="../Neural_Networks/FaceNet.html">
+            
+                    
+                    FaceNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5">
+            
+                <span>
+            
+                    
+                    Anomaly Detection
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="dbscan.html">
+            
+                <a href="dbscan.html">
+            
+                    
+                    DBSCAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="autoencoder_anomaly.html">
+            
+                <a href="autoencoder_anomaly.html">
+            
+                    
+                    Autoencoder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6">
+            
+                <span>
+            
+                    
+                    Visualization
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Visualization/Saliency_Maps.html">
+            
+                <a href="../Visualization/Saliency_Maps.html">
+            
+                    
+                    Saliency Maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Visualization/Fooling_Images.html">
+            
+                <a href="../Visualization/Fooling_Images.html">
+            
+                    
+                    Fooling images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Visualization/Class_Visualization.html">
+            
+                <a href="../Visualization/Class_Visualization.html">
+            
+                    
+                    Class Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../..">DBSCAN</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="outlier-detection-for-a-2d-feature-space-in-python-dbscan">Outlier Detection for a 2D Feature Space in Python (DBSCAN)</h1>
+<h2 id="how-to-detect-outliers-using-plotting-and-clustering-techniques-to-analyze-the-dependency-of-two-features">How to detect outliers using plotting and clustering techniques to analyze the dependency of two features</h2>
+<p>After collecting all your courage to start a machine learning project, you firstly have to think about <strong>how</strong> and <strong>where</strong> <strong>to</strong> actually <strong>start</strong>. Following picture shows a typical <a href="https://cloud.google.com/ml-engine/docs/ml-solutions-overview" target="_blank">machine learning workflow</a>. The very beginning of every machine learning project is to collect and prepare essential data to be able to be processed by those fancy algorithms, such as <a href="../../how-to-build-your-own-neural-network-from-scratch-in-python-68998a08e4f6">neural networks</a> or <a href="../../support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47">support vector machines</a>.</p>
+<p><img src="../../assets/dbscan_1.png" alt></p>
+<p>Besides creating some funky first visualizations of your sourced dataset or engineering used features, you also want to detect if you have any sneaky outliers in your dataset.</p>
+<p>This article provides a <strong>step-by-step guide</strong> <strong>on how to detect outliers</strong> in the dependency between two features (aka attributes or variables), also called a <strong>two-dimensional feature space.</strong></p>
+<h1 id="outlier-detection-&#x2014;-lets-get-started">OUTLIER DETECTION &#x2014; LET&#x2019;S GET STARTED!</h1>
+<p>This project was was developed in the IDE PyCharm with the Project Interpreter <strong>Python 3.7</strong>. However, you are free to apply the code in any other environment or notebook! The full project can be found <a href="https://github.com/JOPloume/outlier-detection-2D-feature-space" target="_blank">here</a>.</p>
+<h1 id="1-&#x2014;-visualizing-the-feature-space">#1 &#x2014; Visualizing the feature space.</h1>
+<p>First step is bringing in some visuals of the feature space we are dealing with. This project makes use of the <em>wine dataset</em> that comes together with the framework <a href="https://scikit-learn.org/stable/index.html" target="_blank">scikit learn</a>.</p>
+<p>We might not be enjoying wine as much as Amy Schumer does, but we still think wine is an amazingly tasty research object to investigate. The 2D feature space we will be examining is the dependency between the <strong>concentration of flavanoids</strong> (a class of metabolites) and the <strong>color intensity</strong> of wine.</p>
+<p><strong>Following code provides an initial visualization of the 2D feature space.</strong></p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">import</span> sys
+<span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> DBSCAN
+<span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> Counter
+
+<span class="hljs-comment"># Reading in 2D Feature Space</span>
+feature_space = pd.read_csv(<span class="hljs-string">&quot;../datasets/wine-data.csv&quot;</span>, header=<span class="hljs-keyword">None</span>, sep=<span class="hljs-string">&quot;,&quot;</span>)
+data = feature_space.iloc[:, <span class="hljs-number">0</span>:<span class="hljs-number">2</span>].values
+
+<span class="hljs-comment"># DBSCAN model with parameters</span>
+model = DBSCAN(eps=<span class="hljs-number">0.8</span>, min_samples=<span class="hljs-number">10</span>).fit(data)
+
+<span class="hljs-comment"># Creating Panda DataFrame with Labels for Outlier Detection</span>
+outlier_df = pd.DataFrame(data)
+
+<span class="hljs-comment"># Printing total number of values for each label</span>
+print(Counter(model.labels_))
+
+<span class="hljs-comment"># Printing DataFrame being considered as Outliers -1</span>
+print(outlier_df[model.labels_ == <span class="hljs-number">-1</span>])
+
+<span class="hljs-comment"># Printing and Indicating which type of object outlier_df is</span>
+print(type(outlier_df))
+
+<span class="hljs-comment"># Exporting this DataFrame to CSV</span>
+outlier_df[model.labels_ == <span class="hljs-number">-1</span>].to_csv(<span class="hljs-string">&quot;../datasets/dbscan-outliers.csv&quot;</span>)
+
+sys.exit()
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+<span class="hljs-keyword">import</span> sys
+<span class="hljs-keyword">from</span> numpy <span class="hljs-keyword">import</span> genfromtxt
+
+<span class="hljs-comment"># NumPy function to create array from tabular dataset</span>
+my_csv = genfromtxt(<span class="hljs-string">&apos;../datasets/wine-data.csv&apos;</span>, delimiter=<span class="hljs-string">&apos;,&apos;</span>)
+
+<span class="hljs-comment"># Slicing array</span>
+array_flavanoids = my_csv[:, <span class="hljs-number">0</span>]
+
+<span class="hljs-comment"># Slicing array</span>
+array_colorintensity = my_csv[:, <span class="hljs-number">1</span>]
+
+<span class="hljs-comment"># Scatter plot function</span>
+plt.scatter(array_flavanoids, array_colorintensity, c=<span class="hljs-string">&apos;b&apos;</span>, marker=<span class="hljs-string">&apos;o&apos;</span>)
+plt.xlabel(<span class="hljs-string">&apos;Concentration of flavanoids&apos;</span>, fontsize=<span class="hljs-number">16</span>)
+plt.ylabel(<span class="hljs-string">&apos;Color intensity&apos;</span>, fontsize=<span class="hljs-number">16</span>)
+plt.title(<span class="hljs-string">&apos;Concentration of flavanoids vs Color intensity&apos;</span>, fontsize=<span class="hljs-number">20</span>)
+plt.show()
+
+sys.exit()
+</code></pre>
+<p><img src="../../assets/dbscan_2.png" alt></p>
+<p>Awesome! Now we have a first &#x201C;feel&#x201D; of the dependency we are dealing with.</p>
+<h1 id="2-&#x2014;-clustering-data-points">#2 &#x2014; Clustering data points.</h1>
+<p>We might already see some clusters and outliers in our first visualization, but to give our intuition a bit more statistical grounding, we take help of a clustering algorithm. <strong>DBSCAN</strong> <em>(Density-Based Spatial Clustering of Applications with Noise) </em>is a clustering algorithm commonly used for outlier detection. Here, a data instance is considered as outlier, if it does not belong to any cluster.</p>
+<blockquote>
+<p>&#x201C;DBSCAN algorithm requires 2 parameters &#x2014; epsilon, which specifies how close points should be to each other to be considered a part of a cluster; and minPts, which specifies how many neighbors a point should have to be included into a cluster.&#x201D; &#x2014; alitouka</p>
+</blockquote>
+<p>&#x201C;DBSCAN algorithm requires 2 parameters &#x2014; <strong>epsilon</strong>, which specifies how close points should be to each other to be considered a part of a cluster; and <strong>minPts</strong>, which specifies how many neighbors a point should have to be included into a cluster.&#x201D; &#x2014; <a href="https://github.com/alitouka" target="_blank">alitouka</a></p>
+<p>With adjusting and tweaking the model&#x2019;s parameters epsilon and minPts (in Python: min_samples), we reveal some nice clusters in the feature space.</p>
+<p><strong>Following code clusters the 2D feature space.</strong></p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+<span class="hljs-keyword">import</span> sys
+<span class="hljs-keyword">from</span> numpy <span class="hljs-keyword">import</span> genfromtxt
+<span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> DBSCAN
+
+<span class="hljs-comment"># Reading in 2D Feature Space</span>
+feature_space = pd.read_csv(<span class="hljs-string">&quot;../datasets/wine-data.csv&quot;</span>, header=<span class="hljs-keyword">None</span>, sep=<span class="hljs-string">&quot;,&quot;</span>)
+data = feature_space.iloc[:, <span class="hljs-number">0</span>:<span class="hljs-number">2</span>].values
+
+<span class="hljs-comment"># DBSCAN model with parameters</span>
+model = DBSCAN(eps=<span class="hljs-number">0.8</span>, min_samples=<span class="hljs-number">10</span>).fit(data)
+
+<span class="hljs-comment"># PLOTTING</span>
+<span class="hljs-comment"># NumPy function to create array from tabular dataset</span>
+my_csv = genfromtxt(<span class="hljs-string">&apos;../datasets/wine-data.csv&apos;</span>, delimiter=<span class="hljs-string">&apos;,&apos;</span>)
+
+<span class="hljs-comment"># Slicing array</span>
+array_flavanoids = my_csv[:, <span class="hljs-number">0</span>]
+
+<span class="hljs-comment"># Slicing array</span>
+array_colorintensity = my_csv[:, <span class="hljs-number">1</span>]
+
+<span class="hljs-comment"># Scatter plot function</span>
+colors = model.labels_
+plt.scatter(array_flavanoids, array_colorintensity, c=colors, marker=<span class="hljs-string">&apos;o&apos;</span>)
+plt.xlabel(<span class="hljs-string">&apos;Concentration of flavanoids&apos;</span>, fontsize=<span class="hljs-number">16</span>)
+plt.ylabel(<span class="hljs-string">&apos;Color intensity&apos;</span>, fontsize=<span class="hljs-number">16</span>)
+plt.title(<span class="hljs-string">&apos;Concentration of flavanoids vs Color intensity&apos;</span>, fontsize=<span class="hljs-number">20</span>)
+plt.show()
+
+sys.exit()
+</code></pre>
+<h1 id="comparing-the-first-visualization-of-the-feature-space-with-the-cluster-visualization">Comparing the first visualization of the feature space with the cluster visualization</h1>
+<p><img src="../../assets/dbscan_3.png" alt></p>
+<p>Oh yes, and we have finally spotted them!</p>
+<h1 id="these-tiny-purple-dots-are-the-outliers-we-were-searching-for">These tiny purple dots are the <strong>outliers</strong> we were searching for!</h1>
+<p><img src="../../assets/dbscan_4.png" alt></p>
+<h1 id="3-&#x2014;-calculating-outliers">#3 &#x2014; Calculating outliers.</h1>
+<p>Wow!! Now we know that there <strong>do</strong> exist outliers in the dependency between the <strong>concentration of flavanoids</strong> and the <strong>color intensity</strong> of wine, yaaay (I still don&#x2019;t actually get what flavanoids are, btw). Just one last step&#x2026;</p>
+<p><strong>Following code calculates the outliers of the 2D feature space.</strong></p>
+<p>This code calculates and finally prints the 11 outliers of the dataset in a separate <a href="https://github.com/JOPloume/outlier-detection-2D-feature-space/blob/master/datasets/dbscan-outliers.csv" target="_blank">CSV-file</a>.</p>
+<p>This <strong>step-by-step guide for outlier detection</strong> was created during my thesis project on human-in-the-loop computing, an approach of combining human with machine intelligence. Stay tuned!</p>
+<p>[1] Google Cloud, <a href="https://cloud.google.com/ml-engine/docs/ml-solutions-overview" target="_blank">Machine learning workflow</a> (2019)</p>
+<p>[2] M. Ester, H.-P. Kriegel, J. Sander and X. Xu, <a href="https://dl-acm-org.proxy.lnu.se/citation.cfm?id=3001507" target="_blank">A density-based algorithm for discovering clusters a density-based algorithm for discovering clusters in large spatial databases with noise</a> (1996), KDD&#x2019;96 Proceedings of the Second International Conference on Knowledge Discovery and Data Mining</p>
+<p>[3] <a href="https://towardsdatascience.com/outlier-detection-python-cd22e6a12098" target="_blank">https://towardsdatascience.com/outlier-detection-python-cd22e6a12098</a></p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="autoencoder_anomaly.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Autoencoder">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"DBSCAN","level":"1.5.1","depth":2,"next":{"title":"Autoencoder","level":"1.5.2","depth":2,"path":"docs/Anomaly/autoencoder_anomaly.md","ref":"docs/Anomaly/autoencoder_anomaly.md","articles":[]},"previous":{"title":"Anomaly Detection","level":"1.5","depth":1,"ref":"","articles":[{"title":"DBSCAN","level":"1.5.1","depth":2,"path":"docs/Anomaly/dbscan.md","ref":"docs/Anomaly/dbscan.md","articles":[]},{"title":"Autoencoder","level":"1.5.2","depth":2,"path":"docs/Anomaly/autoencoder_anomaly.md","ref":"docs/Anomaly/autoencoder_anomaly.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-search","-lunr","custom-js-css","docsearch","intopic-toc"],"pluginsConfig":{"docsearch":{},"docSearch":{"apiKey":"9b2d0c53eb838616448e652b3caafb42","index":"ztlevi-machine-learning"},"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"Navigation"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"css":["css/docsearch.css"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/Anomaly/dbscan.md","mtime":"2021-03-08T12:29:40.465Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-08T12:30:24.019Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-docsearch/doc-search-lib.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-docsearch/doc-search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
