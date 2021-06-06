@@ -1,0 +1,1258 @@
+
+<!DOCTYPE HTML>
+<html lang>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Different Types of Convolution &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-custom-js-css/9eb07385451571ed1c43d6bfc772c8d5-docsearch.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-docsearch/doc-search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="loss/">
+    
+    
+    <link rel="prev" href="./">
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary"><div id="book-search-input">
+    <input type="text" id="book-doc-search-input" placeholder="Type to search">
+</div>
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../basics/">
+            
+                <a href="../basics/">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../basics/optimization.html">
+            
+                <a href="../basics/optimization.html">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../basics/how_to_prevent_overfitting.html">
+            
+                <a href="../basics/how_to_prevent_overfitting.html">
+            
+                    
+                    How to prevent overfitting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../basics/linear_algebra.html">
+            
+                <a href="../basics/linear_algebra.html">
+            
+                    
+                    Linear Algebra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../basics/clustering.html">
+            
+                <a href="../basics/clustering.html">
+            
+                    
+                    Clustering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../basics/calculate_parameters_in_cnn.html">
+            
+                <a href="../basics/calculate_parameters_in_cnn.html">
+            
+                    
+                    Calculate Parameters in CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../basics/weight_norm_and_layer_norm.html">
+            
+                <a href="../basics/weight_norm_and_layer_norm.html">
+            
+                    
+                    Weight norm and layer norm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../basics/Confidence_Interval.html">
+            
+                <a href="../basics/Confidence_Interval.html">
+            
+                    
+                    Confidence Interval
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../basics/Quantization.html">
+            
+                <a href="../basics/Quantization.html">
+            
+                    
+                    Quantization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../classical_ml/">
+            
+                <a href="../classical_ml/">
+            
+                    
+                    Classical Machine Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Neural Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="different_types_of_convolution.html">
+            
+                <a href="different_types_of_convolution.html">
+            
+                    
+                    Different Types of Convolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="loss/">
+            
+                <a href="loss/">
+            
+                    
+                    Loss
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="loss/Hinge_Loss.html">
+            
+                <a href="loss/Hinge_Loss.html">
+            
+                    
+                    Hinge Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="loss/cross_entropy_loss.html">
+            
+                <a href="loss/cross_entropy_loss.html">
+            
+                    
+                    Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="loss/binary_cross_entropy_loss.html">
+            
+                <a href="loss/binary_cross_entropy_loss.html">
+            
+                    
+                    Binary Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="loss/categorical_cross_entropy_loss.html">
+            
+                <a href="loss/categorical_cross_entropy_loss.html">
+            
+                    
+                    Categorical Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="loss/focal_loss.html">
+            
+                <a href="loss/focal_loss.html">
+            
+                    
+                    Optional: Focal Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="loss/coral_loss.html">
+            
+                <a href="loss/coral_loss.html">
+            
+                    
+                    Optional: CORAL Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="resnet.html">
+            
+                <a href="resnet.html">
+            
+                    
+                    Resnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="mobilenet.html">
+            
+                <a href="mobilenet.html">
+            
+                    
+                    Mobilenet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../cv/">
+            
+                <a href="../cv/">
+            
+                    
+                    Computer Vision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../cv/two-stage-detector/">
+            
+                <a href="../cv/two-stage-detector/">
+            
+                    
+                    Two Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../cv/two-stage-detector/metrics.html">
+            
+                <a href="../cv/two-stage-detector/metrics.html">
+            
+                    
+                    Metrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../cv/two-stage-detector/roi.html">
+            
+                <a href="../cv/two-stage-detector/roi.html">
+            
+                    
+                    ROI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../cv/two-stage-detector/r-cnn.html">
+            
+                <a href="../cv/two-stage-detector/r-cnn.html">
+            
+                    
+                    R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../cv/two-stage-detector/fast-rcnn.html">
+            
+                <a href="../cv/two-stage-detector/fast-rcnn.html">
+            
+                    
+                    Fast RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../cv/two-stage-detector/faster-rcnn.html">
+            
+                <a href="../cv/two-stage-detector/faster-rcnn.html">
+            
+                    
+                    Faster RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="../cv/two-stage-detector/mask-rcnn.html">
+            
+                <a href="../cv/two-stage-detector/mask-rcnn.html">
+            
+                    
+                    Mask RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../cv/one-stage-detector/">
+            
+                <a href="../cv/one-stage-detector/">
+            
+                    
+                    One Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../cv/one-stage-detector/yolo.html">
+            
+                <a href="../cv/one-stage-detector/yolo.html">
+            
+                    
+                    YOLO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../cv/one-stage-detector/ssd.html">
+            
+                <a href="../cv/one-stage-detector/ssd.html">
+            
+                    
+                    Single Shot MultiBox Detector(SSD)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../cv/one-stage-detector/fpn.html">
+            
+                <a href="../cv/one-stage-detector/fpn.html">
+            
+                    
+                    FPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../cv/segmentation/">
+            
+                <a href="../cv/segmentation/">
+            
+                    
+                    Segmentation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../cv/segmentation/panoptic.html">
+            
+                <a href="../cv/segmentation/panoptic.html">
+            
+                    
+                    Panoptic Segmentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../cv/segmentation/PSPNet.html">
+            
+                <a href="../cv/segmentation/PSPNet.html">
+            
+                    
+                    PSPNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../cv/facenet.html">
+            
+                <a href="../cv/facenet.html">
+            
+                    
+                    FaceNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../cv/gan.html">
+            
+                <a href="../cv/gan.html">
+            
+                    
+                    GAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../cv/Object_detection_imbalance.html">
+            
+                <a href="../cv/Object_detection_imbalance.html">
+            
+                    
+                    Imbalance problem in object detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../nlp/">
+            
+                <a href="../nlp/">
+            
+                    
+                    NLP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../nlp/embedding.html">
+            
+                <a href="../nlp/embedding.html">
+            
+                    
+                    Embedding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../nlp/rnn.html">
+            
+                <a href="../nlp/rnn.html">
+            
+                    
+                    RNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../nlp/lstm.html">
+            
+                <a href="../nlp/lstm.html">
+            
+                    
+                    LSTM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../parallel-computeing/">
+            
+                <a href="../parallel-computeing/">
+            
+                    
+                    Parallel Computeing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../parallel-computeing/communication.html">
+            
+                <a href="../parallel-computeing/communication.html">
+            
+                    
+                    Communication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../parallel-computeing/sync_mapreduce.html">
+            
+                <a href="../parallel-computeing/sync_mapreduce.html">
+            
+                    
+                    MapReduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../parallel-computeing/parameter_server.html">
+            
+                <a href="../parallel-computeing/parameter_server.html">
+            
+                    
+                    Parameter Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../parallel-computeing/decentralized_and_ring_allreduce.html">
+            
+                <a href="../parallel-computeing/decentralized_and_ring_allreduce.html">
+            
+                    
+                    Decentralized And Ring All Reduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../parallel-computeing/federated_learning.html">
+            
+                <a href="../parallel-computeing/federated_learning.html">
+            
+                    
+                    Federated Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../anomaly-detection/">
+            
+                <a href="../anomaly-detection/">
+            
+                    
+                    Anomaly Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../anomaly-detection/dbscan.html">
+            
+                <a href="../anomaly-detection/dbscan.html">
+            
+                    
+                    DBSCAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../anomaly-detection/autoencoder_anomaly.html">
+            
+                <a href="../anomaly-detection/autoencoder_anomaly.html">
+            
+                    
+                    Autoencoder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../visualization/">
+            
+                <a href="../visualization/">
+            
+                    
+                    Visualization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../visualization/saliency_maps.html">
+            
+                <a href="../visualization/saliency_maps.html">
+            
+                    
+                    Saliency Maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../visualization/fooling_images.html">
+            
+                <a href="../visualization/fooling_images.html">
+            
+                    
+                    Fooling images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../visualization/class_visualization.html">
+            
+                <a href="../visualization/class_visualization.html">
+            
+                    
+                    Class Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="..">Different Types of Convolution</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <p>This post is copied from <a href="https://towardsdatascience.com/a-comprehensive-introduction-to-different-types-of-convolutions-in-deep-learning-669281e58215" target="_blank">Kunlun Bai&apos;s post</a>.</p>
+<h2 id="different-types-of-convolution">Different Types of Convolution</h2>
+<p>If you&#x2019;ve heard of different kinds of convolutions in Deep Learning (e.g. 2D / 3D / 1x1 / Transposed / Dilated (Atrous) / Spatially Separable / Depthwise Separable / Flattened / Grouped / Shuffled Grouped Convolution), and got confused what they actually mean, this article is written for you to understand how they actually work.</p>
+<p>Here in this article, I summarize several types of convolution commonly used in Deep Learning, and try to explain them in a way that is accessible for everyone. Besides this article, there are several good articles from others on this topic. Please check them out (listed in the Reference).</p>
+<h3 id="output-shape">Output shape</h3>
+<p>Use the formula <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mo>(</mo><mi>W</mi><mo>&#x2212;</mo><mi>K</mi><mo>+</mo><mn>2</mn><mi>P</mi><mo>)</mo><mi mathvariant="normal">/</mi><mi>S</mi><mo>]</mo><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">[(W-K+2P)/S]+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mbin">&#x2212;</span><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mbin">+</span><span class="mord mathrm">2</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mclose">)</span><span class="mord mathrm">/</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mclose">]</span><span class="mbin">+</span><span class="mord mathrm">1</span></span></span></span>.</p>
+<h3 id="1-convolution-vs-cross-correlation"><strong>1. Convolution v.s. Cross-correlation</strong></h3>
+<p>Convolution is a widely used technique in signal processing, image processing, and other engineering / science fields. In Deep Learning, a kind of model architecture, Convolutional Neural Network (CNN), is named after this technique. However, convolution in deep learning is essentially the cross-correlation in signal / image processing. There is a subtle difference between these two operations.</p>
+<p>Without diving too deep into details, here is the difference. In signal / image processing, convolution is defined as:</p>
+<p><img src="../.gitbook/assets/conv_1.png" alt></p>
+<p>It is defined as the integral of the product of the two functions after one is reversed and shifted. The following visualization demonstrated the idea.</p>
+<p><img src="../.gitbook/assets/conv_2.png" alt>Convolution in signal processing. The filter g is reversed, and then slides along the horizontal axis. For every position, we calculate the area of the intersection between f and reversed g. The intersection area is the convolution value at that specific position. Image is adopted and edited from this <a href="http://fourier.eng.hmc.edu/e161/lectures/convolution/index.html" target="_blank">link</a>.</p>
+<p>Here, function g is the filter. It&#x2019;s reversed, and then slides along the horizontal axis. For every position, we calculate the area of the intersection between <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span></span></span></span> and reversed <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">g</span></span></span></span>. That intersection area is the convolution value at that specific position.</p>
+<p>On the other hand, cross-correlation is known as sliding dot product or sliding inner-product of two functions. The filter in cross-correlation is not reversed. It directly slides through the function f. The intersection area between <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">g</span></span></span></span> is the cross-correlation. The plot below demonstrates the difference between correlation and cross-correlation.</p>
+<p><img src="../.gitbook/assets/conv_3.jpeg" alt>Difference between convolution and cross-correlation in signal processing. Image is adopted and edited from <a href="https://en.wikipedia.org/wiki/Convolution" target="_blank">Wikipedia</a>.</p>
+<p>In Deep Learning, the filters in convolution are not reversed. Rigorously speaking, it&#x2019;s cross-correlation. We essentially perform element-wise multiplication and addition. But it&#x2019;s a convention to just call it convolution in deep learning. It is fine because the weights of filters are learned during training. If the reversed function g in the example above is the right function, then after training the learned filter would look like the reversed function g. Thus, there is no need to reverse the filter first before training as in true convolution.</p>
+<h3 id="2-convolution-in-deep-learning">2. Convolution in Deep Learning</h3>
+<p>The purpose of doing convolution is to extract useful features from the input. In image processing, there is a wide range of different filters one could choose for convolution. Each type of filters helps to extract different aspects or features from the input image, e.g. horizontal / vertical / diagonal edges. Similarly, in Convolutional Neural Network, <em>different features are extracted through convolution using filters whose weights are automatically learned during training</em>. All these extracted features then are &#x2018;combined&#x2019; to make decisions.</p>
+<p>There are a few advantages of doing convolution, such as weights sharing and translation invariant. Convolution also takes spatial relationship of pixels into considerations. These could be very helpful especially in many computer vision tasks, since those tasks often involve identifying objects where certain components have certain spatially relationship with other components (e.g. a dog&#x2019;s body usually links to a head, four legs, and a tail).</p>
+<h4 id="21-convolution-the-single-channel-version">2.1. Convolution: the single channel version</h4>
+<p><img src="../.gitbook/assets/conv_4.gif" alt>Convolution for a single channel. Image is adopted from this <a href="https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1" target="_blank">link</a>.</p>
+<p>In Deep Learning, convolution is the element-wise multiplication and addition. For an image with 1 channel, the convolution is demonstrated in the figure below. Here the filter is a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span> matrix with element <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mo>[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo>]</mo><mo separator="true">,</mo><mo>[</mo><mn>2</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>0</mn><mo>]</mo><mo separator="true">,</mo><mo>[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo>]</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">[[0, 1, 2], [2, 2, 0], [0, 1, 2]]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">2</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mopen">[</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">2</span><span class="mclose">]</span><span class="mclose">]</span></span></span></span>. The filter is sliding through the input. At each position, it&#x2019;s doing element-wise multiplication and addition. Each sliding position ends up with one number. The final output is then a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span> matrix. (Notice that stride = 1 and padding = 0 in this example. These concepts will be described in the section of arithmetic below.</p>
+<h4 id="22-convolution-the-multi-channel-version">2.2. Convolution: the multi-channel version</h4>
+<p>In many applications, we are dealing with images with multiple channels. A typical example is the RGB image. Each RGB channel emphasizes different aspects of the original image, as illustrated in the following image.</p>
+<p><img src="../.gitbook/assets/conv_5.png" alt>Different channels emphasize different aspects of the raw image. The image was taken at Yuanyang, Yunnan, China.</p>
+<p>Another example of multi-channel data is the layers in Convolutional Neural Network. A convolutional-net layer usually consists of multiple channels (typically hundreds of channels). Each channel describes different aspects of the previous layer. How do we make transition between layers with different depth? How do we transform a layer with depth <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span> to the following layer with depth <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span></span></span></span>?</p>
+<p>Before describing the process, we would like to clarify a few terminologies: layers, channels, feature maps, filters, and kernels. From a hierarchical point of view, the concepts of layers and filters are at the same level, while channels and kernels are at one level below. Channels and feature maps are the same thing. A layer could have multiple channels (or feature maps): an input layer has 3 channels if the inputs are RGB images. &#x201C;channel&#x201D; is usually used to describe the structure of a &#x201C;layer&#x201D;. Similarly, &#x201C;kernel&#x201D; is used to describe the structure of a &#x201C;filter&#x201D;.</p>
+<p><img src="../.gitbook/assets/conv_6.png" alt>Difference between &#x201C;layer&#x201D; (&#x201C;filter&#x201D;) and &#x201C;channel&#x201D; (&#x201C;kernel&#x201D;).</p>
+<p>The difference between filter and kernel is a bit tricky. Sometimes, they are used interchangeably, which could create confusions. Essentially, these two terms have subtle difference. A &#x201C;Kernel&#x201D; refers to a 2D array of weights. The term &#x201C;filter&#x201D; is for 3D structures of multiple kernels stacked together. For a 2D filter, filter is same as kernel. But <em>for a 3D filter and most convolutions in deep learning, a filter is a collection of kernels. Each kernel is unique, emphasizing different aspects of the input channel</em>.</p>
+<p>With these concepts, the multi-channel convolution goes as the following. Each kernel is applied onto an input channel of the previous layer to generate one output channel. This is a kernel-wise process. We repeat such process for all kernels to generate multiple channels. Each of these channels are then summed together to form one single output channel. The following illustration should make the process clearer.</p>
+<p>Here the input layer is a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn><mo>&#xD7;</mo><mn>5</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">5 \times 5 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">5</span><span class="mbin">&#xD7;</span><span class="mord mathrm">5</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span> matrix, with 3 channels. The filter is a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>3</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3 \times 3 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span> matrix. First, each of the kernels in the filter are applied to three channels in the input layer, separately. Three convolutions are performed, which result in 3 channels with size <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span>.</p>
+<p><img src="../.gitbook/assets/conv_7.gif" alt>The first step of 2D convolution for multi-channels: each of the kernels in the filter are applied to three channels in the input layer, separately. The image is adopted from this <a href="https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1" target="_blank">link</a>.</p>
+<p>Then these three channels are summed together (element-wise addition) to form one single channel (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>3</mn><mo>&#xD7;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">3 \times 3 \times 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span></span></span></span>). This channel is the result of convolution of the input layer (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn><mo>&#xD7;</mo><mn>5</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">5 \times 5 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">5</span><span class="mbin">&#xD7;</span><span class="mord mathrm">5</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span> matrix) using a filter (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>3</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3 \times 3 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span> matrix).</p>
+<p><img src="../.gitbook/assets/conv_8.gif" alt></p>
+<p>Equivalently, we can think of this process as sliding a 3D filter matrix through the input layer. Notice that the input layer and the filter have the same depth (channel number = kernel number). <em>The 3D filter moves only in 2-direction, height &amp; width of the image (That&#x2019;s why such operation is called as 2D convolution although a 3D filter is used to process 3D volumetric data).</em> At each sliding position, we perform element-wise multiplication and addition, which results in a single number. In the example shown below, the sliding is performed at 5 positions horizontally and 5 positions vertically. Overall, we get a single output channel.</p>
+<p><img src="../.gitbook/assets/conv_9.png" alt>Another way to think about 2D convolution: thinking of the process as sliding a 3D filter matrix through the input layer. Notice that the input layer and the filter have the same depth (channel number = kernel number). The 3D filter moves only in 2-direction, height &amp; width of the image (That&#x2019;s why such operation is called as 2D convolution although a 3D filter is used to process 3D volumetric data). The output is a one-layer matrix.</p>
+<p>Now we can see how one can make transitions between layers with different depth. Let&#x2019;s say the input layer has <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{in}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> channels, and we want the output layer has <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{out}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> channels. What we need to do is to just apply <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{out}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> filters to the input layer. Each filter has <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{in}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> kernels. Each filter provides one output channel. After applying <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{out}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> filters, we have <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{out}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> channels, which can then be stacked together to form the output layer.</p>
+<p><img src="../.gitbook/assets/conv_10.png" alt>Standard 2D convolution. Mapping one layer with depth Din to another layer with depth Dout, by using Dout filters.</p>
+<h3 id="3-3d-convolution">3. 3D Convolution</h3>
+<p>In the last illustration of the previous section, we see that we were actually perform convolution to a 3D volume. But typically, we still call that operation as 2D convolution in Deep Learning. <em>It&#x2019;s a 2D convolution on a 3D volumetric data. The filter depth is same as the input layer depth. The 3D filter moves only in 2-direction (height &amp; width of the image). The output of such operation is a 2D image (with 1 channel only).</em></p>
+<p>Naturally, there are 3D convolutions. They are the generalization of the 2D convolution. <em>Here in 3D convolution, the filter depth is smaller than the input layer depth (kernel size &lt; channel size). As a result, the 3D filter can move in all 3-direction (height, width, channel of the image)</em>. At each position, the element-wise multiplication and addition provide one number. Since the filter slides through a 3D space, the <em>output numbers are arranged in a 3D space as well. The output is then a 3D data.</em></p>
+<p><img src="../.gitbook/assets/conv_11.png" alt>_In 3D convolution, a 3D filter can move in all 3-direction (height, width, channel of the image)_. At each position, the element-wise multiplication and addition provide one number. Since the filter slides through a 3D space, the _output numbers are arranged in a 3D space as well. The output is then a 3D data._</p>
+<p>Similar as 2D convolutions which encode spatial relationships of objects in a 2D domain, 3D convolutions can describe the spatial relationships of objects in the 3D space. Such 3D relationship is important for some applications, such as in 3D segmentations / reconstructions of biomedical imagining, e.g. CT and MRI where objects such as blood vessels meander around in the 3D space.</p>
+<h3 id="4-1-x-1-convolution">4. 1 x 1 Convolution</h3>
+<p>Since we talked about depth-wise operation in the previous section of 3D convolution, let&#x2019;s look at another interesting operation, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>&#xD7;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1 \times 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span></span></span></span> convolution.</p>
+<p>You may wonder why this is helpful. Do we just multiply a number to every number in the input layer? Yes and No. The operation is trivial for layers with only one channel. There, we multiply every element by a number.</p>
+<p>Things become interesting if the input layer has multiple channels. The following picture illustrates how <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>&#xD7;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1 \times 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span></span></span></span> convolution works for an input layer with dimension <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>&#xD7;</mo><mi>W</mi><mo>&#xD7;</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">H \times W \times D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.02778em;">D</span></span></span></span>. After <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>&#xD7;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1 \times 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span></span></span></span> convolution with filter size <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>&#xD7;</mo><mn>1</mn><mo>&#xD7;</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">1 \times 1 \times D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.02778em;">D</span></span></span></span>, the output channel is with dimension <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>&#xD7;</mo><mi>W</mi><mo>&#xD7;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">H \times W \times 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span></span></span></span>. If we apply N such <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>&#xD7;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1 \times 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span></span></span></span> convolutions and then concatenate results together, we could have a output layer with dimension <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>&#xD7;</mo><mi>W</mi><mo>&#xD7;</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">H \times W \times N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.10903em;">N</span></span></span></span>.</p>
+<p><img src="../.gitbook/assets/conv_12.png" alt>1 x 1 convolution, where the filter size is 1 x 1 x D.</p>
+<p>Initially, 1 x 1 convolutions were proposed in the Network-in-network <a href="https://arxiv.org/abs/1312.4400" target="_blank">paper</a>. They were then highly used in the Google Inception <a href="https://arxiv.org/abs/1409.4842" target="_blank">paper</a><a href="https://arxiv.org/abs/1409.4842" target="_blank">.</a>.) A few advantages of 1 x 1 convolutions are:</p>
+<ul>
+<li>Dimensionality reduction for efficient computations</li>
+<li>Efficient low dimensional embedding, or feature pooling</li>
+<li>Applying nonlinearity again after convolution</li>
+</ul>
+<p>The first two advantages can be observed in the image above. After <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>&#xD7;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1 \times 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span></span></span></span> convolution, we significantly reduce the dimension depth-wise. Say if the original input has 200 channels, the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>&#xD7;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1 \times 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span></span></span></span> convolution will embed these channels (features) into a single channel. The third advantage comes in as after the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>&#xD7;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1 \times 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span></span></span></span> convolution, non-linear activation such as ReLU can be added. The non-linearity allows the network to learn more complex function.</p>
+<p>These advantages were described in Google&#x2019;s Inception <a href="https://arxiv.org/abs/1409.4842" target="_blank">paper</a> as:</p>
+<blockquote>
+<p>&#x201C;One big problem with the above modules, at least in this na&#xEF;ve form, is that even a modest number of 5x5 convolutions can be prohibitively expensive on top of a convolutional layer with a large number of filters.</p>
+<p>This leads to the second idea of the proposed architecture: judiciously applying dimension reductions and projections wherever the computational requirements would increase too much otherwise. This is based on the success of embeddings: even low dimensional embeddings might contain a lot of information about a relatively large image patch... That is, 1 x 1 convolutions are used to compute reductions before the expensive 3 x 3 and 5 x 5 convolutions. Besides being used as reductions, they also include the use of rectified linear activation which makes them dual-purpose.&#x201D;</p>
+</blockquote>
+<p>One interesting perspective regarding 1 x 1 convolution comes from Yann LeCun &#x201C;In Convolutional Nets, there is no such thing as &#x201C;fully-connected layers&#x201D;. There are only convolution layers with 1x1 convolution kernels and a full connection table.&#x201D;</p>
+<p><img src="https://github.com/ztlevi/Machine_Learning_Questions/tree/26cb30cb7a3ec95f737534585c8ae80567d03d7b/assets/conv_13.md" alt></p>
+<h3 id="5-convolution-arithmetic">5. Convolution Arithmetic</h3>
+<p>We now know how to deal with depth in convolution. Let&#x2019;s move on to talk about how to handle the convolution in the other two directions (height &amp; width), as well as important convolution arithmetic.</p>
+<p>Here are a few terminologies:</p>
+<ul>
+<li>Kernel size: kernel is discussed in the previous section. The kernel size defines the field of view of the convolution.</li>
+<li>Stride: it defines the step size of the kernel when sliding through the image. Stride of 1 means that the kernel slides through the image pixel by pixel. Stride of 2 means that the kernel slides through image by moving 2 pixels per step (i.e., skipping 1 pixel). We can use stride (&gt;= 2) for downsampling an image.</li>
+<li>Padding: the padding defines how the border of an image is handled. A padded convolution (&#x2018;same&#x2019; padding in Tensorflow) will keep the spatial output dimensions equal to the input image, by padding 0 around the input boundaries if necessary. On the other hand, unpadded convolution (&#x2018;valid&#x2019; padding in Tensorflow) only perform convolution on the pixels of the input image, without adding 0 around the input boundaries. The output size is smaller than the input size.</li>
+</ul>
+<p>This following illustration describes a 2D convolution using a kernel size of 3, stride of 1 and padding of 1.</p>
+<p><img src="../.gitbook/assets/conv_14.gif" alt></p>
+<p>There is an excellent article about detailed arithmetic (&#x201C;<a href="https://arxiv.org/abs/1603.07285" target="_blank">A guide to convolution arithmetic for deep learning</a>&#x201D;)<a href="https://arxiv.org/abs/1603.07285" target="_blank">.</a>.) One may refer to it for detailed descriptions and examples for different combinations of kernel size, stride, and padding. Here I just summarize results for the most general case.</p>
+<p>For an input image with size of i, kernel size of k, padding of p, and stride of s, the output image from convolution has size o:</p>
+<p><img src="../.gitbook/assets/conv_15.png" alt></p>
+<h3 id="6-transposed-convolution-deconvolution">6. Transposed Convolution (Deconvolution)</h3>
+<p>For many applications and in many network architectures, we often want to do transformations going in the opposite direction of a normal convolution, i.e. we&#x2019;d like to perform up-sampling. A few examples include generating high-resolution images and mapping low dimensional feature map to high dimensional space such as in auto-encoder or semantic segmentation. (In the later example, semantic segmentation first extracts feature maps in the encoder and then restores the original image size in the decoder so that it can classify every pixel in the original image.)</p>
+<p>Traditionally, one could achieve up-sampling by applying interpolation schemes or manually creating rules. Modern architectures such as neural networks, on the other hand, tend to let the network itself learn the proper transformation automatically, without human intervention. To achieve that, we can use the transposed convolution.</p>
+<p>The transposed convolution is also known as deconvolution, or fractionally strided convolution in the literature. However, it&#x2019;s worth noting that the name &#x201C;deconvolution&#x201D; is less appropriate, since transposed convolution is not the real deconvolution as defined in signal / image processing. Technically speaking, deconvolution in signal processing reverses the convolution operation. That is not the case here. Because of that, some authors are strongly against calling transposed convolution as deconvolution. People call it deconvolution mainly because of simplicity. Later, we will see why calling such operation as transposed convolution is natural and more appropriate.</p>
+<p>It is always possible to implement a transposed convolution with a direct convolution. For an example in the image below, we apply transposed convolution with a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span> kernel over a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>&#xD7;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2 \times 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">2</span><span class="mbin">&#xD7;</span><span class="mord mathrm">2</span></span></span></span> input padded with a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>&#xD7;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2 \times 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">2</span><span class="mbin">&#xD7;</span><span class="mord mathrm">2</span></span></span></span> border of zeros using unit strides. The up-sampled output is with size <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn><mo>&#xD7;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">4 \times 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">4</span><span class="mbin">&#xD7;</span><span class="mord mathrm">4</span></span></span></span>.</p>
+<p><img src="../.gitbook/assets/conv_16.gif" alt>Up-sampling a 2 x 2 input to a 4 x 4 output. Image is adopted from this [link](<a href="https://github.com/vdumoulin/conv\_arithmetic\" target="_blank">https://github.com/vdumoulin/conv\_arithmetic\</a>).</p>
+<p>Interestingly enough, one can map the same 2 x 2 input image to a different image size, by applying fancy padding &amp; stride. Below, transposed convolution is applied over the same 2 x 2 input (with 1 zero inserted between inputs) padded with a 2 x 2 border of zeros using unit strides. Now the output is with size 5 x 5.</p>
+<p><img src="../.gitbook/assets/conv_17.gif" alt>Up-sampling a 2 x 2 input to a 5 x 5 output. Image is adopted from this [link](<a href="https://github.com/vdumoulin/conv\_arithmetic\" target="_blank">https://github.com/vdumoulin/conv\_arithmetic\</a>).</p>
+<p>Viewing transposed convolution in the examples above could help us build up some intuitions. But to generalize its application, it is beneficial to look at how it is implemented through matrix multiplication in computer. From there, we can also see why &#x201C;transposed convolution&#x201D; is an appropriate name.</p>
+<p>In convolution, let us define <em>C</em> as our kernel, <em>Large</em> as the input image, <em>Small</em> as the output image from convolution. After the convolution (matrix multiplication), we down-sample the large image into a small output image. The implementation of convolution in matrix multiplication follows as <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>C</mi><mi>x</mi></msub><mi>L</mi><mi>a</mi><mi>r</mi><mi>g</mi><mi>e</mi><mo>=</mo><mi>S</mi><mi>m</mi><mi>a</mi><mi>l</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">C_ x Large = Small</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">L</span><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">e</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit">m</span><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit" style="margin-right:0.01968em;">l</span></span></span></span>.</p>
+<p>The following example shows how such operation works. It flattens the input to a 16 x 1 matrix, and transforms the kernel into a sparse matrix (4 x 16). The matrix multiplication is then applied between sparse matrix and the flattened input. After that, the resulting matrix (4 x 1) is then transformed back to a 2 x 2 output.</p>
+<p><img src="../.gitbook/assets/conv_18.jpeg" alt>Matrix multiplication for convolution: from a Large input image (4 x 4) to a Small output image (2 x 2).</p>
+<p>Now, if we multiple the transpose of matrix <em>CT</em> on both sides of the equation, and use the property that multiplication of a matrix with its transposed matrix gives an Unit matrix, then we have the following formula <em>CT</em> x Small = Large, as demonstrated in the figure below.</p>
+<p><img src="../.gitbook/assets/conv_19.png" alt>Matrix multiplication for convolution: from a Small input image (2 x 2) to a Large output image (4 x 4).</p>
+<p>As you can see here, we perform up-sampling from a small image to a large image. That is what we want to achieve. And now, you can also see where the name &#x201C;transposed convolution&#x201D; comes from.</p>
+<p>The general arithmetic for transposed convolution can be found from Relationship 13 and Relationship 14 in this excellent <a href="https://arxiv.org/abs/1603.07285" target="_blank">article</a> (&#x201C;A guide to convolution arithmetic for deep learning&#x201D;).</p>
+<h4 id="61-checkerboard-artifacts">6.1. Checkerboard artifacts.</h4>
+<p>One unpleasant behavior that people observe when using transposed convolution is the so-called checkerboard artifacts.</p>
+<p><img src="../.gitbook/assets/conv_20.png" alt>A few examples of checkerboard artifacts. Images are adopted from this [paper](<a href="https://distill.pub/2016/deconv-checkerboard/\" target="_blank">https://distill.pub/2016/deconv-checkerboard/\</a>).</p>
+<p>The <a href="https://distill.pub/2016/deconv-checkerboard" target="_blank">paper</a> &#x201C;Deconvolution and Checkerboard Artifacts&#x201D; has an excellent description about this behavior. Please check out this article for more details. Here, I just summarize a few key points.</p>
+<p>Checkerboard artifacts result from &#x201C;uneven overlap&#x201D; of transposed convolution. Such overlap puts more of the metaphorical paint in some places than others.</p>
+<p>In the image below, the layer on the top is the input layer, and the layer on the bottom is the output layer after transposed convolution. During transposed convolution, a layer with small size is mapped to a layer with larger size.</p>
+<p>In the example (a), the stride is 1 and the filer size is 2. As outlined in red, the first pixel on the input maps to the first and second pixels on the output. As outlined in green, the second pixel on the input maps to the second and the third pixels on the output. The second pixel on the output receives information from both the first and the second pixels on the input. Overall, the pixels in the middle portion of the output receive same amount of information from the input. Here exist a region where kernels overlapped. As the filter size is increased to 3 in the example (b), the center portion that receives most information shrinks. But this may not be a big deal, since the overlap is still even. The pixels in the center portion of the output receive same amount of information from the input.</p>
+<p><img src="../.gitbook/assets/conv_21.png" alt>The image is adopted and modified from the paper ([link](<a href="https://distill.pub/2016/deconv-checkerboard/\)\" target="_blank">https://distill.pub/2016/deconv-checkerboard/\)\</a>).</p>
+<p>Now for the example below, we change stride = 2. In the example (a) where filter size = 2, all pixels on the output receive same amount of information from the input. They all receive information from a single pixel on the input. There is no overlap of transposed convolution here.</p>
+<p><img src="../.gitbook/assets/conv_22.png" alt>The image is adopted and modified from the paper ([link](<a href="https://distill.pub/2016/deconv-checkerboard/\)\" target="_blank">https://distill.pub/2016/deconv-checkerboard/\)\</a>).</p>
+<p>If we change the filter size to 4 in the example (b), the evenly overlapped region shrinks. But still, one can use the center portion of the output as the valid output, where each pixel receives the same amount of information from the input.</p>
+<p>However, things become interesting if we change the filter size to 3 and 5 in the example (c) and (d). For these two cases, every pixel on the output receives different amount of information compared to its adjacent pixels. One cannot find a continuous and evenly overlapped region on the output.</p>
+<p><em>The transposed convolution has uneven overlap when the filter size is not divisible by the stride. This &#x201C;uneven overlap&#x201D; puts more of the paint in some places than others, thus creates the checkerboard effects. In fact, the unevenly overlapped region tends to be more extreme in two dimensions. There, two patterns are multiplied together, the unevenness gets squared.</em></p>
+<p>Two things one could do to reduce such artifacts, while applying transposed convolution. First, make sure you use a filer size that is divided by your stride, avoiding the overlap issue. Secondly, one can use transposed convolution with stride = 1, which helps to reduce the checkerboard effects. However, artifacts can still leak through, as seen in many recent models.</p>
+<p>The <a href="https://distill.pub/2016/deconv-checkerboard/" target="_blank">paper</a> further proposed a better up-sampling approach: resize the image first (using nearest-neighbor interpolation or bilinear interpolation) and then do a convolutional layer. By doing that, the authors avoid the checkerboard effects. You may want to try it for your applications.</p>
+<h3 id="7-dilated-convolution-atrous-convolution">7. Dilated Convolution (Atrous Convolution)</h3>
+<p>Dilated convolution was introduced in the <a href="https://arxiv.org/abs/1412.7062" target="_blank">paper</a> (<a href="https://arxiv.org/abs/1412.7062" target="_blank">link</a>) and the paper &#x201C;Multi-scale context aggregation by dilated convolutions&#x201D; (<a href="https://arxiv.org/abs/1511.07122" target="_blank">link</a>).</p>
+<p>This is the standard discrete convolution:</p>
+<p><img src="../.gitbook/assets/conv_23.png" alt></p>
+<p><img src="../.gitbook/assets/conv_24.gif" alt>The standard convolution.</p>
+<p>The dilated convolution follows:</p>
+<p><img src="../.gitbook/assets/conv_25.png" alt></p>
+<p>When <em>l = 1</em>, the dilated convolution becomes as the standard convolution.</p>
+<p><img src="../.gitbook/assets/conv_26.gif" alt>The dilated convolution.</p>
+<p>Intuitively, dilated convolutions &#x201C;inflate&#x201D; the kernel by inserting spaces between the kernel elements. This additional parameter l (dilation rate) indicates how much we want to widen the kernel. Implementations may vary, but there are usually <em>l-1</em> spaces inserted between kernel elements. The following image shows the kernel size when <em>l = 1, 2,</em> and <em>4</em>.</p>
+<p><img src="../.gitbook/assets/conv_27.jpeg" alt>Receptive field for the dilated convolution. We essentially observe a large receptive field without adding additional costs.</p>
+<p>In the image, the 3 x 3 red dots indicate that after the convolution, the output image is with 3 x 3 pixels. Although all three dilated convolutions provide the output with the same dimension, the receptive field observed by the model is dramatically different. The receptive filed is 3 x 3 for <em>l =1</em>. It is 7 x 7 for <em>l =2</em>. The receptive filed increases to 15 x 15 for <em>l = 3</em>. Interestingly, the numbers of parameters associated with these operations are essentially identical. <em>We &#x201C;observe&#x201D; a large receptive filed without adding additional costs.</em> Because of that, dilated convolution is used to cheaply increase the receptive field of output units without increasing the kernel size, which is especially effective when multiple dilated convolutions are stacked one after another.</p>
+<p>The authors in the paper &#x201C;Multi-scale context aggregation by dilated convolutions&#x201D; build a network out of multiple layers of dilated convolutions, where the dilation rate <em>l</em> increases exponentially at each layer. As a result, the effective receptive field grows exponentially while the number of parameters grows only linearly with layers!</p>
+<p>The dilated convolution in the paper is used to systematically aggregate multi-scale contextual information without losing resolution. The paper shows that the proposed module increases the accuracy of state-of-the-art semantic segmentation systems at that time (2016). Please check out the paper for more information.</p>
+<h3 id="8-separable-convolutions">8. Separable Convolutions</h3>
+<p>Separable Convolutions are used in some neural net architectures, such as the MobileNet (<a href="https://arxiv.org/abs/1704.04861" target="_blank">Link</a>). One can perform separable convolution spatially (spatially separable convolution) or depthwise (depthwise separable convolution).</p>
+<h4 id="81-spatially-separable-convolutions">8.1. Spatially Separable Convolutions</h4>
+<p>The spatially separable convolution operates on the 2D spatial dimensions of images, i.e. height and width. Conceptually, spatially separable convolution decomposes a convolution into two separate operations. For an example shown below, a Sobel kernel, which is a 3x3 kernel, is divided into a 3x1 and 1x3 kernel.</p>
+<p><img src="../.gitbook/assets/conv_28.png" alt>A Sobel kernel can be divided into a 3 x 1 and a 1 x 3 kernel.</p>
+<p>In convolution, the 3x3 kernel directly convolves with the image. In spatially separable convolution, the 3x1 kernel first convolves with the image. Then the 1x3 kernel is applied. This would require 6 instead of 9 parameters while doing the same operations.</p>
+<p>Moreover, one need less matrix multiplications in spatially separable convolution than convolution. For a concrete example, convolution on a 5 x 5 image with a 3 x 3 kernel (stride=1, padding=0) requires scanning the kernel at 3 positions horizontally (and 3 positions vertically). That is 9 positions in total, indicated as the dots in the image below. At each position, 9 element-wise multiplications are applied. Overall, that&#x2019;s <em>9 x 9 = 81</em> multiplications.</p>
+<p><img src="../.gitbook/assets/conv_29.png" alt>Standard convolution with 1 channel.</p>
+<p>On the other hand, for spatially separable convolution, we first apply a 3 x 1 filter on the 5 x 5 image. We scan such kernel at 5 positions horizontally and 3 positions vertically. That&#x2019;s <em>5 x 3=15</em> positions in total, indicated as dots on the image below. At each position, 3 element-wise multiplications are applied. That is <em>15 x 3 = 45</em> multiplications. We now obtained a 3 x 5 matrix. This matrix is now convolved with a 1 x 3 kernel, which scans the matrix at 3 positions horizontally and 3 positions vertically. For each of these 9 positions, 3 element-wise multiplications are applied. This step requires <em>9 x 3=27</em> multiplications. Thus, overall, the spatially separable convolution takes <em>45 + 27 = 72</em> multiplications, which is less than convolution.</p>
+<p><img src="../.gitbook/assets/conv_30.png" alt>Spatially separable convolution with 1 channel.</p>
+<p>Let&#x2019;s generalize the above examples a little bit. Let&#x2019;s say we now apply convolutions on a N x N image with a m x m kernel, with stride=1 and padding=0. Traditional convolution requires <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>N</mi><mo>&#x2212;</mo><mn>2</mn><mo>)</mo><mo>&#xD7;</mo><mo>(</mo><mi>N</mi><mo>&#x2212;</mo><mn>2</mn><mo>)</mo><mo>&#xD7;</mo><mi>m</mi><mo>&#xD7;</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">(N-2) \times (N-2) \times m \times m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mbin">&#x2212;</span><span class="mord mathrm">2</span><span class="mclose">)</span><span class="mbin">&#xD7;</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mbin">&#x2212;</span><span class="mord mathrm">2</span><span class="mclose">)</span><span class="mbin">&#xD7;</span><span class="mord mathit">m</span><span class="mbin">&#xD7;</span><span class="mord mathit">m</span></span></span></span> multiplications. Spatially separable convolution requires <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mo>&#xD7;</mo><mo>(</mo><mi>N</mi><mo>&#x2212;</mo><mn>2</mn><mo>)</mo><mo>&#xD7;</mo><mi>m</mi><mo>+</mo><mo>(</mo><mi>N</mi><mo>&#x2212;</mo><mn>2</mn><mo>)</mo><mo>&#xD7;</mo><mo>(</mo><mi>N</mi><mo>&#x2212;</mo><mn>2</mn><mo>)</mo><mo>&#xD7;</mo><mi>m</mi><mo>=</mo><mo>(</mo><mn>2</mn><mi>N</mi><mo>&#x2212;</mo><mn>2</mn><mo>)</mo><mo>&#xD7;</mo><mo>(</mo><mi>N</mi><mo>&#x2212;</mo><mn>2</mn><mo>)</mo><mo>&#xD7;</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">N \times (N-2) \times m + (N-2) \times (N-2) \times m = (2N-2) \times (N-2) \times m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mbin">&#xD7;</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mbin">&#x2212;</span><span class="mord mathrm">2</span><span class="mclose">)</span><span class="mbin">&#xD7;</span><span class="mord mathit">m</span><span class="mbin">+</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mbin">&#x2212;</span><span class="mord mathrm">2</span><span class="mclose">)</span><span class="mbin">&#xD7;</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mbin">&#x2212;</span><span class="mord mathrm">2</span><span class="mclose">)</span><span class="mbin">&#xD7;</span><span class="mord mathit">m</span><span class="mrel">=</span><span class="mopen">(</span><span class="mord mathrm">2</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mbin">&#x2212;</span><span class="mord mathrm">2</span><span class="mclose">)</span><span class="mbin">&#xD7;</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mbin">&#x2212;</span><span class="mord mathrm">2</span><span class="mclose">)</span><span class="mbin">&#xD7;</span><span class="mord mathit">m</span></span></span></span> multiplications. The ratio of computation costs between spatially separable convolution and the standard convolution is</p>
+<p><img src="https://github.com/ztlevi/Machine_Learning_Questions/tree/26cb30cb7a3ec95f737534585c8ae80567d03d7b/docs/.../.gitbook/assets/conv_31.png" alt></p>
+<p>For layers where the image size N is larger than filter size (N &gt;&gt; m), this ratio becomes 2 / m. It means at this asymptotic situation (N &gt;&gt; m), computational cost of spatially separable convolution is 2/3 of the standard convolution for a 3 x 3 filter. It is 2 / 5 for a 5 x 5 filter, 2 / 7 for a 7 x 7 filter, and so on.</p>
+<p>Although spatially separable convolutions save cost, it is rarely used in deep learning. One of the main reason is that not all kernels can be divided into two, smaller kernels. If we replace all traditional convolutions by the spatially separable convolution, we limit ourselves for searching all possible kernels during training. The training results may be sub-optimal.</p>
+<h4 id="82-depthwise-separable-convolutions">8.2. Depthwise Separable Convolutions</h4>
+<p>Now, let&#x2019;s move on to the depthwise separable convolutions, which is much more commonly used in deep learning (e.g. in <a href="https://arxiv.org/abs/1704.04861" target="_blank">MobileNet</a> and <a href="https://arxiv.org/abs/1610.02357" target="_blank">Xception</a>). The depth wise separable convolutions consist of two steps: depthwise convolutions and 1x1 convolutions.</p>
+<p>Before describing these steps, it is worth revisiting the 2D convolution and 1 x 1 convolution we talked about in my previous sections. Let&#x2019;s have a quick recap of standard 2D convolutions. For a concrete example, let&#x2019;s say the input layer is of size 7 x 7 x 3 (height x width x channels), and the filter is of size 3 x 3 x 3. After the 2D convolution with one filter, the output layer is of size 5 x 5 x 1 (with only 1 channel).</p>
+<p><img src="../.gitbook/assets/conv_32.png" alt>Standard 2D convolution to create output with 1 layer, using 1 filter.</p>
+<p>Typically, multiple filters are applied between two neural net layers. Let&#x2019;s say we have 128 filters here. After applying these 128 2D convolutions, we have 128 5 x 5 x 1 output maps. We then stack these maps into a single layer of size 5 x 5 x 128. By doing that, we transform the input layer (7 x 7 x 3) into the output layer (5 x 5 x 128). The spatial dimensions, i.e. height &amp; width, are shrunk, while the depth is extended.</p>
+<p><img src="../.gitbook/assets/conv_34.png" alt>Standard 2D convolution to create output with 128 layer, using 128 filters.</p>
+<p>Now with depthwise separable convolutions, let&#x2019;s see how we can achieve the same transformation.</p>
+<p>First, we apply depthwise convolution to the input layer. Instead of using a single filter of size 3 x 3 x 3 in 2D convolution, we used 3 kernels, separately. Each filter has size 3 x 3 x 1. Each kernel convolves with 1 channel of the input layer (1 channel only, not all channels!). Each of such convolution provides a map of size 5 x 5 x 1. We then stack these maps together to create a 5 x 5 x 3 image. After this, we have the output with size 5 x 5 x 3. We now shrink the spatial dimensions, but the depth is still the same as before.</p>
+<p><img src="../.gitbook/assets/conv_35.png" alt>Depthwise separable convolution &#x2014; first step: Instead of using a single filter of size 3 x 3 x 3 in 2D convolution, we used 3 kernels, separately. Each filter has size 3 x 3 x 1. Each kernel convolves with 1 channel of the input layer (1 channel only, not all channels!). Each of such convolution provides a map of size 5 x 5 x 1. We then stack these maps together to create a 5 x 5 x 3 image. After this, we have the output with size 5 x 5 x 3.</p>
+<p>As the second step of depthwise separable convolution, to extend the depth, we apply the 1x1 convolution with kernel size 1x1x3. Convolving the 5 x 5 x 3 input image with each 1 x 1 x 3 kernel provides a map of size 5 x 5 x 1.</p>
+<p><img src="../.gitbook/assets/conv_36.png" alt></p>
+<p>Thus, after applying 128 1x1 convolutions, we can have a layer with size 5 x 5 x 128.</p>
+<p><img src="../.gitbook/assets/conv_37.png" alt>Depthwise separable convolution &#x2014; second step: apply multiple 1 x 1 convolutions to modify depth.</p>
+<p>With these two steps, depthwise separable convolution also transform the input layer (7 x 7 x 3) into the output layer (5 x 5 x 128).</p>
+<p>The overall process of depthwise separable convolution is shown in the figure below.</p>
+<p><img src="../.gitbook/assets/conv_38.png" alt>The overall process of depthwise separable convolution.</p>
+<p>So, what&#x2019;s the advantage of doing depthwise separable convolutions? Efficiency! One needs much less operations for depthwise separable convolutions compared to 2D convolutions.</p>
+<p>Let&#x2019;s recall the computation costs for our example of 2D convolutions. There are <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>2</mn><mn>8</mn><mn>3</mn><mo>&#xD7;</mo><mn>3</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">128 3 \times 3 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">2</span><span class="mord mathrm">8</span><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span> kernels that move <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn><mo>&#xD7;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">5 \times 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">5</span><span class="mbin">&#xD7;</span><span class="mord mathrm">5</span></span></span></span> times. That is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>2</mn><mn>8</mn><mo>&#xD7;</mo><mn>3</mn><mo>&#xD7;</mo><mn>3</mn><mo>&#xD7;</mo><mn>3</mn><mo>&#xD7;</mo><mn>5</mn><mo>&#xD7;</mo><mn>5</mn><mo>=</mo><mn>8</mn><mn>6</mn><mo separator="true">,</mo><mn>4</mn><mn>0</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">128 \times 3 \times 3 \times 3 \times 5 \times 5 = 86,400</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">2</span><span class="mord mathrm">8</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">5</span><span class="mbin">&#xD7;</span><span class="mord mathrm">5</span><span class="mrel">=</span><span class="mord mathrm">8</span><span class="mord mathrm">6</span><span class="mpunct">,</span><span class="mord mathrm">4</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span></span></span></span> multiplications.</p>
+<p>How about the separable convolution? In the first depthwise convolution step, there are 3 3x3x1 kernels that moves <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn><mo>&#xD7;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">5 \times 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">5</span><span class="mbin">&#xD7;</span><span class="mord mathrm">5</span></span></span></span> times. That is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>3</mn><mo>&#xD7;</mo><mn>3</mn><mo>&#xD7;</mo><mn>1</mn><mo>&#xD7;</mo><mn>5</mn><mo>&#xD7;</mo><mn>5</mn><mo>=</mo><mn>6</mn><mn>7</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">3 \times 3 \times 3 \times 1 \times 5 \times 5 = 675</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathrm">5</span><span class="mbin">&#xD7;</span><span class="mord mathrm">5</span><span class="mrel">=</span><span class="mord mathrm">6</span><span class="mord mathrm">7</span><span class="mord mathrm">5</span></span></span></span> multiplications. In the second step of 1 x 1 convolution, there are 128 1x1x3 kernels that moves <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn><mo>&#xD7;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">5 \times 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">5</span><span class="mbin">&#xD7;</span><span class="mord mathrm">5</span></span></span></span> times. That is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>2</mn><mn>8</mn><mo>&#xD7;</mo><mn>1</mn><mo>&#xD7;</mo><mn>1</mn><mo>&#xD7;</mo><mn>3</mn><mo>&#xD7;</mo><mn>5</mn><mo>&#xD7;</mo><mn>5</mn><mo>=</mo><mn>9</mn><mo separator="true">,</mo><mn>6</mn><mn>0</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">128 \times 1 \times 1 \times 3 \times 5 \times 5 = 9,600</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">2</span><span class="mord mathrm">8</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">5</span><span class="mbin">&#xD7;</span><span class="mord mathrm">5</span><span class="mrel">=</span><span class="mord mathrm">9</span><span class="mpunct">,</span><span class="mord mathrm">6</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span></span></span></span> multiplications. Thus, overall, the depthwise separable convolution takes <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn><mn>7</mn><mn>5</mn><mo>+</mo><mn>9</mn><mn>6</mn><mn>0</mn><mn>0</mn><mo>=</mo><mn>1</mn><mn>0</mn><mo separator="true">,</mo><mn>2</mn><mn>7</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">675 + 9600 = 10,275</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">6</span><span class="mord mathrm">7</span><span class="mord mathrm">5</span><span class="mbin">+</span><span class="mord mathrm">9</span><span class="mord mathrm">6</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">2</span><span class="mord mathrm">7</span><span class="mord mathrm">5</span></span></span></span> multiplications. This is only about 12% of the cost of the 2D convolution!</p>
+<p>So, for an image with arbitrary size, how much time can we save if we apply depthwise separable convolution. Let&#x2019;s generalize the above examples a little bit. Now, for an input image of size <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>&#xD7;</mo><mi>W</mi><mo>&#xD7;</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">H \times W \times D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.02778em;">D</span></span></span></span>, we want to do 2D convolution (stride=1, padding=0) with Nc kernels of size <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>h</mi><mo>&#xD7;</mo><mi>h</mi><mo>&#xD7;</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">h \times h \times D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">h</span><span class="mbin">&#xD7;</span><span class="mord mathit">h</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.02778em;">D</span></span></span></span>, where h is even. This transform the input layer (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>&#xD7;</mo><mi>W</mi><mo>&#xD7;</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">H \times W \times D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.02778em;">D</span></span></span></span>) into the output layer (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>&#x2212;</mo><mi>h</mi><mo>+</mo><mn>1</mn><mo>&#xD7;</mo><mi>W</mi><mo>&#x2212;</mo><mi>h</mi><mo>+</mo><mn>1</mn><mo>&#xD7;</mo><mi>N</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">H-h+1 \times W-h+1 \times Nc</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mbin">&#x2212;</span><span class="mord mathit">h</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mbin">&#x2212;</span><span class="mord mathit">h</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mord mathit">c</span></span></span></span>). The overall multiplications needed is</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mi>c</mi><mo>&#xD7;</mo><mi>h</mi><mo>&#xD7;</mo><mi>h</mi><mo>&#xD7;</mo><mi>D</mi><mo>&#xD7;</mo><mo>(</mo><mi>H</mi><mo>&#x2212;</mo><mi>h</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>&#xD7;</mo><mo>(</mo><mi>W</mi><mo>&#x2212;</mo><mi>h</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">
+Nc \times h \times h \times D \times (H-h+1) \times (W-h+1)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mord mathit">c</span><span class="mbin">&#xD7;</span><span class="mord mathit">h</span><span class="mbin">&#xD7;</span><span class="mord mathit">h</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="mbin">&#xD7;</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mbin">&#x2212;</span><span class="mord mathit">h</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mbin">&#xD7;</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mbin">&#x2212;</span><span class="mord mathit">h</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span></span></p>
+<p>On the other hand, for the same transformation, the multiplication needed for depthwise separable convolution is</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi><mo>&#xD7;</mo><mi>h</mi><mo>&#xD7;</mo><mi>h</mi><mo>&#xD7;</mo><mn>1</mn><mo>&#xD7;</mo><mo>(</mo><mi>H</mi><mo>&#x2212;</mo><mi>h</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>&#xD7;</mo><mo>(</mo><mi>W</mi><mo>&#x2212;</mo><mi>h</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>+</mo><mi>N</mi><mi>c</mi><mo>&#xD7;</mo><mn>1</mn><mo>&#xD7;</mo><mn>1</mn><mo>&#xD7;</mo><mi>D</mi><mo>&#xD7;</mo><mo>(</mo><mi>H</mi><mo>&#x2212;</mo><mi>h</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>&#xD7;</mo><mo>(</mo><mi>W</mi><mo>&#x2212;</mo><mi>h</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">
+D \times h \times h \times 1 \times (H-h+1) \times (W-h+1) + Nc \times 1 \times 1 \times D \times (H-h+1) \times (W-h+1)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="mbin">&#xD7;</span><span class="mord mathit">h</span><span class="mbin">&#xD7;</span><span class="mord mathit">h</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mbin">&#x2212;</span><span class="mord mathit">h</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mbin">&#xD7;</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mbin">&#x2212;</span><span class="mord mathit">h</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mord mathit">c</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="mbin">&#xD7;</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mbin">&#x2212;</span><span class="mord mathit">h</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mbin">&#xD7;</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mbin">&#x2212;</span><span class="mord mathit">h</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>=</mo><mo>(</mo><mi>h</mi><mo>&#xD7;</mo><mi>h</mi><mo>+</mo><mi>N</mi><mi>c</mi><mo>)</mo><mo>&#xD7;</mo><mi>D</mi><mo>&#xD7;</mo><mo>(</mo><mi>H</mi><mo>&#x2212;</mo><mi>h</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>&#xD7;</mo><mo>(</mo><mi>W</mi><mo>&#x2212;</mo><mi>h</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">
+= (h \times h + Nc) \times D \times (H-h+1) \times (W-h+1)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mrel">=</span><span class="mopen">(</span><span class="mord mathit">h</span><span class="mbin">&#xD7;</span><span class="mord mathit">h</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mord mathit">c</span><span class="mclose">)</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="mbin">&#xD7;</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mbin">&#x2212;</span><span class="mord mathit">h</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mbin">&#xD7;</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mbin">&#x2212;</span><span class="mord mathit">h</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span></span></p>
+<p>The ratio of multiplications between depthwise separable convolution and 2D convolution is now:</p>
+<p><img src="../.gitbook/assets/conv_39.png" alt></p>
+<p>For most modern architectures, it is common that the output layer has many channels, e.g. several hundreds if not several thousands. For such layers (Nc &gt;&gt; h), then the above expression reduces down to 1 / h / h. It means for this asymptotic expression, if 3 x 3 filters are used, 2D convolutions spend 9 times more multiplications than a depthwise separable convolutions. For 5 x 5 filters, 2D convolutions spend 25 times more multiplications.</p>
+<p>Is there any drawback of using depthwise separable convolutions? Sure, there are. The depthwise separable convolutions reduces the number of parameters in the convolution. As such, for a small model, the model capacity may be decreased significantly if the 2D convolutions are replaced by depthwise separable convolutions. As a result, the model may become sub-optimal. However, if properly used, depthwise separable convolutions can give you the efficiency without dramatically damaging your model performance.</p>
+<h3 id="9-flattened-convolutions">9. Flattened convolutions</h3>
+<p>The flattened convolution was introduced in the <a href="https://arxiv.org/abs/1412.5474" target="_blank">paper</a> &#x201C;<a href="https://arxiv.org/abs/1412.5474" target="_blank">Flattened convolutional neural networks for feedforward acceleration</a>&#x201D;. Intuitively, the idea is to apply filter separation. Instead of applying one standard convolution filter to map the input layer to an output layer, we separate this standard filter into 3 1D filters. Such idea is similar as that in the spatial separable convolution described above, where a spatial filter is approximated by two rank-1 filters.</p>
+<p><img src="../.gitbook/assets/conv_40.png" alt>The image is adopted from the [paper](<a href="https://arxiv.org/abs/1412.5474\" target="_blank">https://arxiv.org/abs/1412.5474\</a>).</p>
+<p>One should notice that if the standard convolution filter is a rank-1 filter, such filter can always be separated into cross-products of three 1D filters. But this is a strong condition and the intrinsic rank of the standard filter is higher than one in practice. As pointed out in the <a href="https://arxiv.org/abs/1412.5474" target="_blank">paper</a> &#x201C;As the difficulty of classification problem increases, the more number of leading components is required to solve the problem... Learned filters in deep networks have distributed eigenvalues and applying the separation directly to the filters results in significant information loss.&#x201D;</p>
+<p>To alleviate such problem, the <a href="https://arxiv.org/abs/1412.5474" target="_blank">paper</a> restricts connections in receptive fields so that the model can learn 1D separated filters upon training. The paper claims that by training with flattened networks that consists of consecutive sequence of 1D filters across all directions in 3D space provides comparable performance as standard convolutional networks, with much less computation costs due to the significant reduction of learning parameters.</p>
+<h3 id="10-grouped-convolution">10. Grouped Convolution</h3>
+<p>Grouped convolution was introduced in the AlexNet paper (<a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf" target="_blank">link</a>) in 2012. The main reason of implementing it was to allow the network training over two GPUs with limited memory (1.5 GB memory per GPU). The AlexNet below shows two separate convolution paths at most of the layers. It&#x2019;s doing model-parallelization across two GPUs (of course one can do multi-GPUs parallelization if more GPUs are available).</p>
+<p><img src="../.gitbook/assets/conv_41.png" alt>This image is adopted from the AlexNet [paper](<a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf\" target="_blank">https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf\</a>).</p>
+<p>Here we describe how the grouped convolutions work. First of all, conventional 2D convolutions follow the steps showing below. In this example, the input layer of size (7 x 7 x 3) is transformed into the output layer of size (5 x 5 x 128) by applying 128 filters (each filter is of size 3 x 3 x 3). Or in general case, the input layer of size (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mo>&#xD7;</mo><msub><mi>W</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mo>&#xD7;</mo><msub><mi>D</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">H_{in} \times W_{in} \times D_{in}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.08125em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#xD7;</span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#xD7;</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>) is transformed into the output layer of size (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mo>&#xD7;</mo><msub><mi>W</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mo>&#xD7;</mo><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">H_{out} \times W_{out} \times D_{out}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.08125em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#xD7;</span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#xD7;</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>) by applying <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{out}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> kernels (each is of size <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>h</mi><mo>&#xD7;</mo><mi>w</mi><mo>&#xD7;</mo><msub><mi>D</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">h \times w \times D_{in}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord mathit">h</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mbin">&#xD7;</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>).</p>
+<p><img src="../.gitbook/assets/conv_42.png" alt>Standard 2D convolution.</p>
+<p>In grouped convolution, the filters are separated into different groups. Each group is responsible for a conventional 2D convolutions with certain depth. The following examples can make this clearer.</p>
+<p><img src="../.gitbook/assets/conv_43.png" alt>Grouped convolution with 2 filter groups.</p>
+<p>Above is the illustration of grouped convolution with 2 filter groups. In each filter group, the depth of each filter is only half of the that in the nominal 2D convolutions. They are of depth <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">D_{in} / 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">/</span><span class="mord mathrm">2</span></span></span></span>. Each filter group contains <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">D_{out} /2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">/</span><span class="mord mathrm">2</span></span></span></span> filters. The first filter group (red) convolves with the first half of the input layer (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mo>:</mo><mo separator="true">,</mo><mo>:</mo><mo separator="true">,</mo><mn>0</mn><mo>:</mo><msub><mi>D</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mi mathvariant="normal">/</mi><mn>2</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">[:, :, 0:D_{in}/2]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mrel">:</span><span class="mpunct">,</span><span class="mrel">:</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mrel">:</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">/</span><span class="mord mathrm">2</span><span class="mclose">]</span></span></span></span>), while the second filter group (blue) convolves with the second half of the input layer (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mo>:</mo><mo separator="true">,</mo><mo>:</mo><mo separator="true">,</mo><msub><mi>D</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mi mathvariant="normal">/</mi><mn>2</mn><mo>:</mo><msub><mi>D</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mo>]</mo></mrow><annotation encoding="application/x-tex">[:, :, D_{in}/2:D_{in}]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mrel">:</span><span class="mpunct">,</span><span class="mrel">:</span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">/</span><span class="mord mathrm">2</span><span class="mrel">:</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">]</span></span></span></span>). As a result, each filter group creates <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">D_{out}/2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">/</span><span class="mord mathrm">2</span></span></span></span> channels. Overall, two groups create <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>&#xD7;</mo><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mi mathvariant="normal">/</mi><mn>2</mn><mo>=</mo><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">2 \times D_{out}/2 = D_{out}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">2</span><span class="mbin">&#xD7;</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">/</span><span class="mord mathrm">2</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> channels. We then stack these channels in the output layer with <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{out}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> channels.</p>
+<h4 id="101-grouped-convolution-vs-depthwise-convolution">10.1. Grouped convolution v.s. depthwise convolution</h4>
+<p>You may already observe some linkage and difference between grouped convolution and the depthwise convolution used in the depthwise separable convolution. If the number of filter groups is the same as the input layer channel, each filter is of depth <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mi mathvariant="normal">/</mi><msub><mi>D</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">D_{in} / D_{in} = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">/</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span>. This is the same filter depth as in depthwise convolution.</p>
+<p>On the other hand, each filter group now contains <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mi mathvariant="normal">/</mi><msub><mi>D</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{out} / D_{in}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">/</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> filters. Overall, the output layer is of depth <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{out}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>. This is different from that in depthwise convolution, which does not change the layer depth. The layer depth is extended later by 1x1 convolution in the depthwise separable convolution.</p>
+<p>There are a few advantages of doing grouped convolution.</p>
+<p><strong>The first advantage</strong> is the efficient training. Since the convolutions are divided into several paths, each path can be handled separately by different GPUs. This procedure allows the model training over multiple GPUs, in a parallel fashion. Such model-parallelization over multi-GPUs allows more images to be fed into the network per step, compared to training with everything with one GPU. The model-parallelization is considered to be better than data parallelization. The later one split the dataset into batches and then we train on each batch. However, when the batch size becomes too small, we are essentially doing stochastic than batch gradient descent. This would result in slower and sometimes poorer convergence.</p>
+<p>The grouped convolutions become important for training very deep neural nets, as in the ResNeXt shown below</p>
+<p><img src="../.gitbook/assets/conv_44.png" alt>The image is adopted from the ResNeXt [paper](<a href="https://arxiv.org/abs/1611.05431\" target="_blank">https://arxiv.org/abs/1611.05431\</a>).</p>
+<p><strong>The second advantage</strong> is the model is more efficient, i.e. the model parameters decrease as number of filter group increases. In the previous examples, filters have h x w x <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{in}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> x <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{out}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> parameters in a nominal 2D convolution. Filters in a grouped convolution with 2 filter groups has (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>h</mi><mo>&#xD7;</mo><mi>w</mi><mo>&#xD7;</mo><msub><mi>D</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mi mathvariant="normal">/</mi><mn>2</mn><mo>&#xD7;</mo><msub><mi>D</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mi mathvariant="normal">/</mi><mn>2</mn><mo>)</mo><mo>&#xD7;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">h \times w \times D_{in}/2 \times D_{out}/2) \times 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">h</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mbin">&#xD7;</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">/</span><span class="mord mathrm">2</span><span class="mbin">&#xD7;</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">o</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">/</span><span class="mord mathrm">2</span><span class="mclose">)</span><span class="mbin">&#xD7;</span><span class="mord mathrm">2</span></span></span></span> parameters. The number of parameters is reduced by half.</p>
+<p><strong>The third advantage</strong> is a bit surprising. Grouped convolution may provide a better model than a nominal 2D convolution. This another fantastic blog (<a href="https://blog.yani.io/filter-group-tutorial/" target="_blank">link</a>) explains it. Here is a brief summary.</p>
+<p>The reason links to the sparse filter relationship. The image below is the correlation across filters of adjacent layers. The relationship is sparse.</p>
+<p><img src="../.gitbook/assets/conv_45.png" alt>The correlation matrix between filters of adjacent layers in a Network-in-Network model trained on CIFAR10. Pairs of highly correlated filters are brighter, while lower correlated filters are darker. The image is adopted from this [article](<a href="https://blog.yani.io/filter-group-tutorial/\" target="_blank">https://blog.yani.io/filter-group-tutorial/\</a>).</p>
+<p>How about the correlation map for grouped convolution?</p>
+<p><img src="../.gitbook/assets/conv_46.png" alt>The correlations between filters of adjacent layers in a Network-in-Network model trained on CIFAR10, when trained with 1, 2, 4, 8 and 16 filter groups. The image is adopted from this [article](<a href="https://blog.yani.io/filter-group-tutorial/\" target="_blank">https://blog.yani.io/filter-group-tutorial/\</a>).</p>
+<p>The image above is the correlation across filters of adjacent layers, when the model is trained with 1, 2, 4, 8, and 16 filter groups. The article proposed one reasoning (<a href="https://blog.yani.io/filter-group-tutorial/" target="_blank">link</a>): &#x201C;The effect of filter groups is to learn with a block-diagonal structured sparsity on the channel dimension... the filters with high correlation are learned in a more structured way in the networks with filter groups. In effect, filter relationships that don&#x2019;t have to be learned are on longer parameterized. In reducing the number of parameters in the network in this salient way, it is not as easy to over-fit, and hence a regularization-like effect allows the optimizer to learn more accurate, more efficient deep networks.&#x201D;</p>
+<p><img src="../.gitbook/assets/conv_47.png" alt>AlexNet conv1 filter separation: as noted by the authors, filter groups appear to structure learned filters into two distinct groups, black-and-white and color filters. The image is adopted from the AlexNet [paper](<a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf\" target="_blank">https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf\</a>).</p>
+<p>In addition, each filter group learns a unique representation of the data. As noticed by the authors of the AlexNet, filter groups appear to structure learned filters into two distinct groups, black-white filter and color filters.</p>
+<h3 id="11-shuffled-grouped-convolution">11. Shuffled Grouped Convolution</h3>
+<p>Shuffled grouped convolution was introduced in the <a href="https://arxiv.org/abs/1707.01083" target="_blank">ShuffleNet</a> from Magvii Inc (Face++). ShuffleNet is a computation-efficient convolution architecture, which is designed specially for mobile devices with very limited computing power (e.g. 10&#x2013;150 MFLOPs).</p>
+<p>The ideas behind the shuffled grouped convolution are linked to the ideas behind grouped convolution (used in <a href="https://arxiv.org/abs/1704.04861" target="_blank">MobileNet</a> and <a href="https://arxiv.org/abs/1611.05431" target="_blank">ResNeXt</a> for examples) and depthwise separable convolution (used in <a href="https://arxiv.org/abs/1610.02357" target="_blank">Xception</a>).</p>
+<p>Overall, the shuffled grouped convolution involves grouped convolution and channel shuffling.</p>
+<p>In the section about grouped convolution, we know that the filters are separated into different groups. Each group is responsible for a conventional 2D convolutions with certain depth. The total operations are significantly reduced. For examples in the figure below, we have 3 filter groups. The first filter group convolves with the red portion in the input layer. Similarly, the second and the third filter group convolves with the green and blue portions in the input. The kernel depth in each filter group is only 1/3 of the total channel count in the input layer. In this example, after the first grouped convolution GConv1, the input layer is mapped to the intermediate feature map. This feature map is then mapped to the output layer through the second grouped convolution GConv2.</p>
+<p><img src="../.gitbook/assets/conv_48.png" alt></p>
+<p>Grouped convolution is computationally efficient. But the problem is that each filter group only handles information passed down from the fixed portion in the previous layers. For examples in the image above, the first filter group (red) only process information that is passed down from the first 1/3 of the input channels. The blue filter group (blue) only process information that is passed down from the last 1/3 of the input channels. As such, each filter group is only limited to learn a few specific features. This property blocks information flow between channel groups and weakens representations during training. To overcome this problem, we apply the channel shuffle.</p>
+<p>The idea of channel shuffle is that we want to mix up the information from different filter groups. In the image below, we get the feature map after applying the first grouped convolution GConv1 with 3 filter groups. Before feeding this feature map into the second grouped convolution, we first divide the channels in each group into several subgroups. The we mix up these subgroups.</p>
+<p><img src="../.gitbook/assets/conv_49.png" alt>Channel shuffle.</p>
+<p>After such shuffling, we continue performing the second grouped convolution GConv2 as usual. But now, since the information in the shuffled layer has already been mixed, we essentially feed each group in GConv2 with different subgroups in the feature map layer (or in the input layer). As a result, we allow the information flow between channels groups and strengthen the representations.</p>
+<h3 id="12-pointwise-grouped-convolution">12. Pointwise grouped convolution</h3>
+<p>The ShuffleNet paper (<a href="https://arxiv.org/abs/1707.01083" target="_blank">link</a>) also introduced the pointwise grouped convolution. Typically for grouped convolution such as in MobileNet (<a href="https://arxiv.org/abs/1704.04861" target="_blank">link</a>) or ResNeXt (<a href="https://arxiv.org/abs/1611.05431" target="_blank">link</a>), the group operation is performed on the 3x3 spatial convolution, but not on 1 x 1 convolution.</p>
+<p>The shuffleNet paper argues that the 1 x 1 convolution are also computationally costly. It suggests applying group convolution for 1 x 1 convolution as well. The pointwise grouped convolution, as the name suggested, performs group operations for 1 x 1 convolution. The operation is identical as for grouped convolution, with only one modification &#x2014; performing on 1x1 filters instead of NxN filters (N&gt;1).</p>
+<p>In the ShuffleNet paper, authors utilized three types of convolutions we have learned: (1) shuffled grouped convolution; (2) pointwise grouped convolution; and (3) depthwise separable convolution. Such architecture design significantly reduces the computation cost while maintaining the accuracy. For examples the classification error of ShuffleNet and AlexNet is comparable on actual mobile devices. However, the computation cost has been dramatically reduced from 720 MFLOPs in AlexNet down to 40&#x2013;140 MFLOPs in ShuffleNet. With relatively small computation cost and good model performance, ShuffleNet gained popularity in the field of convolutional neural net for mobile devices.</p>
+<p>Thank you for reading the article. Please feel free to leave questions and comments below.</p>
+<h3 id="reference">Reference</h3>
+<h4 id="blogs--articles">Blogs &amp; articles</h4>
+<ul>
+<li>&#x201C;An Introduction to different Types of Convolutions in Deep Learning&#x201D; (<a href="https://towardsdatascience.com/types-of-convolutions-in-deep-learning-717013397f4d" target="_blank">Link</a>)</li>
+<li>&#x201C;Review: DilatedNet &#x2014; Dilated Convolution (Semantic Segmentation)&#x201D; (<a href="https://towardsdatascience.com/review-dilated-convolution-semantic-segmentation-9d5a5bd768f5" target="_blank">Link</a>)</li>
+<li>&#x201C;ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices&#x201D; (<a href="https://medium.com/syncedreview/shufflenet-an-extremely-efficient-convolutional-neural-network-for-mobile-devices-72c6f5b01651" target="_blank">Link</a>)</li>
+<li>&#x201C;Separable convolutions &#x201C;A Basic Introduction to Separable Convolutions&#x201D; (<a href="https://towardsdatascience.com/a-basic-introduction-to-separable-convolutions-b99ec3102728" target="_blank">Link</a>)</li>
+<li>Inception network &#x201C;A Simple Guide to the Versions of the Inception Network&#x201D; (<a href="https://towardsdatascience.com/a-simple-guide-to-the-versions-of-the-inception-network-7fc52b863202" target="_blank">Link</a>)</li>
+<li>&#x201C;A Tutorial on Filter Groups (Grouped Convolution)&#x201D; (<a href="https://blog.yani.io/filter-group-tutorial/" target="_blank">Link</a>)</li>
+<li>&#x201C;Convolution arithmetic animation&#x201D; (<a href="https://github.com/vdumoulin/conv_arithmetic" target="_blank">Link</a>)</li>
+<li>&#x201C;Up-sampling with Transposed Convolution&#x201D; (<a href="https://towardsdatascience.com/up-sampling-with-transposed-convolution-9ae4f2df52d0" target="_blank">Link</a>)</li>
+<li>&#x201C;Intuitively Understanding Convolutions for Deep Learning&#x201D; (<a href="https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1" target="_blank">Link</a>)</li>
+</ul>
+<h4 id="papers">Papers</h4>
+<ul>
+<li>Network in Network (<a href="https://arxiv.org/abs/1312.4400" target="_blank">Link</a>)</li>
+<li>Multi-Scale Context Aggregation by Dilated Convolutions (<a href="https://arxiv.org/abs/1511.07122" target="_blank">Link</a>)</li>
+<li>Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs (<a href="https://arxiv.org/abs/1412.7062" target="_blank">Link</a>)</li>
+<li>ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices (<a href="https://arxiv.org/abs/1707.01083" target="_blank">Link</a>)</li>
+<li>A guide to convolution arithmetic for deep learning (<a href="https://arxiv.org/abs/1603.07285" target="_blank">Link</a>)</li>
+<li>Going deeper with convolutions (<a href="https://arxiv.org/abs/1409.4842" target="_blank">Link</a>)</li>
+<li>Rethinking the Inception Architecture for Computer Vision (<a href="https://arxiv.org/pdf/1512.00567v3.pdf" target="_blank">Link</a>)</li>
+<li>Flattened convolutional neural networks for feedforward acceleration (<a href="https://arxiv.org/abs/1412.5474" target="_blank">Link</a>)</li>
+<li>Xception: Deep Learning with Depthwise Separable Convolutions (<a href="https://arxiv.org/abs/1610.02357" target="_blank">Link</a>)</li>
+<li>MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications (<a href="https://arxiv.org/abs/1704.04861" target="_blank">Link</a>)</li>
+<li>Deconvolution and Checkerboard Artifacts (<a href="https://distill.pub/2016/deconv-checkerboard/" target="_blank">Link</a>)</li>
+<li>ResNeXt: Aggregated Residual Transformations for Deep Neural Networks (<a href="https://arxiv.org/abs/1611.05431" target="_blank">Link</a>)</li>
+</ul>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Neural Networks">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="loss/" class="navigation navigation-next " aria-label="Next page: Loss">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Different Types of Convolution","level":"1.4.1","depth":2,"next":{"title":"Loss","level":"1.4.2","depth":2,"path":"neural_networks/loss/README.md","ref":"neural_networks/loss/README.md","articles":[{"title":"Hinge Loss","level":"1.4.2.1","depth":3,"path":"neural_networks/loss/Hinge_Loss.md","ref":"neural_networks/loss/Hinge_Loss.md","articles":[]},{"title":"Cross-Entropy Loss","level":"1.4.2.2","depth":3,"path":"neural_networks/loss/cross_entropy_loss.md","ref":"neural_networks/loss/cross_entropy_loss.md","articles":[]},{"title":"Binary Cross-Entropy Loss","level":"1.4.2.3","depth":3,"path":"neural_networks/loss/binary_cross_entropy_loss.md","ref":"neural_networks/loss/binary_cross_entropy_loss.md","articles":[]},{"title":"Categorical Cross-Entropy Loss","level":"1.4.2.4","depth":3,"path":"neural_networks/loss/categorical_cross_entropy_loss.md","ref":"neural_networks/loss/categorical_cross_entropy_loss.md","articles":[]},{"title":"Optional: Focal Loss","level":"1.4.2.5","depth":3,"path":"neural_networks/loss/focal_loss.md","ref":"neural_networks/loss/focal_loss.md","articles":[]},{"title":"Optional: CORAL Loss","level":"1.4.2.6","depth":3,"path":"neural_networks/loss/coral_loss.md","ref":"neural_networks/loss/coral_loss.md","articles":[]}]},"previous":{"title":"Neural Networks","level":"1.4","depth":1,"path":"neural_networks/README.md","ref":"neural_networks/README.md","articles":[{"title":"Different Types of Convolution","level":"1.4.1","depth":2,"path":"neural_networks/different_types_of_convolution.md","ref":"neural_networks/different_types_of_convolution.md","articles":[]},{"title":"Loss","level":"1.4.2","depth":2,"path":"neural_networks/loss/README.md","ref":"neural_networks/loss/README.md","articles":[{"title":"Hinge Loss","level":"1.4.2.1","depth":3,"path":"neural_networks/loss/Hinge_Loss.md","ref":"neural_networks/loss/Hinge_Loss.md","articles":[]},{"title":"Cross-Entropy Loss","level":"1.4.2.2","depth":3,"path":"neural_networks/loss/cross_entropy_loss.md","ref":"neural_networks/loss/cross_entropy_loss.md","articles":[]},{"title":"Binary Cross-Entropy Loss","level":"1.4.2.3","depth":3,"path":"neural_networks/loss/binary_cross_entropy_loss.md","ref":"neural_networks/loss/binary_cross_entropy_loss.md","articles":[]},{"title":"Categorical Cross-Entropy Loss","level":"1.4.2.4","depth":3,"path":"neural_networks/loss/categorical_cross_entropy_loss.md","ref":"neural_networks/loss/categorical_cross_entropy_loss.md","articles":[]},{"title":"Optional: Focal Loss","level":"1.4.2.5","depth":3,"path":"neural_networks/loss/focal_loss.md","ref":"neural_networks/loss/focal_loss.md","articles":[]},{"title":"Optional: CORAL Loss","level":"1.4.2.6","depth":3,"path":"neural_networks/loss/coral_loss.md","ref":"neural_networks/loss/coral_loss.md","articles":[]}]},{"title":"Resnet","level":"1.4.3","depth":2,"path":"neural_networks/resnet.md","ref":"neural_networks/resnet.md","articles":[]},{"title":"Mobilenet","level":"1.4.4","depth":2,"path":"neural_networks/mobilenet.md","ref":"neural_networks/mobilenet.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-search","-lunr","custom-js-css","docsearch","intopic-toc"],"pluginsConfig":{"docsearch":{},"docSearch":{"apiKey":"9b2d0c53eb838616448e652b3caafb42","index":"ztlevi-machine-learning"},"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"Navigation"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"css":["css/docsearch.css"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"neural_networks/different_types_of_convolution.md","mtime":"2021-06-06T08:01:39.121Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-06T08:02:29.611Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-docsearch/doc-search-lib.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-docsearch/doc-search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

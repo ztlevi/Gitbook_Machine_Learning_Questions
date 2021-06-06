@@ -1,0 +1,1072 @@
+
+<!DOCTYPE HTML>
+<html lang>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Single Shot MultiBox Detector(SSD) &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-custom-js-css/9eb07385451571ed1c43d6bfc772c8d5-docsearch.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-docsearch/doc-search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="fpn.html">
+    
+    
+    <link rel="prev" href="yolo.html">
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary"><div id="book-search-input">
+    <input type="text" id="book-doc-search-input" placeholder="Type to search">
+</div>
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../basics/">
+            
+                <a href="../../basics/">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../basics/optimization.html">
+            
+                <a href="../../basics/optimization.html">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../basics/how_to_prevent_overfitting.html">
+            
+                <a href="../../basics/how_to_prevent_overfitting.html">
+            
+                    
+                    How to prevent overfitting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../basics/linear_algebra.html">
+            
+                <a href="../../basics/linear_algebra.html">
+            
+                    
+                    Linear Algebra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../basics/clustering.html">
+            
+                <a href="../../basics/clustering.html">
+            
+                    
+                    Clustering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../basics/calculate_parameters_in_cnn.html">
+            
+                <a href="../../basics/calculate_parameters_in_cnn.html">
+            
+                    
+                    Calculate Parameters in CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../basics/weight_norm_and_layer_norm.html">
+            
+                <a href="../../basics/weight_norm_and_layer_norm.html">
+            
+                    
+                    Weight norm and layer norm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../basics/Confidence_Interval.html">
+            
+                <a href="../../basics/Confidence_Interval.html">
+            
+                    
+                    Confidence Interval
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../basics/Quantization.html">
+            
+                <a href="../../basics/Quantization.html">
+            
+                    
+                    Quantization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../classical_ml/">
+            
+                <a href="../../classical_ml/">
+            
+                    
+                    Classical Machine Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../neural_networks/">
+            
+                <a href="../../neural_networks/">
+            
+                    
+                    Neural Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../neural_networks/different_types_of_convolution.html">
+            
+                <a href="../../neural_networks/different_types_of_convolution.html">
+            
+                    
+                    Different Types of Convolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../neural_networks/loss/">
+            
+                <a href="../../neural_networks/loss/">
+            
+                    
+                    Loss
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../neural_networks/loss/Hinge_Loss.html">
+            
+                <a href="../../neural_networks/loss/Hinge_Loss.html">
+            
+                    
+                    Hinge Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../neural_networks/loss/cross_entropy_loss.html">
+            
+                <a href="../../neural_networks/loss/cross_entropy_loss.html">
+            
+                    
+                    Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../neural_networks/loss/binary_cross_entropy_loss.html">
+            
+                <a href="../../neural_networks/loss/binary_cross_entropy_loss.html">
+            
+                    
+                    Binary Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../neural_networks/loss/categorical_cross_entropy_loss.html">
+            
+                <a href="../../neural_networks/loss/categorical_cross_entropy_loss.html">
+            
+                    
+                    Categorical Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../neural_networks/loss/focal_loss.html">
+            
+                <a href="../../neural_networks/loss/focal_loss.html">
+            
+                    
+                    Optional: Focal Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../neural_networks/loss/coral_loss.html">
+            
+                <a href="../../neural_networks/loss/coral_loss.html">
+            
+                    
+                    Optional: CORAL Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../neural_networks/resnet.html">
+            
+                <a href="../../neural_networks/resnet.html">
+            
+                    
+                    Resnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../neural_networks/mobilenet.html">
+            
+                <a href="../../neural_networks/mobilenet.html">
+            
+                    
+                    Mobilenet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Computer Vision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../two-stage-detector/">
+            
+                <a href="../two-stage-detector/">
+            
+                    
+                    Two Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../two-stage-detector/metrics.html">
+            
+                <a href="../two-stage-detector/metrics.html">
+            
+                    
+                    Metrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../two-stage-detector/roi.html">
+            
+                <a href="../two-stage-detector/roi.html">
+            
+                    
+                    ROI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../two-stage-detector/r-cnn.html">
+            
+                <a href="../two-stage-detector/r-cnn.html">
+            
+                    
+                    R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../two-stage-detector/fast-rcnn.html">
+            
+                <a href="../two-stage-detector/fast-rcnn.html">
+            
+                    
+                    Fast RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../two-stage-detector/faster-rcnn.html">
+            
+                <a href="../two-stage-detector/faster-rcnn.html">
+            
+                    
+                    Faster RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="../two-stage-detector/mask-rcnn.html">
+            
+                <a href="../two-stage-detector/mask-rcnn.html">
+            
+                    
+                    Mask RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    One Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="yolo.html">
+            
+                <a href="yolo.html">
+            
+                    
+                    YOLO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2.2" data-path="ssd.html">
+            
+                <a href="ssd.html">
+            
+                    
+                    Single Shot MultiBox Detector(SSD)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="fpn.html">
+            
+                <a href="fpn.html">
+            
+                    
+                    FPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../segmentation/">
+            
+                <a href="../segmentation/">
+            
+                    
+                    Segmentation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../segmentation/panoptic.html">
+            
+                <a href="../segmentation/panoptic.html">
+            
+                    
+                    Panoptic Segmentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../segmentation/PSPNet.html">
+            
+                <a href="../segmentation/PSPNet.html">
+            
+                    
+                    PSPNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../facenet.html">
+            
+                <a href="../facenet.html">
+            
+                    
+                    FaceNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../gan.html">
+            
+                <a href="../gan.html">
+            
+                    
+                    GAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Object_detection_imbalance.html">
+            
+                <a href="../Object_detection_imbalance.html">
+            
+                    
+                    Imbalance problem in object detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../nlp/">
+            
+                <a href="../../nlp/">
+            
+                    
+                    NLP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../nlp/embedding.html">
+            
+                <a href="../../nlp/embedding.html">
+            
+                    
+                    Embedding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../nlp/rnn.html">
+            
+                <a href="../../nlp/rnn.html">
+            
+                    
+                    RNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../nlp/lstm.html">
+            
+                <a href="../../nlp/lstm.html">
+            
+                    
+                    LSTM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../parallel-computeing/">
+            
+                <a href="../../parallel-computeing/">
+            
+                    
+                    Parallel Computeing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../parallel-computeing/communication.html">
+            
+                <a href="../../parallel-computeing/communication.html">
+            
+                    
+                    Communication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../parallel-computeing/sync_mapreduce.html">
+            
+                <a href="../../parallel-computeing/sync_mapreduce.html">
+            
+                    
+                    MapReduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../parallel-computeing/parameter_server.html">
+            
+                <a href="../../parallel-computeing/parameter_server.html">
+            
+                    
+                    Parameter Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../parallel-computeing/decentralized_and_ring_allreduce.html">
+            
+                <a href="../../parallel-computeing/decentralized_and_ring_allreduce.html">
+            
+                    
+                    Decentralized And Ring All Reduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../parallel-computeing/federated_learning.html">
+            
+                <a href="../../parallel-computeing/federated_learning.html">
+            
+                    
+                    Federated Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../anomaly-detection/">
+            
+                <a href="../../anomaly-detection/">
+            
+                    
+                    Anomaly Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../anomaly-detection/dbscan.html">
+            
+                <a href="../../anomaly-detection/dbscan.html">
+            
+                    
+                    DBSCAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../anomaly-detection/autoencoder_anomaly.html">
+            
+                <a href="../../anomaly-detection/autoencoder_anomaly.html">
+            
+                    
+                    Autoencoder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../visualization/">
+            
+                <a href="../../visualization/">
+            
+                    
+                    Visualization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../visualization/saliency_maps.html">
+            
+                <a href="../../visualization/saliency_maps.html">
+            
+                    
+                    Saliency Maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../visualization/fooling_images.html">
+            
+                <a href="../../visualization/fooling_images.html">
+            
+                    
+                    Fooling images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../visualization/class_visualization.html">
+            
+                <a href="../../visualization/class_visualization.html">
+            
+                    
+                    Class Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../..">Single Shot MultiBox Detector(SSD)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <ul>
+<li><strong>Single Shot</strong>: this means that the tasks of object localization and classification are done in a single forward pass of the network</li>
+<li><strong>MultiBox</strong>: this is the name of a technique for bounding box regression developed by Szegedy et al. (we will briefly cover it shortly)</li>
+<li><strong>Detector</strong>: The network is an object detector that also classifies those detected objects</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<p><img src="../../.gitbook/assets/ssd.png" alt="Architecture"></p>
+<h2 id="choosing-default-boundary-boxes">Choosing default boundary boxes</h2>
+<p>SSD defines a scale value for each feature map layer. Starting from the left, Conv4_3 detects objects at the smallest scale 0.2 (or 0.1 sometimes) and then increases linearly to the rightmost layer at a scale of 0.9.</p>
+<p><img src="../../.gitbook/assets/scale_ssd.png" alt></p>
+<p>the scale value with the target aspect ratios, we compute the width and the height of the default boxes. For layers making 6 predictions, SSD starts with 5 target aspect ratios: 1, 2, 3, 1/2 and 1/3. Then the width and the height of the default boxes are calculated as:</p>
+<p><img src="../../.gitbook/assets/ssd_wh.png" alt="wh"></p>
+<p>The center of each default box to <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mfrac><mrow><mi>i</mi><mo>+</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>5</mn></mrow><mrow><mi mathvariant="normal">&#x2223;</mi><msub><mi>f</mi><mrow><mi>k</mi></mrow></msub><mi mathvariant="normal">&#x2223;</mi></mrow></mfrac><mo separator="true">,</mo><mfrac><mrow><mi>j</mi><mo>+</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>5</mn></mrow><mrow><mi mathvariant="normal">&#x2223;</mi><msub><mi>f</mi><mrow><mi>k</mi></mrow></msub><mi mathvariant="normal">&#x2223;</mi></mrow></mfrac><mo>)</mo></mrow><annotation encoding="application/x-tex">(\frac{i+0.5}{|f_{k}|}, \frac{j+0.5}{|f_{k}|})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.907772em;"></span><span class="strut bottom" style="height:1.427772em;vertical-align:-0.52em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.34500000000000003em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">&#x2223;</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist"><span style="top:0.15122857142857138em;margin-right:0.07142857142857144em;margin-left:-0.10764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm mtight">&#x2223;</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">i</span><span class="mbin mtight">+</span><span class="mord mathrm mtight">0</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">5</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mpunct">,</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.34500000000000003em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">&#x2223;</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist"><span style="top:0.15122857142857138em;margin-right:0.07142857142857144em;margin-left:-0.10764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm mtight">&#x2223;</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.44610799999999995em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span><span class="mbin mtight">+</span><span class="mord mathrm mtight">0</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">5</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mclose">)</span></span></span></span>, where <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2223;</mi><msub><mi>f</mi><mrow><mi>k</mi></mrow></msub><mi mathvariant="normal">&#x2223;</mi></mrow><annotation encoding="application/x-tex">|f_{k}|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2223;</span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">&#x2223;</span></span></span></span> is the size of the k-th square feature map, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo>&#x2208;</mo><mo>[</mo><mn>0</mn><mo separator="true">,</mo><mi mathvariant="normal">&#x2223;</mi><msub><mi>f</mi><mrow><mi>k</mi></mrow></msub><mi mathvariant="normal">&#x2223;</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">i, j \in [0, |f_{k}|]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mrel">&#x2208;</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">&#x2223;</span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">&#x2223;</span><span class="mclose">]</span></span></span></span>.</p>
+<p>Default boundary boxes are chosen manually. The criterion for matching a prior and a ground-truth box is IoU (Intersection Over Union), which is also called <strong>Jaccard index</strong>. The more overlap, the better match. The process of matching looks like follows:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> every ground-truth box:
+    match the ground-truth box <span class="hljs-keyword">with</span> prior having the biggest the IoU
+<span class="hljs-keyword">for</span> every prior:
+    ious = IoU(prior, ground_truth_boxes)
+    max_iou = max(ious)
+    <span class="hljs-keyword">if</span> max_iou &gt; threshold:
+        i = argmax(ious)
+        match the prior <span class="hljs-keyword">with</span> ground_truth_boxes[i]
+</code></pre>
+<blockquote>
+<p>YOLO uses k-means clustering on the training dataset to determine those default boundary boxes.</p>
+</blockquote>
+<h2 id="try-to-verify-the-number-of-default-boxes-in-ssd300-the-one-implemented">Try to verify the number of default boxes in SSD300 (the one implemented)</h2>
+<p>For conv4_3, conv10_2 and conv11_2, we only associate 4 default boxes at each feature map location - omitting aspect ratios of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.845108em;"></span><span class="strut bottom" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">3</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span>and 3.</p>
+<ol>
+<li>Conv4_3: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mn>8</mn><mo>&#x22C5;</mo><mn>3</mn><mn>8</mn><mo>&#x22C5;</mo><mn>4</mn><mo>=</mo><mn>5</mn><mn>7</mn><mn>7</mn><mn>6</mn></mrow><annotation encoding="application/x-tex">38 \cdot 38 \cdot 4 = 5776</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mord mathrm">8</span><span class="mbin">&#x22C5;</span><span class="mord mathrm">3</span><span class="mord mathrm">8</span><span class="mbin">&#x22C5;</span><span class="mord mathrm">4</span><span class="mrel">=</span><span class="mord mathrm">5</span><span class="mord mathrm">7</span><span class="mord mathrm">7</span><span class="mord mathrm">6</span></span></span></span></li>
+<li>Conv7: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>9</mn><mo>&#x22C5;</mo><mn>1</mn><mn>9</mn><mo>&#x22C5;</mo><mn>6</mn><mo>=</mo><mn>2</mn><mn>1</mn><mn>6</mn><mn>6</mn></mrow><annotation encoding="application/x-tex">19 \cdot 19 \cdot 6 = 2166</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">9</span><span class="mbin">&#x22C5;</span><span class="mord mathrm">1</span><span class="mord mathrm">9</span><span class="mbin">&#x22C5;</span><span class="mord mathrm">6</span><span class="mrel">=</span><span class="mord mathrm">2</span><span class="mord mathrm">1</span><span class="mord mathrm">6</span><span class="mord mathrm">6</span></span></span></span></li>
+<li>Conv8_2: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>0</mn><mo>&#x22C5;</mo><mn>1</mn><mn>0</mn><mo>&#x22C5;</mo><mn>6</mn><mo>=</mo><mn>6</mn><mn>0</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">10 \cdot 10 \cdot 6 = 600</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mbin">&#x22C5;</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mbin">&#x22C5;</span><span class="mord mathrm">6</span><span class="mrel">=</span><span class="mord mathrm">6</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span></span></span></span></li>
+<li>Conv9_2: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn><mo>&#x22C5;</mo><mn>5</mn><mo>&#x22C5;</mo><mn>6</mn><mo>=</mo><mn>1</mn><mn>5</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">5 \cdot 5 \cdot 6 = 150</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">5</span><span class="mbin">&#x22C5;</span><span class="mord mathrm">5</span><span class="mbin">&#x22C5;</span><span class="mord mathrm">6</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">5</span><span class="mord mathrm">0</span></span></span></span></li>
+<li>Conv10_2: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#x22C5;</mo><mn>3</mn><mo>&#x22C5;</mo><mn>4</mn><mo>=</mo><mn>3</mn><mn>6</mn></mrow><annotation encoding="application/x-tex">3 \cdot 3 \cdot 4 = 36</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#x22C5;</span><span class="mord mathrm">3</span><span class="mbin">&#x22C5;</span><span class="mord mathrm">4</span><span class="mrel">=</span><span class="mord mathrm">3</span><span class="mord mathrm">6</span></span></span></span></li>
+<li>Conv11_2: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">4</span></span></span></span></li>
+</ol>
+<p>Total: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn><mn>7</mn><mn>7</mn><mn>6</mn><mo>+</mo><mn>2</mn><mn>1</mn><mn>6</mn><mn>6</mn><mo>+</mo><mn>6</mn><mn>0</mn><mn>0</mn><mo>+</mo><mn>1</mn><mn>5</mn><mn>0</mn><mo>+</mo><mn>3</mn><mn>6</mn><mo>+</mo><mn>4</mn><mo>=</mo><mn>8</mn><mn>7</mn><mn>3</mn><mn>2</mn></mrow><annotation encoding="application/x-tex">5776+ 2166 + 600 + 150 + 36 + 4 = 8732</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">5</span><span class="mord mathrm">7</span><span class="mord mathrm">7</span><span class="mord mathrm">6</span><span class="mbin">+</span><span class="mord mathrm">2</span><span class="mord mathrm">1</span><span class="mord mathrm">6</span><span class="mord mathrm">6</span><span class="mbin">+</span><span class="mord mathrm">6</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mord mathrm">5</span><span class="mord mathrm">0</span><span class="mbin">+</span><span class="mord mathrm">3</span><span class="mord mathrm">6</span><span class="mbin">+</span><span class="mord mathrm">4</span><span class="mrel">=</span><span class="mord mathrm">8</span><span class="mord mathrm">7</span><span class="mord mathrm">3</span><span class="mord mathrm">2</span></span></span></span></p>
+<h2 id="loss-function">Loss Function</h2>
+<p>MultiBox&apos;s loss function also combined two critical components that made their way into SSD:</p>
+<ul>
+<li><strong>Confidence Loss</strong>: this measures how confident the network is of the objectness of the computed bounding box. Categorical cross-entropy is used to compute this loss.</li>
+<li><strong>Location Loss</strong>: this measures how far away the network&apos;s predicted bounding boxes are from the ground truth ones from the training set. L1-smooth Norm is used here.</li>
+</ul>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*7h3MObIuV1d0mbSzjvvYjA.png" alt="img"></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mi>u</mi><mi>l</mi><mi>t</mi><mi>i</mi><mi>b</mi><mi>o</mi><mi>x</mi><mi>L</mi><mi>o</mi><mi>s</mi><mi>s</mi><mo>=</mo><mi>c</mi><mi>o</mi><mi>n</mi><mi>f</mi><mi>i</mi><mi>d</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi><mi>L</mi><mi>o</mi><mi>s</mi><mi>s</mi><mo>+</mo><mi>&#x3B1;</mi><mo>&#x2217;</mo><mi>l</mi><mi>o</mi><mi>c</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>L</mi><mi>o</mi><mi>s</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">multiboxLoss = confidenceLoss + \alpha * locationLoss</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span><span class="mord mathit">u</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">t</span><span class="mord mathit">i</span><span class="mord mathit">b</span><span class="mord mathit">o</span><span class="mord mathit">x</span><span class="mord mathit">L</span><span class="mord mathit">o</span><span class="mord mathit">s</span><span class="mord mathit">s</span><span class="mrel">=</span><span class="mord mathit">c</span><span class="mord mathit">o</span><span class="mord mathit">n</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mord mathit">i</span><span class="mord mathit">d</span><span class="mord mathit">e</span><span class="mord mathit">n</span><span class="mord mathit">c</span><span class="mord mathit">e</span><span class="mord mathit">L</span><span class="mord mathit">o</span><span class="mord mathit">s</span><span class="mord mathit">s</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span><span class="mbin">&#x2217;</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit">c</span><span class="mord mathit">a</span><span class="mord mathit">t</span><span class="mord mathit">i</span><span class="mord mathit">o</span><span class="mord mathit">n</span><span class="mord mathit">L</span><span class="mord mathit">o</span><span class="mord mathit">s</span><span class="mord mathit">s</span></span></span></span></p>
+<p>Where the alpha term helps us in balancing the contribution of the location loss.</p>
+<h2 id="hard-negative-mining">Hard Negative Mining</h2>
+<p>During training, as most of the bounding boxes will have low IoU and therefore be interpreted as negative training examples, we may end up with a disproportionate amount of negative examples in our training set. Therefore, instead of using all negative predictions, it is advised to <strong>keep a ratio of negative to positive examples of around 3:1</strong>. The reason why you need to keep negative samples is because the network also needs to learn and be explicitly told what constitutes an incorrect detection.</p>
+<p><img src="../../.gitbook/assets/hard_negative_mining.png" alt="Example of hard negative mining"></p>
+<h2 id="data-augmentation">Data Augmentation</h2>
+<ul>
+<li>Generated additional training examples with patches of the original image at different IoU ratios (e.g. 0.1, 0.3, 0.5, etc.) and random patches as well.</li>
+<li>Each image is also randomly horizontally flipped with a probability of 0.5.</li>
+</ul>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="yolo.html" class="navigation navigation-prev " aria-label="Previous page: YOLO">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="fpn.html" class="navigation navigation-next " aria-label="Next page: FPN">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Single Shot MultiBox Detector(SSD)","level":"1.5.2.2","depth":3,"next":{"title":"FPN","level":"1.5.2.3","depth":3,"path":"cv/one-stage-detector/fpn.md","ref":"cv/one-stage-detector/fpn.md","articles":[]},"previous":{"title":"YOLO","level":"1.5.2.1","depth":3,"path":"cv/one-stage-detector/yolo.md","ref":"cv/one-stage-detector/yolo.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-search","-lunr","custom-js-css","docsearch","intopic-toc"],"pluginsConfig":{"docsearch":{},"docSearch":{"apiKey":"9b2d0c53eb838616448e652b3caafb42","index":"ztlevi-machine-learning"},"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"Navigation"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"css":["css/docsearch.css"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"cv/one-stage-detector/ssd.md","mtime":"2021-06-06T08:01:39.121Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-06T08:02:29.611Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-docsearch/doc-search-lib.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-docsearch/doc-search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

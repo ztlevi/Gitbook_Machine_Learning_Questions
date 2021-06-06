@@ -1,0 +1,1102 @@
+
+<!DOCTYPE HTML>
+<html lang>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Confidence Interval &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-custom-js-css/9eb07385451571ed1c43d6bfc772c8d5-docsearch.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-docsearch/doc-search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Quantization.html">
+    
+    
+    <link rel="prev" href="weight_norm_and_layer_norm.html">
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary"><div id="book-search-input">
+    <input type="text" id="book-doc-search-input" placeholder="Type to search">
+</div>
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="optimization.html">
+            
+                <a href="optimization.html">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="how_to_prevent_overfitting.html">
+            
+                <a href="how_to_prevent_overfitting.html">
+            
+                    
+                    How to prevent overfitting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="linear_algebra.html">
+            
+                <a href="linear_algebra.html">
+            
+                    
+                    Linear Algebra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="clustering.html">
+            
+                <a href="clustering.html">
+            
+                    
+                    Clustering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="calculate_parameters_in_cnn.html">
+            
+                <a href="calculate_parameters_in_cnn.html">
+            
+                    
+                    Calculate Parameters in CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="weight_norm_and_layer_norm.html">
+            
+                <a href="weight_norm_and_layer_norm.html">
+            
+                    
+                    Weight norm and layer norm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.7" data-path="Confidence_Interval.html">
+            
+                <a href="Confidence_Interval.html">
+            
+                    
+                    Confidence Interval
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="Quantization.html">
+            
+                <a href="Quantization.html">
+            
+                    
+                    Quantization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../classical_ml/">
+            
+                <a href="../classical_ml/">
+            
+                    
+                    Classical Machine Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../neural_networks/">
+            
+                <a href="../neural_networks/">
+            
+                    
+                    Neural Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../neural_networks/different_types_of_convolution.html">
+            
+                <a href="../neural_networks/different_types_of_convolution.html">
+            
+                    
+                    Different Types of Convolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../neural_networks/loss/">
+            
+                <a href="../neural_networks/loss/">
+            
+                    
+                    Loss
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../neural_networks/loss/Hinge_Loss.html">
+            
+                <a href="../neural_networks/loss/Hinge_Loss.html">
+            
+                    
+                    Hinge Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../neural_networks/loss/cross_entropy_loss.html">
+            
+                <a href="../neural_networks/loss/cross_entropy_loss.html">
+            
+                    
+                    Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../neural_networks/loss/binary_cross_entropy_loss.html">
+            
+                <a href="../neural_networks/loss/binary_cross_entropy_loss.html">
+            
+                    
+                    Binary Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../neural_networks/loss/categorical_cross_entropy_loss.html">
+            
+                <a href="../neural_networks/loss/categorical_cross_entropy_loss.html">
+            
+                    
+                    Categorical Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../neural_networks/loss/focal_loss.html">
+            
+                <a href="../neural_networks/loss/focal_loss.html">
+            
+                    
+                    Optional: Focal Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../neural_networks/loss/coral_loss.html">
+            
+                <a href="../neural_networks/loss/coral_loss.html">
+            
+                    
+                    Optional: CORAL Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../neural_networks/resnet.html">
+            
+                <a href="../neural_networks/resnet.html">
+            
+                    
+                    Resnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../neural_networks/mobilenet.html">
+            
+                <a href="../neural_networks/mobilenet.html">
+            
+                    
+                    Mobilenet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../cv/">
+            
+                <a href="../cv/">
+            
+                    
+                    Computer Vision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../cv/two-stage-detector/">
+            
+                <a href="../cv/two-stage-detector/">
+            
+                    
+                    Two Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../cv/two-stage-detector/metrics.html">
+            
+                <a href="../cv/two-stage-detector/metrics.html">
+            
+                    
+                    Metrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../cv/two-stage-detector/roi.html">
+            
+                <a href="../cv/two-stage-detector/roi.html">
+            
+                    
+                    ROI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../cv/two-stage-detector/r-cnn.html">
+            
+                <a href="../cv/two-stage-detector/r-cnn.html">
+            
+                    
+                    R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../cv/two-stage-detector/fast-rcnn.html">
+            
+                <a href="../cv/two-stage-detector/fast-rcnn.html">
+            
+                    
+                    Fast RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../cv/two-stage-detector/faster-rcnn.html">
+            
+                <a href="../cv/two-stage-detector/faster-rcnn.html">
+            
+                    
+                    Faster RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="../cv/two-stage-detector/mask-rcnn.html">
+            
+                <a href="../cv/two-stage-detector/mask-rcnn.html">
+            
+                    
+                    Mask RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../cv/one-stage-detector/">
+            
+                <a href="../cv/one-stage-detector/">
+            
+                    
+                    One Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../cv/one-stage-detector/yolo.html">
+            
+                <a href="../cv/one-stage-detector/yolo.html">
+            
+                    
+                    YOLO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../cv/one-stage-detector/ssd.html">
+            
+                <a href="../cv/one-stage-detector/ssd.html">
+            
+                    
+                    Single Shot MultiBox Detector(SSD)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../cv/one-stage-detector/fpn.html">
+            
+                <a href="../cv/one-stage-detector/fpn.html">
+            
+                    
+                    FPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../cv/segmentation/">
+            
+                <a href="../cv/segmentation/">
+            
+                    
+                    Segmentation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../cv/segmentation/panoptic.html">
+            
+                <a href="../cv/segmentation/panoptic.html">
+            
+                    
+                    Panoptic Segmentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../cv/segmentation/PSPNet.html">
+            
+                <a href="../cv/segmentation/PSPNet.html">
+            
+                    
+                    PSPNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../cv/facenet.html">
+            
+                <a href="../cv/facenet.html">
+            
+                    
+                    FaceNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../cv/gan.html">
+            
+                <a href="../cv/gan.html">
+            
+                    
+                    GAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../cv/Object_detection_imbalance.html">
+            
+                <a href="../cv/Object_detection_imbalance.html">
+            
+                    
+                    Imbalance problem in object detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../nlp/">
+            
+                <a href="../nlp/">
+            
+                    
+                    NLP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../nlp/embedding.html">
+            
+                <a href="../nlp/embedding.html">
+            
+                    
+                    Embedding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../nlp/rnn.html">
+            
+                <a href="../nlp/rnn.html">
+            
+                    
+                    RNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../nlp/lstm.html">
+            
+                <a href="../nlp/lstm.html">
+            
+                    
+                    LSTM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../parallel-computeing/">
+            
+                <a href="../parallel-computeing/">
+            
+                    
+                    Parallel Computeing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../parallel-computeing/communication.html">
+            
+                <a href="../parallel-computeing/communication.html">
+            
+                    
+                    Communication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../parallel-computeing/sync_mapreduce.html">
+            
+                <a href="../parallel-computeing/sync_mapreduce.html">
+            
+                    
+                    MapReduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../parallel-computeing/parameter_server.html">
+            
+                <a href="../parallel-computeing/parameter_server.html">
+            
+                    
+                    Parameter Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../parallel-computeing/decentralized_and_ring_allreduce.html">
+            
+                <a href="../parallel-computeing/decentralized_and_ring_allreduce.html">
+            
+                    
+                    Decentralized And Ring All Reduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../parallel-computeing/federated_learning.html">
+            
+                <a href="../parallel-computeing/federated_learning.html">
+            
+                    
+                    Federated Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../anomaly-detection/">
+            
+                <a href="../anomaly-detection/">
+            
+                    
+                    Anomaly Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../anomaly-detection/dbscan.html">
+            
+                <a href="../anomaly-detection/dbscan.html">
+            
+                    
+                    DBSCAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../anomaly-detection/autoencoder_anomaly.html">
+            
+                <a href="../anomaly-detection/autoencoder_anomaly.html">
+            
+                    
+                    Autoencoder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../visualization/">
+            
+                <a href="../visualization/">
+            
+                    
+                    Visualization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../visualization/saliency_maps.html">
+            
+                <a href="../visualization/saliency_maps.html">
+            
+                    
+                    Saliency Maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../visualization/fooling_images.html">
+            
+                <a href="../visualization/fooling_images.html">
+            
+                    
+                    Fooling images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../visualization/class_visualization.html">
+            
+                <a href="../visualization/class_visualization.html">
+            
+                    
+                    Class Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="..">Confidence Interval</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <p><a href="https://www.simplypsychology.org/confidence-interval.html#:~:text=The%20confidence%20interval%20(CI" target="_blank">Reference</a>%20is,an%20upper%20and%20lower%20interval&gt;)</p>
+<blockquote>
+<p>The confidence interval (CI) is a range of values that&#x2019;s likely to include a population value with a certain degree of confidence. It is often expressed a % whereby a population means lies between an upper and lower interval.</p>
+</blockquote>
+<p><img src="../../.gitbook/assets/confidence-interval-1.jpg" alt="img"></p>
+<h2 id="what-does-a-95-confidence-interval-mean">What does a 95% confidence interval mean?</h2>
+<p>The 95% confidence interval is a range of values that you can be 95% certain contains the true mean of the population.<br>As the sample size increases, the range of interval values will narrow, meaning that you know that mean with much more accuracy compared with a smaller sample.</p>
+<p>We can visualize this using a <a href="https://www.simplypsychology.org/normal-distribution.html" target="_blank">normal distribution</a> (see the below graph).</p>
+<p><img src="../../.gitbook/assets/confidence-interval-2.jpg" alt="standard normal distribution 1.96 "></p>
+<p>For example, the probability of the population mean value being between -1.96 and +1.96 standard deviations (z-scores) from the sample mean is 95%.</p>
+<p>Accordingly, there is a 5% chance that the population mean lies outside of the upper and lower confidence interval (as illustrated by the 2.5% of outliers on either side of the 1.96 z-scores).</p>
+<h2 id="why-do-researchers-use-confidence-intervals">Why do researchers use confidence intervals?</h2>
+<p>It is more or less impossible to study every single person in a population so <a href="https://www.simplypsychology.org/sampling.html" target="_blank">researchers select a sample</a> or sub-group of the population.</p>
+<p>This means that the researcher can only estimate the parameters (i.e. characteristics) of a population, the estimated range being calculated from a given set of sample data.</p>
+<p><img src="../../.gitbook/assets/confidence-interval-3.jpg" alt="sampling from a population"></p>
+<!-- <span id="ezoic-pub-ad-placeholder-852" class="ezoic-adpicker-ad" data-ezadpicker="852" data-ez-position-type="under_first_paragraph" data-ezadblocked='true'></span> -->
+<!-- placeholder 852 blocked.  Reason : no sizes -->
+<p>Therefore, a confidence interval is simply a way to measure how well your sample represents the population you are studying.</p>
+<p>The probability that the confidence interval includes the true mean value within a population is called the confidence level of the CI.</p>
+<p>You can calculate a CI for any confidence level you like, but the most commonly used value is 95%. A 95% confidence interval is a range of values (upper and lower) that you can be 95% certain contains the true mean of the population.</p>
+<!-- <span id="ezoic-pub-ad-placeholder-853" class="ezoic-adpicker-ad" data-ezadpicker="853" data-ez-position-type="under_second_paragraph" data-ezadblocked='true'></span> -->
+<!-- placeholder 853 blocked.  Reason : no sizes -->
+<h2 id="how-do-i-calculate-a-confidence-interval">How do I calculate a confidence interval?</h2>
+<p>To calculate the confidence interval, start by computing the mean and standard error of the sample.</p>
+<p>Remember, you must calculate an upper and low score for the confidence interval using the <a href="https://www.simplypsychology.org/z-score.html" target="_blank">z-score</a> for the chosen confidence level (see table below).</p>
+<table>
+<thead>
+<tr>
+<th>Confidence Level</th>
+<th>Z-Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.90</td>
+<td>1.645</td>
+</tr>
+<tr>
+<td>0.95</td>
+<td>1.96</td>
+</tr>
+<tr>
+<td>0.99</td>
+<td>2.58</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h2 id="confidence-interval-formula">Confidence Interval Formula</h2>
+</blockquote>
+<p><img src="../../.gitbook/assets/confidence-interval-4.jpg" alt="confidence interval formula "></p>
+<p>Where:</p>
+<ul>
+<li><strong>X</strong> is the mean</li>
+<li><strong>Z</strong> is the chosen Z-value (1.96 for 95%)</li>
+<li><strong>s</strong> is the standard error</li>
+<li><strong>n</strong> is the sample size</li>
+</ul>
+<p>For the lower interval score divide the standard error by the square root on n, and then multiply the sum of this calculation by the z-score (1.96 for 95%). Finally, subtract the value of this calculation from the sample mean.</p>
+<blockquote>
+<h2 id="an-example">An Example</h2>
+</blockquote>
+<ul>
+<li><strong>X</strong> (mean) = 86</li>
+<li><strong>Z</strong> = 1.960 (from the table above for 95%)</li>
+<li><strong>s</strong> (standard error) = 6.2</li>
+<li><strong>n</strong> (sample size) = 46</li>
+</ul>
+<p>Lower Value: 86 - 1.960 &#xD7; 6.2 &#x221A;46 = <strong>86 - 1.79</strong> = 84.21</p>
+<p>Upper Value: 86 + 1.960 &#xD7; 6.2 &#x221A;46 = <strong>86 + 1.79</strong> = 87.79</p>
+<p>So the population mean is likely to be between 84.21 and 87.79</p>
+<h2 id="how-can-we-be-confident-the-population-mean-is-similar-to-the-sample-mean">How can we be confident the population mean is similar to the sample mean?</h2>
+<p>The narrower the interval (upper and lower values), the more precise is our estimate.</p>
+<p>As a general rule, as a sample size increases the confident interval should become more narrow.</p>
+<p><img src="../../.gitbook/assets/confidence-interval-5.gif" alt="confidence interval graphs"></p>
+<p>Therefore, with large samples, you can estimate the population mean with more precision than you can with smaller samples, so the confidence interval is quite narrow when computed from a large sample.</p>
+<h2 id="how-to-report-a-confident-interval-apa-style">How to report a confident interval APA style</h2>
+<p>The APA 6 style manual states (p.117):</p>
+<blockquote>
+<p>&#x201C; When reporting confidence intervals, use the format 95% CI [LL, UL] where LL is the lower limit of the confidence interval and UL is the upper limit. &#x201D;</p>
+</blockquote>
+<p>For example, one might report: 95% CI [5.62, 8.31].</p>
+<p>Confidence intervals can also be reported in a table</p>
+<p><img src="../../.gitbook/assets/confidence-interval-6.jpg" alt="apa style table"></p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="weight_norm_and_layer_norm.html" class="navigation navigation-prev " aria-label="Previous page: Weight norm and layer norm">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Quantization.html" class="navigation navigation-next " aria-label="Next page: Quantization">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Confidence Interval","level":"1.2.7","depth":2,"next":{"title":"Quantization","level":"1.2.8","depth":2,"path":"basics/Quantization.md","ref":"basics/Quantization.md","articles":[]},"previous":{"title":"Weight norm and layer norm","level":"1.2.6","depth":2,"path":"basics/weight_norm_and_layer_norm.md","ref":"basics/weight_norm_and_layer_norm.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-search","-lunr","custom-js-css","docsearch","intopic-toc"],"pluginsConfig":{"docsearch":{},"docSearch":{"apiKey":"9b2d0c53eb838616448e652b3caafb42","index":"ztlevi-machine-learning"},"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"Navigation"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"css":["css/docsearch.css"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basics/Confidence_Interval.md","mtime":"2021-06-06T08:01:39.081Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-06T08:02:29.611Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-docsearch/doc-search-lib.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-docsearch/doc-search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

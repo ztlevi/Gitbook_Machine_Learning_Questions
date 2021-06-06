@@ -1,0 +1,1023 @@
+
+<!DOCTYPE HTML>
+<html lang>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Hinge Loss &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-custom-js-css/9eb07385451571ed1c43d6bfc772c8d5-docsearch.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-docsearch/doc-search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="cross_entropy_loss.html">
+    
+    
+    <link rel="prev" href="./">
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary"><div id="book-search-input">
+    <input type="text" id="book-doc-search-input" placeholder="Type to search">
+</div>
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../basics/">
+            
+                <a href="../../basics/">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../basics/optimization.html">
+            
+                <a href="../../basics/optimization.html">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../basics/how_to_prevent_overfitting.html">
+            
+                <a href="../../basics/how_to_prevent_overfitting.html">
+            
+                    
+                    How to prevent overfitting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../basics/linear_algebra.html">
+            
+                <a href="../../basics/linear_algebra.html">
+            
+                    
+                    Linear Algebra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../basics/clustering.html">
+            
+                <a href="../../basics/clustering.html">
+            
+                    
+                    Clustering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../basics/calculate_parameters_in_cnn.html">
+            
+                <a href="../../basics/calculate_parameters_in_cnn.html">
+            
+                    
+                    Calculate Parameters in CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../basics/weight_norm_and_layer_norm.html">
+            
+                <a href="../../basics/weight_norm_and_layer_norm.html">
+            
+                    
+                    Weight norm and layer norm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../basics/Confidence_Interval.html">
+            
+                <a href="../../basics/Confidence_Interval.html">
+            
+                    
+                    Confidence Interval
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../basics/Quantization.html">
+            
+                <a href="../../basics/Quantization.html">
+            
+                    
+                    Quantization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../classical_ml/">
+            
+                <a href="../../classical_ml/">
+            
+                    
+                    Classical Machine Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Neural Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../different_types_of_convolution.html">
+            
+                <a href="../different_types_of_convolution.html">
+            
+                    
+                    Different Types of Convolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Loss
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.2.1" data-path="Hinge_Loss.html">
+            
+                <a href="Hinge_Loss.html">
+            
+                    
+                    Hinge Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="cross_entropy_loss.html">
+            
+                <a href="cross_entropy_loss.html">
+            
+                    
+                    Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="binary_cross_entropy_loss.html">
+            
+                <a href="binary_cross_entropy_loss.html">
+            
+                    
+                    Binary Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="categorical_cross_entropy_loss.html">
+            
+                <a href="categorical_cross_entropy_loss.html">
+            
+                    
+                    Categorical Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="focal_loss.html">
+            
+                <a href="focal_loss.html">
+            
+                    
+                    Optional: Focal Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="coral_loss.html">
+            
+                <a href="coral_loss.html">
+            
+                    
+                    Optional: CORAL Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../resnet.html">
+            
+                <a href="../resnet.html">
+            
+                    
+                    Resnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../mobilenet.html">
+            
+                <a href="../mobilenet.html">
+            
+                    
+                    Mobilenet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../cv/">
+            
+                <a href="../../cv/">
+            
+                    
+                    Computer Vision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../cv/two-stage-detector/">
+            
+                <a href="../../cv/two-stage-detector/">
+            
+                    
+                    Two Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../cv/two-stage-detector/metrics.html">
+            
+                <a href="../../cv/two-stage-detector/metrics.html">
+            
+                    
+                    Metrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../../cv/two-stage-detector/roi.html">
+            
+                <a href="../../cv/two-stage-detector/roi.html">
+            
+                    
+                    ROI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../../cv/two-stage-detector/r-cnn.html">
+            
+                <a href="../../cv/two-stage-detector/r-cnn.html">
+            
+                    
+                    R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../../cv/two-stage-detector/fast-rcnn.html">
+            
+                <a href="../../cv/two-stage-detector/fast-rcnn.html">
+            
+                    
+                    Fast RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../../cv/two-stage-detector/faster-rcnn.html">
+            
+                <a href="../../cv/two-stage-detector/faster-rcnn.html">
+            
+                    
+                    Faster RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="../../cv/two-stage-detector/mask-rcnn.html">
+            
+                <a href="../../cv/two-stage-detector/mask-rcnn.html">
+            
+                    
+                    Mask RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../cv/one-stage-detector/">
+            
+                <a href="../../cv/one-stage-detector/">
+            
+                    
+                    One Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../cv/one-stage-detector/yolo.html">
+            
+                <a href="../../cv/one-stage-detector/yolo.html">
+            
+                    
+                    YOLO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../cv/one-stage-detector/ssd.html">
+            
+                <a href="../../cv/one-stage-detector/ssd.html">
+            
+                    
+                    Single Shot MultiBox Detector(SSD)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../cv/one-stage-detector/fpn.html">
+            
+                <a href="../../cv/one-stage-detector/fpn.html">
+            
+                    
+                    FPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../cv/segmentation/">
+            
+                <a href="../../cv/segmentation/">
+            
+                    
+                    Segmentation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../cv/segmentation/panoptic.html">
+            
+                <a href="../../cv/segmentation/panoptic.html">
+            
+                    
+                    Panoptic Segmentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../cv/segmentation/PSPNet.html">
+            
+                <a href="../../cv/segmentation/PSPNet.html">
+            
+                    
+                    PSPNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../cv/facenet.html">
+            
+                <a href="../../cv/facenet.html">
+            
+                    
+                    FaceNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../cv/gan.html">
+            
+                <a href="../../cv/gan.html">
+            
+                    
+                    GAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../cv/Object_detection_imbalance.html">
+            
+                <a href="../../cv/Object_detection_imbalance.html">
+            
+                    
+                    Imbalance problem in object detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../nlp/">
+            
+                <a href="../../nlp/">
+            
+                    
+                    NLP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../nlp/embedding.html">
+            
+                <a href="../../nlp/embedding.html">
+            
+                    
+                    Embedding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../nlp/rnn.html">
+            
+                <a href="../../nlp/rnn.html">
+            
+                    
+                    RNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../nlp/lstm.html">
+            
+                <a href="../../nlp/lstm.html">
+            
+                    
+                    LSTM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../parallel-computeing/">
+            
+                <a href="../../parallel-computeing/">
+            
+                    
+                    Parallel Computeing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../parallel-computeing/communication.html">
+            
+                <a href="../../parallel-computeing/communication.html">
+            
+                    
+                    Communication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../parallel-computeing/sync_mapreduce.html">
+            
+                <a href="../../parallel-computeing/sync_mapreduce.html">
+            
+                    
+                    MapReduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../parallel-computeing/parameter_server.html">
+            
+                <a href="../../parallel-computeing/parameter_server.html">
+            
+                    
+                    Parameter Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../parallel-computeing/decentralized_and_ring_allreduce.html">
+            
+                <a href="../../parallel-computeing/decentralized_and_ring_allreduce.html">
+            
+                    
+                    Decentralized And Ring All Reduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../parallel-computeing/federated_learning.html">
+            
+                <a href="../../parallel-computeing/federated_learning.html">
+            
+                    
+                    Federated Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../anomaly-detection/">
+            
+                <a href="../../anomaly-detection/">
+            
+                    
+                    Anomaly Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../anomaly-detection/dbscan.html">
+            
+                <a href="../../anomaly-detection/dbscan.html">
+            
+                    
+                    DBSCAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../anomaly-detection/autoencoder_anomaly.html">
+            
+                <a href="../../anomaly-detection/autoencoder_anomaly.html">
+            
+                    
+                    Autoencoder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../visualization/">
+            
+                <a href="../../visualization/">
+            
+                    
+                    Visualization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../visualization/saliency_maps.html">
+            
+                <a href="../../visualization/saliency_maps.html">
+            
+                    
+                    Saliency Maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../visualization/fooling_images.html">
+            
+                <a href="../../visualization/fooling_images.html">
+            
+                    
+                    Fooling images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../visualization/class_visualization.html">
+            
+                <a href="../../visualization/class_visualization.html">
+            
+                    
+                    Class Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../..">Hinge Loss</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="hinge-loss-in-support-vector-machines"><a href="https://en.wikipedia.org/wiki/Hinge_loss" target="_blank">Hinge loss in Support Vector Machines</a></h2>
+<p>From our SVM model, we know that hinge <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>o</mi><mi>s</mi><mi>s</mi><mo>=</mo><mo>[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo>&#x2212;</mo><mi>y</mi><mo>&#x2217;</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">loss = [0, 1- y*f(x)]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit">s</span><span class="mord mathit">s</span><span class="mrel">=</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mbin">&#x2212;</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mbin">&#x2217;</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mclose">]</span></span></span></span>.</p>
+<p>Looking at the graph for SVM in Fig 4, we can see that for <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mo>&#x2217;</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&#x2265;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">y*f(x) \geq 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mbin">&#x2217;</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mrel">&#x2265;</span><span class="mord mathrm">1</span></span></span></span>, hinge loss is &#x2018;<strong>0</strong>&#x2019;. However, when <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mo>&#x2217;</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">y*f(x) &lt; 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mbin">&#x2217;</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mrel">&lt;</span><span class="mord mathrm">1</span></span></span></span>, then hinge loss increases massively. As <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mo>&#x2217;</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">y*f(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mbin">&#x2217;</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span> increases with every misclassified point (very wrong points in Fig 5), the upper bound of hinge loss <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mn>1</mn><mo>&#x2212;</mo><mi>y</mi><mo>&#x2217;</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><annotation encoding="application/x-tex">{1- y*f(x)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">&#x2212;</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mbin">&#x2217;</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span></span> also increases exponentially.</p>
+<p>Hence, the points that are farther away from the decision margins have a greater loss value, thus penalising those points.</p>
+<p><em>Conclusion</em>: This is just a basic understanding of what loss functions are and how hinge loss works. I will be posting other articles with greater understanding of &#x2018;Hinge loss&#x2019; shortly</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Loss">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="cross_entropy_loss.html" class="navigation navigation-next " aria-label="Next page: Cross-Entropy Loss">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Hinge Loss","level":"1.4.2.1","depth":3,"next":{"title":"Cross-Entropy Loss","level":"1.4.2.2","depth":3,"path":"neural_networks/loss/cross_entropy_loss.md","ref":"neural_networks/loss/cross_entropy_loss.md","articles":[]},"previous":{"title":"Loss","level":"1.4.2","depth":2,"path":"neural_networks/loss/README.md","ref":"neural_networks/loss/README.md","articles":[{"title":"Hinge Loss","level":"1.4.2.1","depth":3,"path":"neural_networks/loss/Hinge_Loss.md","ref":"neural_networks/loss/Hinge_Loss.md","articles":[]},{"title":"Cross-Entropy Loss","level":"1.4.2.2","depth":3,"path":"neural_networks/loss/cross_entropy_loss.md","ref":"neural_networks/loss/cross_entropy_loss.md","articles":[]},{"title":"Binary Cross-Entropy Loss","level":"1.4.2.3","depth":3,"path":"neural_networks/loss/binary_cross_entropy_loss.md","ref":"neural_networks/loss/binary_cross_entropy_loss.md","articles":[]},{"title":"Categorical Cross-Entropy Loss","level":"1.4.2.4","depth":3,"path":"neural_networks/loss/categorical_cross_entropy_loss.md","ref":"neural_networks/loss/categorical_cross_entropy_loss.md","articles":[]},{"title":"Optional: Focal Loss","level":"1.4.2.5","depth":3,"path":"neural_networks/loss/focal_loss.md","ref":"neural_networks/loss/focal_loss.md","articles":[]},{"title":"Optional: CORAL Loss","level":"1.4.2.6","depth":3,"path":"neural_networks/loss/coral_loss.md","ref":"neural_networks/loss/coral_loss.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-search","-lunr","custom-js-css","docsearch","intopic-toc"],"pluginsConfig":{"docsearch":{},"docSearch":{"apiKey":"9b2d0c53eb838616448e652b3caafb42","index":"ztlevi-machine-learning"},"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"Navigation"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"css":["css/docsearch.css"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"neural_networks/loss/Hinge_Loss.md","mtime":"2021-06-06T08:01:39.121Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-06T08:02:29.611Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-docsearch/doc-search-lib.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-docsearch/doc-search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

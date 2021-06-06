@@ -1,0 +1,1081 @@
+
+<!DOCTYPE HTML>
+<html lang>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Linear Algebra &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-custom-js-css/9eb07385451571ed1c43d6bfc772c8d5-docsearch.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-docsearch/doc-search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="clustering.html">
+    
+    
+    <link rel="prev" href="how_to_prevent_overfitting.html">
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary"><div id="book-search-input">
+    <input type="text" id="book-doc-search-input" placeholder="Type to search">
+</div>
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="optimization.html">
+            
+                <a href="optimization.html">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="how_to_prevent_overfitting.html">
+            
+                <a href="how_to_prevent_overfitting.html">
+            
+                    
+                    How to prevent overfitting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="linear_algebra.html">
+            
+                <a href="linear_algebra.html">
+            
+                    
+                    Linear Algebra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="clustering.html">
+            
+                <a href="clustering.html">
+            
+                    
+                    Clustering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="calculate_parameters_in_cnn.html">
+            
+                <a href="calculate_parameters_in_cnn.html">
+            
+                    
+                    Calculate Parameters in CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="weight_norm_and_layer_norm.html">
+            
+                <a href="weight_norm_and_layer_norm.html">
+            
+                    
+                    Weight norm and layer norm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="Confidence_Interval.html">
+            
+                <a href="Confidence_Interval.html">
+            
+                    
+                    Confidence Interval
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="Quantization.html">
+            
+                <a href="Quantization.html">
+            
+                    
+                    Quantization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../classical_ml/">
+            
+                <a href="../classical_ml/">
+            
+                    
+                    Classical Machine Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../neural_networks/">
+            
+                <a href="../neural_networks/">
+            
+                    
+                    Neural Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../neural_networks/different_types_of_convolution.html">
+            
+                <a href="../neural_networks/different_types_of_convolution.html">
+            
+                    
+                    Different Types of Convolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../neural_networks/loss/">
+            
+                <a href="../neural_networks/loss/">
+            
+                    
+                    Loss
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../neural_networks/loss/Hinge_Loss.html">
+            
+                <a href="../neural_networks/loss/Hinge_Loss.html">
+            
+                    
+                    Hinge Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../neural_networks/loss/cross_entropy_loss.html">
+            
+                <a href="../neural_networks/loss/cross_entropy_loss.html">
+            
+                    
+                    Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../neural_networks/loss/binary_cross_entropy_loss.html">
+            
+                <a href="../neural_networks/loss/binary_cross_entropy_loss.html">
+            
+                    
+                    Binary Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../neural_networks/loss/categorical_cross_entropy_loss.html">
+            
+                <a href="../neural_networks/loss/categorical_cross_entropy_loss.html">
+            
+                    
+                    Categorical Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../neural_networks/loss/focal_loss.html">
+            
+                <a href="../neural_networks/loss/focal_loss.html">
+            
+                    
+                    Optional: Focal Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../neural_networks/loss/coral_loss.html">
+            
+                <a href="../neural_networks/loss/coral_loss.html">
+            
+                    
+                    Optional: CORAL Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../neural_networks/resnet.html">
+            
+                <a href="../neural_networks/resnet.html">
+            
+                    
+                    Resnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../neural_networks/mobilenet.html">
+            
+                <a href="../neural_networks/mobilenet.html">
+            
+                    
+                    Mobilenet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../cv/">
+            
+                <a href="../cv/">
+            
+                    
+                    Computer Vision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../cv/two-stage-detector/">
+            
+                <a href="../cv/two-stage-detector/">
+            
+                    
+                    Two Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../cv/two-stage-detector/metrics.html">
+            
+                <a href="../cv/two-stage-detector/metrics.html">
+            
+                    
+                    Metrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../cv/two-stage-detector/roi.html">
+            
+                <a href="../cv/two-stage-detector/roi.html">
+            
+                    
+                    ROI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../cv/two-stage-detector/r-cnn.html">
+            
+                <a href="../cv/two-stage-detector/r-cnn.html">
+            
+                    
+                    R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../cv/two-stage-detector/fast-rcnn.html">
+            
+                <a href="../cv/two-stage-detector/fast-rcnn.html">
+            
+                    
+                    Fast RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../cv/two-stage-detector/faster-rcnn.html">
+            
+                <a href="../cv/two-stage-detector/faster-rcnn.html">
+            
+                    
+                    Faster RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="../cv/two-stage-detector/mask-rcnn.html">
+            
+                <a href="../cv/two-stage-detector/mask-rcnn.html">
+            
+                    
+                    Mask RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../cv/one-stage-detector/">
+            
+                <a href="../cv/one-stage-detector/">
+            
+                    
+                    One Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../cv/one-stage-detector/yolo.html">
+            
+                <a href="../cv/one-stage-detector/yolo.html">
+            
+                    
+                    YOLO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../cv/one-stage-detector/ssd.html">
+            
+                <a href="../cv/one-stage-detector/ssd.html">
+            
+                    
+                    Single Shot MultiBox Detector(SSD)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../cv/one-stage-detector/fpn.html">
+            
+                <a href="../cv/one-stage-detector/fpn.html">
+            
+                    
+                    FPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../cv/segmentation/">
+            
+                <a href="../cv/segmentation/">
+            
+                    
+                    Segmentation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../cv/segmentation/panoptic.html">
+            
+                <a href="../cv/segmentation/panoptic.html">
+            
+                    
+                    Panoptic Segmentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../cv/segmentation/PSPNet.html">
+            
+                <a href="../cv/segmentation/PSPNet.html">
+            
+                    
+                    PSPNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../cv/facenet.html">
+            
+                <a href="../cv/facenet.html">
+            
+                    
+                    FaceNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../cv/gan.html">
+            
+                <a href="../cv/gan.html">
+            
+                    
+                    GAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../cv/Object_detection_imbalance.html">
+            
+                <a href="../cv/Object_detection_imbalance.html">
+            
+                    
+                    Imbalance problem in object detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../nlp/">
+            
+                <a href="../nlp/">
+            
+                    
+                    NLP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../nlp/embedding.html">
+            
+                <a href="../nlp/embedding.html">
+            
+                    
+                    Embedding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../nlp/rnn.html">
+            
+                <a href="../nlp/rnn.html">
+            
+                    
+                    RNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../nlp/lstm.html">
+            
+                <a href="../nlp/lstm.html">
+            
+                    
+                    LSTM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../parallel-computeing/">
+            
+                <a href="../parallel-computeing/">
+            
+                    
+                    Parallel Computeing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../parallel-computeing/communication.html">
+            
+                <a href="../parallel-computeing/communication.html">
+            
+                    
+                    Communication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../parallel-computeing/sync_mapreduce.html">
+            
+                <a href="../parallel-computeing/sync_mapreduce.html">
+            
+                    
+                    MapReduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../parallel-computeing/parameter_server.html">
+            
+                <a href="../parallel-computeing/parameter_server.html">
+            
+                    
+                    Parameter Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../parallel-computeing/decentralized_and_ring_allreduce.html">
+            
+                <a href="../parallel-computeing/decentralized_and_ring_allreduce.html">
+            
+                    
+                    Decentralized And Ring All Reduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../parallel-computeing/federated_learning.html">
+            
+                <a href="../parallel-computeing/federated_learning.html">
+            
+                    
+                    Federated Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../anomaly-detection/">
+            
+                <a href="../anomaly-detection/">
+            
+                    
+                    Anomaly Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../anomaly-detection/dbscan.html">
+            
+                <a href="../anomaly-detection/dbscan.html">
+            
+                    
+                    DBSCAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../anomaly-detection/autoencoder_anomaly.html">
+            
+                <a href="../anomaly-detection/autoencoder_anomaly.html">
+            
+                    
+                    Autoencoder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../visualization/">
+            
+                <a href="../visualization/">
+            
+                    
+                    Visualization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../visualization/saliency_maps.html">
+            
+                <a href="../visualization/saliency_maps.html">
+            
+                    
+                    Saliency Maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../visualization/fooling_images.html">
+            
+                <a href="../visualization/fooling_images.html">
+            
+                    
+                    Fooling images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../visualization/class_visualization.html">
+            
+                <a href="../visualization/class_visualization.html">
+            
+                    
+                    Class Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="..">Linear Algebra</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="the-rank-of-a-matrix">The Rank of a Matrix</h2>
+<p>You can think of an <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mo>&#xD7;</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">r \times c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mbin">&#xD7;</span><span class="mord mathit">c</span></span></span></span> matrix as a set of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span> row <a href="https://stattrek.com/help/glossary.aspx?Target=Vectors" target="_blank">vectors</a>, each having <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span></span></span></span> elements; or you can think of it as a set of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span></span></span></span> column vectors, each having <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span> elements.</p>
+<p>The <strong>rank</strong> of a matrix is defined as (a) the maximum number of <a href="https://stattrek.com/help/glossary.aspx?Target=Linear_dependence_of_vectors" target="_blank"> linearly independent</a> <em>column</em> vectors in the matrix or (b) the maximum number of linearly independent <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>o</mi><mi>w</mi></mrow><annotation encoding="application/x-tex">row</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span></span> vectors in the matrix. Both definitions are equivalent.</p>
+<p>For an <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mo>&#xD7;</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">r \times c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mbin">&#xD7;</span><span class="mord mathit">c</span></span></span></span> matrix,</p>
+<ul>
+<li>If <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span> is less than <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span></span></span></span>, then the maximum rank of the matrix is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>.</li>
+<li>If <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span> is greater than <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span></span></span></span>, then the maximum rank of the matrix is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span></span></span></span>.</li>
+</ul>
+<p>The rank of a matrix would be zero only if the matrix had no elements. If a matrix had even one element, its minimum rank would be one.</p>
+<p>For example, the following matrix has rank of 2.</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi><mo>=</mo><mrow><mo fence="true">(</mo><mtable><mtr><mtd><mrow><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn></mrow></mtd><mtd><mrow><mn>4</mn></mrow></mtd><mtd><mrow><mn>4</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>3</mn></mrow></mtd><mtd><mrow><mn>4</mn></mrow></mtd><mtd><mrow><mn>8</mn></mrow></mtd><mtd><mrow><mn>0</mn></mrow></mtd></mtr></mtable><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">
+X =
+\begin{pmatrix}
+1 &amp; 2 &amp; 4 &amp; 4 \\
+3 &amp; 4 &amp; 8 &amp; 0
+\end{pmatrix}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.45em;"></span><span class="strut bottom" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mrel">=</span><span class="minner displaystyle textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist"><span style="top:-0.6099999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">1</span></span></span><span style="top:0.5900000000000003em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">3</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist"><span style="top:-0.6099999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">2</span></span></span><span style="top:0.5900000000000003em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">4</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist"><span style="top:-0.6099999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">4</span></span></span><span style="top:0.5900000000000003em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">8</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist"><span style="top:-0.6099999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">4</span></span></span><span style="top:0.5900000000000003em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size3">)</span></span></span></span></span></span></span></p>
+<h2 id="singular-value-decomposition"><a href="https://www.youtube.com/watch?v=P5mlg91as1c" target="_blank">Singular Value Decomposition</a></h2>
+<h3 id="formula">Formula</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mrow><mo>[</mo><mi>m</mi><mo>&#xD7;</mo><mi>n</mi><mo>]</mo></mrow></msub><mo>=</mo><msub><mi>U</mi><mrow><mo>[</mo><mi>m</mi><mo>&#xD7;</mo><mi>r</mi><mo>]</mo></mrow></msub><msub><mi mathvariant="normal">&#x3A3;</mi><mrow><mo>[</mo><mi>r</mi><mo>&#xD7;</mo><mi>r</mi><mo>]</mo></mrow></msub><mo>(</mo><msub><mi>V</mi><mrow><mo>[</mo><mi>n</mi><mo>&#xD7;</mo><mi>r</mi><mo>]</mo></mrow></msub><msup><mo>)</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">A_{[m \times n]}=U_{[m \times r]} \Sigma_{[r \times r]} (V_{[n \times r]})^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:1.1965309999999998em;vertical-align:-0.3551999999999999em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:0.18019999999999992em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mopen mtight">[</span><span class="mord mathit mtight">m</span><span class="mbin mtight">&#xD7;</span><span class="mord mathit mtight">n</span><span class="mclose mtight">]</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist"><span style="top:0.18019999999999992em;margin-right:0.05em;margin-left:-0.10903em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mopen mtight">[</span><span class="mord mathit mtight">m</span><span class="mbin mtight">&#xD7;</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span><span class="mclose mtight">]</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathrm">&#x3A3;</span><span class="msupsub"><span class="vlist"><span style="top:0.18019999999999992em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mopen mtight">[</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span><span class="mbin mtight">&#xD7;</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span><span class="mclose mtight">]</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist"><span style="top:0.18019999999999992em;margin-right:0.05em;margin-left:-0.22222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mopen mtight">[</span><span class="mord mathit mtight">n</span><span class="mbin mtight">&#xD7;</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span><span class="mclose mtight">]</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<ul>
+<li>A: Input data matrix<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mo>&#xD7;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m \times n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span><span class="mbin">&#xD7;</span><span class="mord mathit">n</span></span></span></span> matrix (e.g. m documents, n terms)</li>
+</ul>
+</li>
+<li>U: left singular vectors<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mo>&#xD7;</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">m \times r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span> matrix (m documents, r concepts)</li>
+</ul>
+</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x3A3;</mi></mrow><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x3A3;</span></span></span></span>: Singular values<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mo>&#xD7;</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">r \times r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span> diagonal matrix (strength of each <code>concept</code>) (r: rank of matrix A)</li>
+</ul>
+</li>
+<li>V: Right singular vectors<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>&#xD7;</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">n \times r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span> matrix (n terms, r concepts)</li>
+</ul>
+</li>
+</ul>
+<p><img src="../.gitbook/assets/svd_1.jpg" alt></p>
+<h3 id="properties">Properties</h3>
+<p>It is always possible to decompose a real matrix A into <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>=</mo><mi>U</mi><mi mathvariant="normal">&#x3A3;</mi><msup><mi>V</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">A=U \Sigma V^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="mord mathrm">&#x3A3;</span><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>, where</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>U</mi><mo separator="true">,</mo><mi mathvariant="normal">&#x3A3;</mi><mo separator="true">,</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">U, \Sigma, V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="mpunct">,</span><span class="mord mathrm">&#x3A3;</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span>: unique</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>U</mi><mo separator="true">,</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">U, V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span>: column orthonormal<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>U</mi><mi>T</mi></msup><mi>U</mi><mo>=</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">U^T U = I</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.07847em;">I</span></span></span></span>; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>V</mi><mi>T</mi></msup><mi>V</mi><mo>=</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">V^T V = I</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.07847em;">I</span></span></span></span> (I: identity matrix)</li>
+<li>(Columns are orthogonal unit vectors)</li>
+</ul>
+</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x3A3;</mi></mrow><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x3A3;</span></span></span></span>: diagonal<ul>
+<li>Entries (singular values) are positive, and sorted in decreasing order (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>&#x3C3;</mi><mn>1</mn></msub><mo>&#x2265;</mo><msub><mi>&#x3C3;</mi><mn>2</mn></msub><mo>&#x2265;</mo><mo>&#x22EF;</mo><mo>&#x2265;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sigma_1 \geq \sigma_2 \geq \cdots \geq 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">&#x3C3;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">&#x2265;</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">&#x3C3;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">&#x2265;</span><span class="minner">&#x22EF;</span><span class="mrel">&#x2265;</span><span class="mord mathrm">0</span></span></span></span>)</li>
+</ul>
+</li>
+</ul>
+<p><img src="../.gitbook/assets/svd_2.jpg" alt></p>
+<p><img src="../.gitbook/assets/svd_3.jpg" alt></p>
+<p><img src="../.gitbook/assets/svd_4.jpg" alt></p>
+<p><img src="../.gitbook/assets/svd_5.jpg" alt></p>
+<h3 id="interpretation">Interpretation</h3>
+<ul>
+<li>U: user-to-concept similarity matrix</li>
+<li>V: movie-to-concept similarity matrix</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x3A3;</mi></mrow><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x3A3;</span></span></span></span>: its diagonal elements <code>strength</code> of each concept</li>
+</ul>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="how_to_prevent_overfitting.html" class="navigation navigation-prev " aria-label="Previous page: How to prevent overfitting">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="clustering.html" class="navigation navigation-next " aria-label="Next page: Clustering">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Linear Algebra","level":"1.2.3","depth":2,"next":{"title":"Clustering","level":"1.2.4","depth":2,"path":"basics/clustering.md","ref":"basics/clustering.md","articles":[]},"previous":{"title":"How to prevent overfitting","level":"1.2.2","depth":2,"path":"basics/how_to_prevent_overfitting.md","ref":"basics/how_to_prevent_overfitting.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-search","-lunr","custom-js-css","docsearch","intopic-toc"],"pluginsConfig":{"docsearch":{},"docSearch":{"apiKey":"9b2d0c53eb838616448e652b3caafb42","index":"ztlevi-machine-learning"},"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"Navigation"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"css":["css/docsearch.css"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basics/linear_algebra.md","mtime":"2021-06-06T08:01:39.081Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-06T08:02:29.611Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-docsearch/doc-search-lib.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-docsearch/doc-search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

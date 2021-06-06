@@ -1,0 +1,1074 @@
+
+<!DOCTYPE HTML>
+<html lang>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Optional: CORAL Loss &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-custom-js-css/9eb07385451571ed1c43d6bfc772c8d5-docsearch.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-docsearch/doc-search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../resnet.html">
+    
+    
+    <link rel="prev" href="focal_loss.html">
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary"><div id="book-search-input">
+    <input type="text" id="book-doc-search-input" placeholder="Type to search">
+</div>
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../basics/">
+            
+                <a href="../../basics/">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../basics/optimization.html">
+            
+                <a href="../../basics/optimization.html">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../basics/how_to_prevent_overfitting.html">
+            
+                <a href="../../basics/how_to_prevent_overfitting.html">
+            
+                    
+                    How to prevent overfitting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../basics/linear_algebra.html">
+            
+                <a href="../../basics/linear_algebra.html">
+            
+                    
+                    Linear Algebra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../basics/clustering.html">
+            
+                <a href="../../basics/clustering.html">
+            
+                    
+                    Clustering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../basics/calculate_parameters_in_cnn.html">
+            
+                <a href="../../basics/calculate_parameters_in_cnn.html">
+            
+                    
+                    Calculate Parameters in CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../basics/weight_norm_and_layer_norm.html">
+            
+                <a href="../../basics/weight_norm_and_layer_norm.html">
+            
+                    
+                    Weight norm and layer norm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../basics/Confidence_Interval.html">
+            
+                <a href="../../basics/Confidence_Interval.html">
+            
+                    
+                    Confidence Interval
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../basics/Quantization.html">
+            
+                <a href="../../basics/Quantization.html">
+            
+                    
+                    Quantization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../classical_ml/">
+            
+                <a href="../../classical_ml/">
+            
+                    
+                    Classical Machine Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Neural Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../different_types_of_convolution.html">
+            
+                <a href="../different_types_of_convolution.html">
+            
+                    
+                    Different Types of Convolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Loss
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="Hinge_Loss.html">
+            
+                <a href="Hinge_Loss.html">
+            
+                    
+                    Hinge Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="cross_entropy_loss.html">
+            
+                <a href="cross_entropy_loss.html">
+            
+                    
+                    Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="binary_cross_entropy_loss.html">
+            
+                <a href="binary_cross_entropy_loss.html">
+            
+                    
+                    Binary Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="categorical_cross_entropy_loss.html">
+            
+                <a href="categorical_cross_entropy_loss.html">
+            
+                    
+                    Categorical Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="focal_loss.html">
+            
+                <a href="focal_loss.html">
+            
+                    
+                    Optional: Focal Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2.6" data-path="coral_loss.html">
+            
+                <a href="coral_loss.html">
+            
+                    
+                    Optional: CORAL Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../resnet.html">
+            
+                <a href="../resnet.html">
+            
+                    
+                    Resnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../mobilenet.html">
+            
+                <a href="../mobilenet.html">
+            
+                    
+                    Mobilenet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../cv/">
+            
+                <a href="../../cv/">
+            
+                    
+                    Computer Vision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../cv/two-stage-detector/">
+            
+                <a href="../../cv/two-stage-detector/">
+            
+                    
+                    Two Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../cv/two-stage-detector/metrics.html">
+            
+                <a href="../../cv/two-stage-detector/metrics.html">
+            
+                    
+                    Metrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../../cv/two-stage-detector/roi.html">
+            
+                <a href="../../cv/two-stage-detector/roi.html">
+            
+                    
+                    ROI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../../cv/two-stage-detector/r-cnn.html">
+            
+                <a href="../../cv/two-stage-detector/r-cnn.html">
+            
+                    
+                    R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../../cv/two-stage-detector/fast-rcnn.html">
+            
+                <a href="../../cv/two-stage-detector/fast-rcnn.html">
+            
+                    
+                    Fast RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../../cv/two-stage-detector/faster-rcnn.html">
+            
+                <a href="../../cv/two-stage-detector/faster-rcnn.html">
+            
+                    
+                    Faster RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="../../cv/two-stage-detector/mask-rcnn.html">
+            
+                <a href="../../cv/two-stage-detector/mask-rcnn.html">
+            
+                    
+                    Mask RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../cv/one-stage-detector/">
+            
+                <a href="../../cv/one-stage-detector/">
+            
+                    
+                    One Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../cv/one-stage-detector/yolo.html">
+            
+                <a href="../../cv/one-stage-detector/yolo.html">
+            
+                    
+                    YOLO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../cv/one-stage-detector/ssd.html">
+            
+                <a href="../../cv/one-stage-detector/ssd.html">
+            
+                    
+                    Single Shot MultiBox Detector(SSD)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../cv/one-stage-detector/fpn.html">
+            
+                <a href="../../cv/one-stage-detector/fpn.html">
+            
+                    
+                    FPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../cv/segmentation/">
+            
+                <a href="../../cv/segmentation/">
+            
+                    
+                    Segmentation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../cv/segmentation/panoptic.html">
+            
+                <a href="../../cv/segmentation/panoptic.html">
+            
+                    
+                    Panoptic Segmentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../cv/segmentation/PSPNet.html">
+            
+                <a href="../../cv/segmentation/PSPNet.html">
+            
+                    
+                    PSPNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../cv/facenet.html">
+            
+                <a href="../../cv/facenet.html">
+            
+                    
+                    FaceNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../cv/gan.html">
+            
+                <a href="../../cv/gan.html">
+            
+                    
+                    GAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../cv/Object_detection_imbalance.html">
+            
+                <a href="../../cv/Object_detection_imbalance.html">
+            
+                    
+                    Imbalance problem in object detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../nlp/">
+            
+                <a href="../../nlp/">
+            
+                    
+                    NLP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../nlp/embedding.html">
+            
+                <a href="../../nlp/embedding.html">
+            
+                    
+                    Embedding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../nlp/rnn.html">
+            
+                <a href="../../nlp/rnn.html">
+            
+                    
+                    RNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../nlp/lstm.html">
+            
+                <a href="../../nlp/lstm.html">
+            
+                    
+                    LSTM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../parallel-computeing/">
+            
+                <a href="../../parallel-computeing/">
+            
+                    
+                    Parallel Computeing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../parallel-computeing/communication.html">
+            
+                <a href="../../parallel-computeing/communication.html">
+            
+                    
+                    Communication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../parallel-computeing/sync_mapreduce.html">
+            
+                <a href="../../parallel-computeing/sync_mapreduce.html">
+            
+                    
+                    MapReduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../parallel-computeing/parameter_server.html">
+            
+                <a href="../../parallel-computeing/parameter_server.html">
+            
+                    
+                    Parameter Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../parallel-computeing/decentralized_and_ring_allreduce.html">
+            
+                <a href="../../parallel-computeing/decentralized_and_ring_allreduce.html">
+            
+                    
+                    Decentralized And Ring All Reduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../parallel-computeing/federated_learning.html">
+            
+                <a href="../../parallel-computeing/federated_learning.html">
+            
+                    
+                    Federated Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../anomaly-detection/">
+            
+                <a href="../../anomaly-detection/">
+            
+                    
+                    Anomaly Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../anomaly-detection/dbscan.html">
+            
+                <a href="../../anomaly-detection/dbscan.html">
+            
+                    
+                    DBSCAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../anomaly-detection/autoencoder_anomaly.html">
+            
+                <a href="../../anomaly-detection/autoencoder_anomaly.html">
+            
+                    
+                    Autoencoder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../visualization/">
+            
+                <a href="../../visualization/">
+            
+                    
+                    Visualization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../visualization/saliency_maps.html">
+            
+                <a href="../../visualization/saliency_maps.html">
+            
+                    
+                    Saliency Maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../visualization/fooling_images.html">
+            
+                <a href="../../visualization/fooling_images.html">
+            
+                    
+                    Fooling images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../visualization/class_visualization.html">
+            
+                <a href="../../visualization/class_visualization.html">
+            
+                    
+                    Class Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../..">Optional: CORAL Loss</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <p><a href="https://arxiv.org/pdf/1901.07884.pdf" target="_blank">Reference</a></p>
+<p>Consistant Rank Ligist for Ordinal Regression</p>
+<h3 id="network-design">Network design</h3>
+<p>After the last fully-connected layer with num of classes as one, a 1D linear bias layer is introduced.</p>
+<pre><code class="lang-python">self.fc = nn.Linear(<span class="hljs-number">4096</span>, <span class="hljs-number">1</span>, bias=<span class="hljs-keyword">False</span>)
+self.linear_1_bias = nn.Parameter(torch.zeros(num_classes<span class="hljs-number">-1</span>).float())
+</code></pre>
+<h3 id="loss-function">Loss function</h3>
+<p>Let <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">W</span></span></span></span> denote the weight parameters of the neural network excluding the bias units of the final layer. The penultimate layer, whose output is denoted as <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo separator="true">,</mo><mi>W</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">g(x_i,W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span>, shares a single weight with all nodes in the final output layer. <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">K-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span></span></span></span> independent bias units are then added to <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo separator="true">,</mo><mi>W</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">g(x_i, W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span> such that <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow><mi>g</mi><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo separator="true">,</mo><mi>W</mi><mo>)</mo><mo>+</mo><msub><mi>b</mi><mi>k</mi></msub></mrow><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>K</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msubsup></mrow><annotation encoding="application/x-tex">{g(x_i, W)+b_k}_{k=1}^{K-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.881462em;"></span><span class="strut bottom" style="height:1.1827699999999999em;vertical-align:-0.3013079999999999em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mclose">)</span><span class="mbin">+</span><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span><span class="msupsub"><span class="vlist"><span style="top:0.3013079999999999em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.403131em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.07153em;">K</span><span class="mbin mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> are the inputs to the crresponding binary classifiers in the final layer. Let <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mo>(</mo><mi>z</mi><mo>)</mo><mo>=</mo><mn>1</mn><mi mathvariant="normal">/</mi><mo>(</mo><mn>1</mn><mo>+</mo><mi>e</mi><mi>x</mi><mi>p</mi><mo>(</mo><mo>&#x2212;</mo><mi>z</mi><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">s(z)=1/(1+exp(-z))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">s</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">/</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mbin">+</span><span class="mord mathit">e</span><span class="mord mathit">x</span><span class="mord mathit">p</span><span class="mopen">(</span><span class="mord">&#x2212;</span><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span> be the logistic sigmoid function. The predicted empirical probability for task k is defined as:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>P</mi></mrow><mo>^</mo></mover><mo>(</mo><msubsup><mi>y</mi><mi>i</mi><mi>k</mi></msubsup><mo>=</mo><mn>1</mn><mo>)</mo><mo>=</mo><mi>s</mi><mo>(</mo><mi>g</mi><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo separator="true">,</mo><mi>W</mi><mo>)</mo><mo>+</mo><msub><mi>b</mi><mi>k</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">
+\hat{P}(y_i^k=1) = s(g(x_i, W) +b_k)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9467699999999999em;"></span><span class="strut bottom" style="height:1.19677em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle cramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span></span></span><span style="top:-0.25233em;margin-left:0.16668em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body"><span>^</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.247em;margin-left:-0.03588em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span style="top:-0.4129999999999999em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit">s</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mclose">)</span><span class="mbin">+</span><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+<p>For model training, we minimize the loss function:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>(</mo><mi>W</mi><mo separator="true">,</mo><mi>b</mi><mo>)</mo><mo>=</mo><mo>&#x2212;</mo><msubsup><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></msubsup><msubsup><mo>&#x2211;</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>K</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msubsup><msup><mi>&#x3BB;</mi><mi>k</mi></msup><mo>[</mo><mi>l</mi><mi>o</mi><mi>g</mi><mo>(</mo><mi>s</mi><mo>(</mo><mi>g</mi><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo separator="true">,</mo><mi>W</mi><mo>)</mo><mo>+</mo><msub><mi>b</mi><mi>k</mi></msub><mo>)</mo><mo>)</mo><msubsup><mi>y</mi><mi>i</mi><mi>k</mi></msubsup><mo>+</mo><mi>l</mi><mi>o</mi><mi>g</mi><mo>(</mo><mn>1</mn><mo>&#x2212;</mo><mi>s</mi><mo>(</mo><mi>g</mi><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo separator="true">,</mo><mi>W</mi><mo>)</mo><mo>+</mo><msub><mi>b</mi><mi>k</mi></msub><mo>)</mo><mo>)</mo><mo>(</mo><mn>1</mn><mo>&#x2212;</mo><msubsup><mi>y</mi><mi>i</mi><mi>k</mi></msubsup><mo>)</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">
+L(W,b) = - \sum_{i=1}^N \sum_{k=1}^{K-1} \lambda ^k [log(s(g(x_i,W) +b_k))y_i^k + log(1-s(g(x_i,
+W) + b_k))(1-y_i^k)]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.8283360000000002em;"></span><span class="strut bottom" style="height:3.1304490000000005em;vertical-align:-1.302113em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mpunct">,</span><span class="mord mathit">b</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord">&#x2212;</span><span class="mop op-limits"><span class="vlist"><span style="top:1.1776689999999999em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.000005000000000143778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span><span style="top:-1.2500050000000003em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">N</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mop op-limits"><span class="vlist"><span style="top:1.202113em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.000005000000000032756em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span><span style="top:-1.250005em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.07153em;">K</span><span class="mbin mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mord"><span class="mord mathit">&#x3BB;</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathit">s</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mclose">)</span><span class="mbin">+</span><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mclose">)</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.247em;margin-left:-0.03588em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span style="top:-0.4129999999999999em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mbin">&#x2212;</span><span class="mord mathit">s</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mclose">)</span><span class="mbin">+</span><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.247em;margin-left:-0.03588em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span style="top:-0.4129999999999999em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mclose">]</span></span></span></span></span></p>
+<p>which is the weighted cross-entropy of K-1 binary classifiers. For rank prediction, the binary labels are obtained via:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>k</mi></msub><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>)</mo><mo>=</mo><mn>1</mn><mrow><mover accent="true"><mrow><mi>P</mi></mrow><mo>^</mo></mover><mo>(</mo><msubsup><mi>y</mi><mi>i</mi><mi>k</mi></msubsup><mo>=</mo><mn>1</mn><mo>)</mo><mo>&gt;</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>5</mn></mrow></mrow><annotation encoding="application/x-tex">
+f_k(x_i) = 1{ \hat{P}(y_i^k=1) &gt; 0.5 }
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9467699999999999em;"></span><span class="strut bottom" style="height:1.19677em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord displaystyle textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle cramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span></span></span><span style="top:-0.25233em;margin-left:0.16668em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body"><span>^</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.247em;margin-left:-0.03588em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span style="top:-0.4129999999999999em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mrel">&gt;</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">5</span></span></span></span></span></span></p>
+<h4 id="example">Example</h4>
+<p>Let&apos;s take a look at the labels, for 7 ranks:</p>
+<ul>
+<li>Cross-Entropy, the one hot encoded label for class 3 is denoted as <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><msup><mo>]</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">[0,0,1,0,0,0,0]^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>,</li>
+<li><p>CROAL-Loss, it&apos;s <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><msup><mo>]</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">[1,1,1,0,0,0 ]^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<pre><code class="lang-python">levels = [[<span class="hljs-number">1</span>] * label + [<span class="hljs-number">0</span>] * (self.num_classes - <span class="hljs-number">1</span> - label) <span class="hljs-keyword">for</span> label <span class="hljs-keyword">in</span> batch_y]
+</code></pre>
+</li>
+</ul>
+<p>The logits for CORAL-loss looks like this <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>9</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>8</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>6</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>4</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><msup><mo>]</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">[0.9, 0.8, 0.6, 0.4, 0.2, 0.1]^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">9</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">8</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">6</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">4</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>, we find the last num &gt;= 0.5, it&apos;s index 3 is our prediction.</p>
+<p>During training, the loss for the current sample is calculated as</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtable><mtr><mtd><mrow><mi>L</mi><mo>=</mo><mo>&#x2212;</mo><msubsup><mo>&#x2211;</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>K</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msubsup><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo>]</mo><mo>&#x2217;</mo><mi>l</mi><mi>o</mi><mi>g</mi><mo>(</mo><mo>[</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>9</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>8</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>6</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>4</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><msup><mo>]</mo><mi>T</mi></msup><mo>)</mo></mrow></mtd></mtr><mtr><mtd><mrow><mo>+</mo><mo>(</mo><mn>1</mn><mo>&#x2212;</mo><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo>]</mo><mo>)</mo><mo>&#x2217;</mo><mi>l</mi><mi>o</mi><mi>g</mi><mo>(</mo><mn>1</mn><mo>&#x2212;</mo><mo>[</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>9</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>8</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>6</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>4</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><msup><mo>]</mo><mi>T</mi></msup><mo>)</mo></mrow></mtd></mtr><mtr><mtd><mrow><mo>=</mo><mo>&#x2212;</mo><msubsup><mo>&#x2211;</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>K</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msubsup><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo>]</mo><mo>&#x2217;</mo><mi>l</mi><mi>o</mi><mi>g</mi><mo>(</mo><mo>[</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>9</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>8</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>6</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>4</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><msup><mo>]</mo><mi>T</mi></msup><mo>)</mo></mrow></mtd></mtr><mtr><mtd><mrow><mo>+</mo><mo>[</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo>]</mo><mo>&#x2217;</mo><mi>l</mi><mi>o</mi><mi>g</mi><mo>(</mo><mn>1</mn><mo>&#x2212;</mo><mo>[</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>9</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>8</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>6</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>4</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><msup><mo>]</mo><mi>T</mi></msup><mo>)</mo></mrow></mtd></mtr><mtr><mtd><mrow></mrow></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">
+\begin{aligned}
+L = -\sum_{k=1}^{K-1} [1,1,1,0,0,0] * log( [0.9,0.8,0.6,0.4,0.2,0.1]^T ) \\
++ (1 - [1,1,1,0,0,0]) * log (1- [0.9, 0.8, 0.6, 0.4, 0.2, 0.1]^T ) \\
+= - \sum_{k=1}^{K-1} [1,1,1,0,0,0] * log( [0.9,0.8,0.6,0.4,0.2,0.1]^T ) \\
++ [0,0,0,1,1,1] * log (1- [0.9, 0.8, 0.6, 0.4, 0.2, 0.1]^T ) \\
+\end{aligned}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:5.23178em;"></span><span class="strut bottom" style="height:9.963560000000001em;vertical-align:-4.7317800000000005em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist"><span style="top:-3.4034439999999995em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathit">L</span><span class="mrel">=</span><span class="mord">&#x2212;</span><span class="mop op-limits"><span class="vlist"><span style="top:1.202113em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.000005000000000032756em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span><span style="top:-1.250005em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.07153em;">K</span><span class="mbin mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mclose">]</span><span class="mbin">&#x2217;</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">9</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">8</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">6</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">4</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span><span style="top:-1.2099999999999989em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord">+</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mbin">&#x2212;</span><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mclose">]</span><span class="mclose">)</span><span class="mbin">&#x2217;</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mbin">&#x2212;</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">9</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">8</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">6</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">4</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span><span style="top:0.9783360000000021em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mrel">=</span><span class="mord">&#x2212;</span><span class="mop op-limits"><span class="vlist"><span style="top:1.202113em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.000005000000000032756em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span><span style="top:-1.250005em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.07153em;">K</span><span class="mbin mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mclose">]</span><span class="mbin">&#x2217;</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">9</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">8</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">6</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">4</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span><span style="top:3.171780000000002em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord">+</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mclose">]</span><span class="mbin">&#x2217;</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mbin">&#x2212;</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">9</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">8</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">6</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">4</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span><span style="top:4.37178em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></span></span></p>
+<h2 id="ordinal-regression">Ordinal Regression</h2>
+<h3 id="network-design">Network design</h3>
+<p>Last fc layer outputs <code>(num_classes-1)*2</code> logits.</p>
+<pre><code class="lang-python">self.fc = nn.Linear(<span class="hljs-number">2048</span> * block.expansion, (self.num_classes<span class="hljs-number">-1</span>)*<span class="hljs-number">2</span>)
+</code></pre>
+<p>Final output is similar to CORAL-loss:</p>
+<pre><code class="lang-python">probas = F.softmax(logits, dim=<span class="hljs-number">2</span>)[:, :, <span class="hljs-number">1</span>]
+predict_levels = probas &gt; <span class="hljs-number">0.5</span>
+predicted_labels = torch.sum(predict_levels, dim=<span class="hljs-number">1</span>)
+</code></pre>
+<h3 id="loss-function">Loss function</h3>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">cost_fn</span><span class="hljs-params">(logits, levels, imp)</span>:</span>
+    val = (-torch.sum((F.log_softmax(logits, dim=<span class="hljs-number">2</span>)[:, :, <span class="hljs-number">1</span>]*levels
+                      + F.log_softmax(logits, dim=<span class="hljs-number">2</span>)[:, :, <span class="hljs-number">0</span>]*(<span class="hljs-number">1</span>-levels))*imp, dim=<span class="hljs-number">1</span>))
+    <span class="hljs-keyword">return</span> torch.mean(val)
+</code></pre>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="focal_loss.html" class="navigation navigation-prev " aria-label="Previous page: Optional: Focal Loss">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../resnet.html" class="navigation navigation-next " aria-label="Next page: Resnet">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Optional: CORAL Loss","level":"1.4.2.6","depth":3,"next":{"title":"Resnet","level":"1.4.3","depth":2,"path":"neural_networks/resnet.md","ref":"neural_networks/resnet.md","articles":[]},"previous":{"title":"Optional: Focal Loss","level":"1.4.2.5","depth":3,"path":"neural_networks/loss/focal_loss.md","ref":"neural_networks/loss/focal_loss.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-search","-lunr","custom-js-css","docsearch","intopic-toc"],"pluginsConfig":{"docsearch":{},"docSearch":{"apiKey":"9b2d0c53eb838616448e652b3caafb42","index":"ztlevi-machine-learning"},"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"Navigation"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"css":["css/docsearch.css"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"neural_networks/loss/coral_loss.md","mtime":"2021-06-06T08:01:39.121Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-06T08:02:29.611Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-docsearch/doc-search-lib.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-docsearch/doc-search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

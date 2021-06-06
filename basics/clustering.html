@@ -1,0 +1,1194 @@
+
+<!DOCTYPE HTML>
+<html lang>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Clustering &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-custom-js-css/9eb07385451571ed1c43d6bfc772c8d5-docsearch.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-docsearch/doc-search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="calculate_parameters_in_cnn.html">
+    
+    
+    <link rel="prev" href="linear_algebra.html">
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary"><div id="book-search-input">
+    <input type="text" id="book-doc-search-input" placeholder="Type to search">
+</div>
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="optimization.html">
+            
+                <a href="optimization.html">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="how_to_prevent_overfitting.html">
+            
+                <a href="how_to_prevent_overfitting.html">
+            
+                    
+                    How to prevent overfitting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="linear_algebra.html">
+            
+                <a href="linear_algebra.html">
+            
+                    
+                    Linear Algebra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="clustering.html">
+            
+                <a href="clustering.html">
+            
+                    
+                    Clustering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="calculate_parameters_in_cnn.html">
+            
+                <a href="calculate_parameters_in_cnn.html">
+            
+                    
+                    Calculate Parameters in CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="weight_norm_and_layer_norm.html">
+            
+                <a href="weight_norm_and_layer_norm.html">
+            
+                    
+                    Weight norm and layer norm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="Confidence_Interval.html">
+            
+                <a href="Confidence_Interval.html">
+            
+                    
+                    Confidence Interval
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="Quantization.html">
+            
+                <a href="Quantization.html">
+            
+                    
+                    Quantization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../classical_ml/">
+            
+                <a href="../classical_ml/">
+            
+                    
+                    Classical Machine Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../neural_networks/">
+            
+                <a href="../neural_networks/">
+            
+                    
+                    Neural Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../neural_networks/different_types_of_convolution.html">
+            
+                <a href="../neural_networks/different_types_of_convolution.html">
+            
+                    
+                    Different Types of Convolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../neural_networks/loss/">
+            
+                <a href="../neural_networks/loss/">
+            
+                    
+                    Loss
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../neural_networks/loss/Hinge_Loss.html">
+            
+                <a href="../neural_networks/loss/Hinge_Loss.html">
+            
+                    
+                    Hinge Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../neural_networks/loss/cross_entropy_loss.html">
+            
+                <a href="../neural_networks/loss/cross_entropy_loss.html">
+            
+                    
+                    Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../neural_networks/loss/binary_cross_entropy_loss.html">
+            
+                <a href="../neural_networks/loss/binary_cross_entropy_loss.html">
+            
+                    
+                    Binary Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../neural_networks/loss/categorical_cross_entropy_loss.html">
+            
+                <a href="../neural_networks/loss/categorical_cross_entropy_loss.html">
+            
+                    
+                    Categorical Cross-Entropy Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../neural_networks/loss/focal_loss.html">
+            
+                <a href="../neural_networks/loss/focal_loss.html">
+            
+                    
+                    Optional: Focal Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../neural_networks/loss/coral_loss.html">
+            
+                <a href="../neural_networks/loss/coral_loss.html">
+            
+                    
+                    Optional: CORAL Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../neural_networks/resnet.html">
+            
+                <a href="../neural_networks/resnet.html">
+            
+                    
+                    Resnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../neural_networks/mobilenet.html">
+            
+                <a href="../neural_networks/mobilenet.html">
+            
+                    
+                    Mobilenet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../cv/">
+            
+                <a href="../cv/">
+            
+                    
+                    Computer Vision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../cv/two-stage-detector/">
+            
+                <a href="../cv/two-stage-detector/">
+            
+                    
+                    Two Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../cv/two-stage-detector/metrics.html">
+            
+                <a href="../cv/two-stage-detector/metrics.html">
+            
+                    
+                    Metrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../cv/two-stage-detector/roi.html">
+            
+                <a href="../cv/two-stage-detector/roi.html">
+            
+                    
+                    ROI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../cv/two-stage-detector/r-cnn.html">
+            
+                <a href="../cv/two-stage-detector/r-cnn.html">
+            
+                    
+                    R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../cv/two-stage-detector/fast-rcnn.html">
+            
+                <a href="../cv/two-stage-detector/fast-rcnn.html">
+            
+                    
+                    Fast RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../cv/two-stage-detector/faster-rcnn.html">
+            
+                <a href="../cv/two-stage-detector/faster-rcnn.html">
+            
+                    
+                    Faster RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="../cv/two-stage-detector/mask-rcnn.html">
+            
+                <a href="../cv/two-stage-detector/mask-rcnn.html">
+            
+                    
+                    Mask RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../cv/one-stage-detector/">
+            
+                <a href="../cv/one-stage-detector/">
+            
+                    
+                    One Stage Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../cv/one-stage-detector/yolo.html">
+            
+                <a href="../cv/one-stage-detector/yolo.html">
+            
+                    
+                    YOLO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../cv/one-stage-detector/ssd.html">
+            
+                <a href="../cv/one-stage-detector/ssd.html">
+            
+                    
+                    Single Shot MultiBox Detector(SSD)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../cv/one-stage-detector/fpn.html">
+            
+                <a href="../cv/one-stage-detector/fpn.html">
+            
+                    
+                    FPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../cv/segmentation/">
+            
+                <a href="../cv/segmentation/">
+            
+                    
+                    Segmentation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../cv/segmentation/panoptic.html">
+            
+                <a href="../cv/segmentation/panoptic.html">
+            
+                    
+                    Panoptic Segmentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../cv/segmentation/PSPNet.html">
+            
+                <a href="../cv/segmentation/PSPNet.html">
+            
+                    
+                    PSPNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../cv/facenet.html">
+            
+                <a href="../cv/facenet.html">
+            
+                    
+                    FaceNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../cv/gan.html">
+            
+                <a href="../cv/gan.html">
+            
+                    
+                    GAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../cv/Object_detection_imbalance.html">
+            
+                <a href="../cv/Object_detection_imbalance.html">
+            
+                    
+                    Imbalance problem in object detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../nlp/">
+            
+                <a href="../nlp/">
+            
+                    
+                    NLP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../nlp/embedding.html">
+            
+                <a href="../nlp/embedding.html">
+            
+                    
+                    Embedding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../nlp/rnn.html">
+            
+                <a href="../nlp/rnn.html">
+            
+                    
+                    RNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../nlp/lstm.html">
+            
+                <a href="../nlp/lstm.html">
+            
+                    
+                    LSTM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../parallel-computeing/">
+            
+                <a href="../parallel-computeing/">
+            
+                    
+                    Parallel Computeing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../parallel-computeing/communication.html">
+            
+                <a href="../parallel-computeing/communication.html">
+            
+                    
+                    Communication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../parallel-computeing/sync_mapreduce.html">
+            
+                <a href="../parallel-computeing/sync_mapreduce.html">
+            
+                    
+                    MapReduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../parallel-computeing/parameter_server.html">
+            
+                <a href="../parallel-computeing/parameter_server.html">
+            
+                    
+                    Parameter Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../parallel-computeing/decentralized_and_ring_allreduce.html">
+            
+                <a href="../parallel-computeing/decentralized_and_ring_allreduce.html">
+            
+                    
+                    Decentralized And Ring All Reduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../parallel-computeing/federated_learning.html">
+            
+                <a href="../parallel-computeing/federated_learning.html">
+            
+                    
+                    Federated Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../anomaly-detection/">
+            
+                <a href="../anomaly-detection/">
+            
+                    
+                    Anomaly Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../anomaly-detection/dbscan.html">
+            
+                <a href="../anomaly-detection/dbscan.html">
+            
+                    
+                    DBSCAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../anomaly-detection/autoencoder_anomaly.html">
+            
+                <a href="../anomaly-detection/autoencoder_anomaly.html">
+            
+                    
+                    Autoencoder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../visualization/">
+            
+                <a href="../visualization/">
+            
+                    
+                    Visualization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../visualization/saliency_maps.html">
+            
+                <a href="../visualization/saliency_maps.html">
+            
+                    
+                    Saliency Maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../visualization/fooling_images.html">
+            
+                <a href="../visualization/fooling_images.html">
+            
+                    
+                    Fooling images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../visualization/class_visualization.html">
+            
+                <a href="../visualization/class_visualization.html">
+            
+                    
+                    Class Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="..">Clustering</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="kmeans">Kmeans</h2>
+<p><img src="../.gitbook/assets/clustering.png" alt="clustering"></p>
+<ul>
+<li>Clustering is a unsupervised learning algorithm that groups data in such a way that data points in the same group are more similar to each other than to those from other groups</li>
+<li>Similarity is usually defined using a distance measure (e.g, Euclidean, Cosine, Jaccard, etc.)</li>
+<li>The goal is usually to discover the underlying structure within the data (usually high dimensional)</li>
+<li>The most common clustering algorithm is K-means, where we define K (the number of clusters) and the algorithm iteratively finds the cluster each data point belongs to</li>
+</ul>
+<p><a href="http://scikit-learn.org/stable/modules/clustering.html" target="_blank">scikit-learn</a> implements many clustering algorithms. Below is a comparison adopted from its page.</p>
+<h3 id="algorithm">Algorithm</h3>
+<ul>
+<li>Input:<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span></span></span></span> (number of clusters)</li>
+<li>Training set <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><msup><mi>x</mi><mn>1</mn></msup><mo separator="true">,</mo><msup><mi>x</mi><mn>2</mn></msup><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></mrow><annotation encoding="application/x-tex">{x^1,x^2,...,x^m}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">m</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></span> (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mi>i</mi></msup><mo>&#x2208;</mo><msup><mrow><mi mathvariant="double-struck">R</mi></mrow><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">x^i \in \mathbb{R}^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.824664em;"></span><span class="strut bottom" style="height:0.863764em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">&#x2208;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbb">R</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>)</li>
+</ul>
+</li>
+<li><p>Algorithm:</p>
+<ol>
+<li>Randomly initialized <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span></span></span></span> cluster centroids <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>&#x3BC;</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>&#x3BC;</mi><mn>2</mn></msub><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><msub><mi>&#x3BC;</mi><mi>K</mi></msub><mo>&#x2208;</mo><msup><mrow><mi mathvariant="double-struck">R</mi></mrow><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\mu_1,\mu_2,...,\mu_K \in \mathbb{R}^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68889em;"></span><span class="strut bottom" style="height:0.88333em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">&#x3BC;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">&#x3BC;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">&#x3BC;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.07153em;">K</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">&#x2208;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbb">R</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></li>
+<li><p>Repeat {</p>
+<ul>
+<li>for i = 1 to <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span></span></span></span><ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>c</mi><mi>i</mi></msup></mrow><annotation encoding="application/x-tex">c^i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.824664em;"></span><span class="strut bottom" style="height:0.824664em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> := index (from 1 to K) of cluster centroid closest to <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mi>i</mi></msup></mrow><annotation encoding="application/x-tex">x^i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.824664em;"></span><span class="strut bottom" style="height:0.824664em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></li>
+</ul>
+</li>
+<li>for k = 1 to <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span></span></span></span><ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>&#x3BC;</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">\mu_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">&#x3BC;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> := average (mean) of points assigned to Cluster k</li>
+</ul>
+</li>
+</ul>
+<p>}</p>
+</li>
+</ol>
+</li>
+</ul>
+<p><a href="https://github.com/ztlevi/Machine_Learning_Questions/blob/master/codes/kmeans/kmeans.py" target="_blank"><strong>Python implementation</strong></a></p>
+<h3 id="random-initialization">Random initialization</h3>
+<ul>
+<li>How we initialize K-means<ul>
+<li>And how avoid local optimum</li>
+</ul>
+</li>
+<li>Consider clustering algorithm<ul>
+<li>Never spoke about how we initialize the centroids<ul>
+<li>A few ways - one method is most recommended</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Have number of centroids set to less than number of examples (K &lt; m) (if K &gt; m we have a problem)0<ul>
+<li>Randomly pick K training examples</li>
+<li>Set &#x3BC;1 up to &#x3BC;K to these example&apos;s values</li>
+</ul>
+</li>
+<li>K means can converge to different solutions depending on the initialization setup<ul>
+<li>Risk of local optimum <img src="../.gitbook/assets/kmeans_local_optima.png" alt="img"></li>
+<li>The local optimum are valid convergence, but local optimum not global ones</li>
+</ul>
+</li>
+<li>If this is a concern<ul>
+<li>We can do multiple random initializations<ul>
+<li>See if we get the same result - many same results are likely to indicate a global optimum</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Algorithmically we can do this as follows;</p>
+<p><img src="../.gitbook/assets/kmeans_random_init.png" alt></p>
+<ul>
+<li>A typical number of times to initialize K-means is 50-1000</li>
+<li>Randomly initialize K-means<ul>
+<li>For each 100 random initialization run K-means</li>
+<li>Then compute the distortion on the set of cluster assignments and centroids at convergent</li>
+<li>End with 100 ways of cluster the data</li>
+<li>Pick the clustering which gave the lowest distortion</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>If you&apos;re running K means with 2-10 clusters can help find better global optimum</p>
+<ul>
+<li>If K is larger than 10, then multiple random initializations are less likely to be necessary</li>
+<li>First solution is probably good enough (better granularity of clustering)</li>
+</ul>
+</li>
+</ul>
+<h3 id="determine-optimal-k">Determine optimal k</h3>
+<h4 id="elbow-mothod">Elbow mothod</h4>
+<p>The technique to determine K, the number of clusters, is called the elbow method. With a bit of fantasy, you can see an elbow in the chart below.</p>
+<p>We&#x2019;ll plot:</p>
+<ul>
+<li>values for K on the horizontal axis</li>
+<li>the distortion on the Y axis (the values calculated with the cost function). This results in:</li>
+</ul>
+<p><img src="../.gitbook/assets/elbow-method.png" alt="img"></p>
+<p>When K increases, the centroids are closer to the clusters centroids. The improvements will decline, at some point rapidly, creating the elbow shape. That point is the optimal value for K. In the image above, K=3.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># clustering dataset</span>
+<span class="hljs-comment"># determine k using elbow method</span>
+
+<span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> KMeans
+<span class="hljs-keyword">from</span> sklearn <span class="hljs-keyword">import</span> metrics
+<span class="hljs-keyword">from</span> scipy.spatial.distance <span class="hljs-keyword">import</span> cdist
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+
+x1 = np.array([<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-number">6</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>])
+x2 = np.array([<span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
+
+plt.plot()
+plt.xlim([<span class="hljs-number">0</span>, <span class="hljs-number">10</span>])
+plt.ylim([<span class="hljs-number">0</span>, <span class="hljs-number">10</span>])
+plt.title(<span class="hljs-string">&apos;Dataset&apos;</span>)
+plt.scatter(x1, x2)
+plt.show()
+
+<span class="hljs-comment"># create new plot and data</span>
+plt.plot()
+X = np.array(list(zip(x1, x2))).reshape(len(x1), <span class="hljs-number">2</span>)
+colors = [<span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;g&apos;</span>, <span class="hljs-string">&apos;r&apos;</span>]
+markers = [<span class="hljs-string">&apos;o&apos;</span>, <span class="hljs-string">&apos;v&apos;</span>, <span class="hljs-string">&apos;s&apos;</span>]
+
+<span class="hljs-comment"># k means determine k</span>
+distortions = []
+K = range(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>)
+<span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> K:
+    kmeanModel = KMeans(n_clusters=k).fit(X)
+    kmeanModel.fit(X)
+    distortions.append(sum(np.min(cdist(X, kmeanModel.cluster_centers_, <span class="hljs-string">&apos;euclidean&apos;</span>), axis=<span class="hljs-number">1</span>)) / X.shape[<span class="hljs-number">0</span>])
+
+<span class="hljs-comment"># Plot the elbow</span>
+plt.plot(K, distortions, <span class="hljs-string">&apos;bx-&apos;</span>)
+plt.xlabel(<span class="hljs-string">&apos;k&apos;</span>)
+plt.ylabel(<span class="hljs-string">&apos;Distortion&apos;</span>)
+plt.title(<span class="hljs-string">&apos;The Elbow Method showing the optimal k&apos;</span>)
+plt.show()
+</code></pre>
+<h4 id="another-method-for-choosing-k">Another method for choosing K</h4>
+<ul>
+<li>Using K-means for market segmentation</li>
+<li>Running K-means for a later/downstream purpose<ul>
+<li>See how well different number of clusters serve you later needs</li>
+</ul>
+</li>
+<li><p>e.g.</p>
+<ul>
+<li>T-shirt size example<ul>
+<li>If you have three sizes (S,M,L)</li>
+<li>Or five sizes (XS, S, M, L, XL)</li>
+<li>Run K means where K = 3 and K = 5</li>
+</ul>
+</li>
+<li><p>How does this look</p>
+<p><img src="../.gitbook/assets/kmeans_another_chosing_K.png" alt="img"></p>
+</li>
+<li><p>This gives a way to chose the number of clusters</p>
+<ul>
+<li>Could consider the cost of making extra sizes vs. how well distributed the products are</li>
+<li>How important are those sizes though? (e.g. more sizes might make the customers happier)</li>
+<li>So applied problem may help guide the number of clusters</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="dbscan-density-based-spatial-clustering-of-applications-with-noise">DBSCAN: Density-Based Spatial Clustering of Applications with Noise</h2>
+<p>DBSCAN is a density-based clustered algorithm similar to mean-shift, but with a couple of notable advantages. Check out another fancy graphic below and let&#x2019;s get started!</p>
+<p><img src="https://miro.medium.com/max/1485/1*tc8UF-h0nQqUfLC8-0uInQ.gif" alt="img"></p>
+<ol>
+<li>DBSCAN begins with an arbitrary starting data point that has not been visited. The neighborhood of this point is extracted using a distance epsilon &#x3B5; (All points which are within the &#x3B5; distance are neighborhood points).</li>
+<li>If there are a sufficient number of points (according to minPoints) within this neighborhood then the clustering process starts and the current data point becomes the first point in the new cluster. Otherwise, the point will be labeled as noise (later this noisy point might become the part of the cluster). In both cases that point is marked as &#x201C;visited&#x201D;.</li>
+<li>For this first point in the new cluster, the points within its &#x3B5; distance neighborhood also become part of the same cluster. This procedure of making all points in the &#x3B5; neighborhood belong to the same cluster is then repeated for all of the new points that have been just added to the cluster group.</li>
+<li>This process of steps 2 and 3 is repeated until all points in the cluster are determined i.e all points within the &#x3B5; neighborhood of the cluster have been visited and labeled.</li>
+<li>Once we&#x2019;re done with the current cluster, a new unvisited point is retrieved and processed, leading to the discovery of a further cluster or noise. This process repeats until all points are marked as visited. Since at the end of this all points have been visited, each point will have been marked as either belonging to a cluster or being noise.</li>
+</ol>
+<p>DBSCAN poses some great advantages over other clustering algorithms. Firstly, it does not require a pe-set number of clusters at all. It also identifies outliers as noises, unlike mean-shift which simply throws them into a cluster even if the data point is very different. Additionally, it can find arbitrarily sized and arbitrarily shaped clusters quite well.</p>
+<p>The main drawback of DBSCAN is that it doesn&#x2019;t perform as well as others when the clusters are of varying density. This is because the setting of the distance threshold &#x3B5; and minPoints for identifying the neighborhood points will vary from cluster to cluster when the density varies. This drawback also occurs with very high-dimensional data since again the distance threshold &#x3B5; becomes challenging to estimate.</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="linear_algebra.html" class="navigation navigation-prev " aria-label="Previous page: Linear Algebra">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="calculate_parameters_in_cnn.html" class="navigation navigation-next " aria-label="Next page: Calculate Parameters in CNN">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Clustering","level":"1.2.4","depth":2,"next":{"title":"Calculate Parameters in CNN","level":"1.2.5","depth":2,"path":"basics/calculate_parameters_in_cnn.md","ref":"basics/calculate_parameters_in_cnn.md","articles":[]},"previous":{"title":"Linear Algebra","level":"1.2.3","depth":2,"path":"basics/linear_algebra.md","ref":"basics/linear_algebra.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-search","-lunr","custom-js-css","docsearch","intopic-toc"],"pluginsConfig":{"docsearch":{},"docSearch":{"apiKey":"9b2d0c53eb838616448e652b3caafb42","index":"ztlevi-machine-learning"},"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"Navigation"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"css":["css/docsearch.css"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basics/clustering.md","mtime":"2021-06-06T08:01:39.081Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-06T08:02:29.611Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-docsearch/doc-search-lib.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-docsearch/doc-search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
